@@ -24,7 +24,7 @@
 | [java/collection/hashmap-iterate.mmap](java/collection/hashmap-iterate.mmap) | collection集合 | HashMap的7种循环方式 & 性能比较 & 删除安全性分析 | Done       |
 | [java/annotation/annotation-note.mmap](java/annotation/annotation-note.mmap) | annotation注解 | 注解的定义、使用、解析                           | Done       |
 
-# JavaWeb
+## JavaWeb
 
 | 文件                                                 | 类别    | 概述                                | 版本                   |
 | ---------------------------------------------------- | ------- | ----------------------------------- | ---------------------- |
@@ -32,13 +32,13 @@
 
 ## Database
 
-| 文件                                                         | 类别            | 概述                       | 版本      |
-| ------------------------------------------------------------ | --------------- | -------------------------- | --------- |
-| [database/database-transaction.mmap](database/database-transaction.mmap) | transaction事务 | 事务的概念、特性（隔离性） | TODO：TCL |
+| 文件                                                         | 类别            | 概述                                                         | 版本                   |
+| ------------------------------------------------------------ | --------------- | ------------------------------------------------------------ | ---------------------- |
+| [database/database-transaction.mmap](database/database-transaction.mmap) | transaction事务 | 事务的概念、特性（隔离性）、<br/>事务管理操作（TCL）、Spring事务 | TODO：oracle/redis事务 |
 
 ## Spring
 
-| 文件                                                         | 类别   | 概述                                              | 版本             |
-| ------------------------------------------------------------ | ------ | ------------------------------------------------- | ---------------- |
-| [java/spring/spring-note.mmap](java/spring/spring-note.mmap) | Spring | Spring IOC 、Bean管理（xml、注解）、依赖注入、AOP | TODO：Spring事务 |
+| 文件                                                         | 类别   | 概述                                              | 版本                               |
+| ------------------------------------------------------------ | ------ | ------------------------------------------------- | ---------------------------------- |
+| [java/spring/spring-note.mmap](java/spring/spring-note.mmap) | Spring | Spring IOC 、Bean管理（xml、注解）、依赖注入、AOP | TODO：Spring MVC、Spring中设计模式 |
 
