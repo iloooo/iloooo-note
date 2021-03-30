@@ -32,9 +32,10 @@
 
 ## Database
 
-| 文件                                                         | 类别            | 概述                                                         | 版本                   |
-| ------------------------------------------------------------ | --------------- | ------------------------------------------------------------ | ---------------------- |
-| [database/database-transaction.mmap](database/database-transaction.mmap) | transaction事务 | 事务的概念、特性（隔离性）、<br/>事务管理操作（TCL）、Spring事务 | TODO：oracle/redis事务 |
+| 文件                                                         | 类别            | 概述                                                         | 版本                                |
+| ------------------------------------------------------------ | --------------- | ------------------------------------------------------------ | ----------------------------------- |
+| [database/database-transaction.mmap](database/database-transaction.mmap) | transaction事务 | 事务的概念、特性（隔离性）、<br/>事务管理操作（TCL）、Spring事务 | TODO：oracle/redis事务              |
+| [database/database-jdbc.xmind](database/database-jdbc.xmind) | jdbc            | jdbc驱动、连接、连接池、操作和结果集、事务                   | TODO：Resultset详解（数据类型对应） |
 
 ## Spring
 
