@@ -36,6 +36,14 @@
 
 ### 底层原理：  xml 解析、工厂模式（对象工厂）、反射
 
+### 初始化IOC容器，获取容器中Bean：ApplicationContext接口的实现类
+
+- ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+UserDao userDao = (UserDao) applicationContext.getBean("userDao");
+- ClassPathXmlApplicationContext ：类的根路径下加载配置文件
+- FileSystemXmlApplicationContext：磁盘路径上加载配置文件
+- AnnotationConfigApplicationContext：使用注解配置容器对象
+
 ### IOC实现：Bean管理
 
 - Bean ：Spring IOC容器创建管理的对象
@@ -130,14 +138,6 @@
 	- （3）调用 bean 的初始化的方法（需要进行配置初始化的方法）
 	- （4）bean 可以使用了（对象获取到了）
 	- （5）当容器关闭时候，调用 bean 的销毁的方法（需要进行配置销毁的方法）
-
-### IOC使用：ApplicationContext接口的实现类
-
-- ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-UserDao userDao = (UserDao) applicationContext.getBean("userDao");
-- ClassPathXmlApplicationContext ：类的根路径下加载配置文件
-- FileSystemXmlApplicationContext：磁盘路径上加载配置文件
-- AnnotationConfigApplicationContext：使用注解配置容器对象
 
 ### Spring5新特性
 
