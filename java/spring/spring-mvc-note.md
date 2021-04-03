@@ -42,7 +42,7 @@ UserDao userDao = (UserDao) applicationContext.getBean("userDao");
     <url-pattern>/</url-pattern>
 </servlet-mapping>
 
-- ③spring-mvc.xml 配置
+- ③spring-mvc.xml 配置，xml或者注解开发MVC架构
 
 ## 组件解析
 
