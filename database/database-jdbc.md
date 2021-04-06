@@ -165,12 +165,6 @@ ResultSet rs = ptmt.executeQuery();
 
 ### rollback(); 回滚事务
 
-## ORM框架
-
-### Mybatis：TODO
-
-### Hibernate：TODO
-
 ## 
 
 ## 
