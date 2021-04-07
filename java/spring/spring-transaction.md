@@ -128,3 +128,5 @@
 
 	- ④xml开启事务的注解驱动<tx:annotation-driven />
 
+## 数据库事务
+
