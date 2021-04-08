@@ -155,23 +155,232 @@ mapper逐个注册SQL映射文件
 	  <property name="basePackage" value="com.atguigu.dao"></property>
 	  </bean>
 
-## 映射文件（mappers里注册的xml）
+## mapper的xml映射文件
 
-### 元素
+### 顶级元素
 
 - cache – 该命名空间的缓存配置。
 - cache-ref – 引用其它命名空间的缓存配置。
 - sql – 可被其它语句引用的可重用语句块。
+
+  <!--sql语句抽取-->
+  <sql id="selectUser">select * from user</sql>
+  
+  <select id="findByCondition" parameterType="user" resultType="user">
+      <include refid="selectUser"></include>
+      <where>
+          <if test="id!=0">
+              and id=#{id}
+          </if>
+          <if test="username!=null">
+              and username=#{username}
+          </if>
+          <if test="password!=null">
+              and password=#{password}
+          </if>
+      </where>
+  </select>
+
 - insert – 映射插入语句。
+
+  <insert id="insertAuthor">
+   insert into Author (id,username,password,email,bio)
+   values (#{id},#{username},#{password},#{email},#{bio})
+  </insert>
+
 - update – 映射更新语句。
+
+  <update id="updateAuthor">
+   update Author set
+    username = #{username},
+    password = #{password},
+    email = #{email},
+    bio = #{bio}
+   where id = #{id}
+  </update>
+
 - delete – 映射删除语句。
+
+  <delete id="deleteAuthor">
+   delete from Author where id = #{id}
+  </delete>
+
 - select – 映射查询语句。
+
+  <select
+   id="selectPerson"
+   parameterType="int"
+   parameterMap="deprecated"
+   resultType="hashmap"
+   resultMap="personResultMap"
+   flushCache="false"
+   useCache="true"
+   timeout="10000"
+   fetchSize="256"
+   statementType="PREPARED"
+   resultSetType="FORWARD_ONLY">
+
 - resultMap – 描述如何从数据库结果集中加载对象，是最复杂也是最强大的元素。
+
+### 属性
+
+- select、insert、update、delete公共属性
+
+	-   id必选
+
+		- 在命名空间中唯一的标识符，可以被用来引用这条语句
+
+	-   parameterType
+
+	  <insert id="insertUser" parameterType="User">
+	  	 insert into users (id, username, password)
+	  		 values (#{id}, #{username}, #{password})
+	  </insert>
+	  如果 User 类型的参数对象传递到了语句中，id、username 和 password 属性将会被查找，然后将它们的值传入预处理语句的参数中
+
+		- 将会传入这条语句的参数类的完全限定类名或别名
+		- 可选，可以通过 TypeHandler 推断出具体传入语句的参数，默认值为 unset。
+
+	- flushCache	
+
+		- 将其设置为 true，任何时候只要语句被调用，都会导致本地缓存和二级缓存都会被清空
+		- 默认值：true（对应插入、更新和删除语句）
+		- 默认值：false （select）
+
+	- timeout
+
+		- 这个设置是在抛出异常之前，驱动程序等待数据库返回请求结果的秒数。
+		- 默认值为 unset（依赖驱动）。
+
+	- statementType
+
+		- STATEMENT，PREPARED 或 CALLABLE 的一个。这会让 MyBatis 分别使用 Statement，PreparedStatement 或 CallableStatement，
+		- 默认值：PREPARED。
+
+- insert、update公共属性
+
+	- useGeneratedKeys
+
+		- 这会令 MyBatis 使用 JDBC 的 getGeneratedKeys 方法来取出由数据库内部生成的主键（比如：像 MySQL 和 SQL Server 这样的关系数据库管理系统的自动递增字段）
+		- 默认值：false。
+
+	- keyProperty
+
+		- 唯一标记一个属性，MyBatis 会通过 getGeneratedKeys 的返回值或者通过 insert 语句的 selectKey 子元素设置它的键值
+		- 默认：unset。如果希望得到多个生成的列，也可以是逗号分隔的属性名称列表。
+
+	- keyColumn
+
+		- 通过生成的键值设置表中的列名，这个设置仅在某些数据库（像 PostgreSQL）是必须的，当主键列不是表中的第一列的时候需要设置。如果希望得到多个生成的列，也可以是逗号分隔的属性名称列表。
+
+- select属性
+
+	-   useCache
+
+		- 将其设置为 true，将会导致本条语句的结果被二级缓存
+		- 默认值：对 select 元素为 true
+
+	-   fetchSize
+
+		- 这是尝试影响驱动程序每次批量返回的结果行数和这个设置值相等
+		- 默认值为 unset（依赖驱动）
+
+	-   resultSetType
+
+		- 这个设置仅对多结果集的情况适用，它将列出语句执行后返回的结果集并每个结果集给一个名称，名称是逗号分隔的。
+
+	-   resultType
+
+		- 从这条语句中返回的期望类型的类的完全限定名或别名
+		- 注意
+
+			- 如果是集合情形，那应该是集合可以包含的类型，而不能是集合本身
+			- 使用 resultType 或 resultMap，但不能同时使用
+
+	-   resultMap
+
+		- 外部 resultMap 的命名引用
+		- 注意：使用 resultMap 或 resultType，但不能同时使用
+
+### 主键的自动生成（insert）
+
+- 数据库支持自动生成主键
+
+	- 方法
+
+		- 可以设置 useGeneratedKeys=”true”，然后再把 keyProperty 设置到目标属性上就OK了
+
+	- 实例
+
+		- <insert id="insertAuthor" useGeneratedKeys="true"
+    keyProperty="id">
+  insert into Author (username, password, email, bio) values
+  <foreach item="item" collection="list" separator=",">
+    (#{item.username}, #{item.password}, #{item.email}, #{item.bio})
+  </foreach>
+</insert>
+
+- 数据库不支持自动生成主键
+
+	- 方法
+
+		- 在insert中使用selectKey语句
+		- <selectKey  keyProperty="id"  resultType="int"  order="BEFORE"  statementType="PREPARED">
+
+### 结果映射resultMap
+
+### 缓存cache
+
+- 要开启二级缓存,你需要在你的 SQL 映射文件中添加一行<cache/>
+- <cache/>效果如下
+
+	- 映射语句文件中的所有 select 语句将会被缓存。
+	- 映射语句文件中的所有 insert,update 和 delete 语句会刷新缓存。
+	- 缓存会使用 Least Recently Used(LRU,最近最少使用的)算法来收回。
+	- 根据时间表(比如 no Flush Interval,没有刷新间隔), 缓存不会以任何时间顺序 来刷新。
+	- 缓存会存储列表集合或对象(无论查询方法返回什么)的 1024 个引用。
+	- 缓存会被视为是 read/write(可读/可写)的缓存,意味着对象检索不是共享的,而 且可以安全地被调用者修改,而不干扰其他调用者或线程所做的潜在修改。
+
+- 属性
+
+	- <cache
+  eviction="FIFO"
+  flushInterval="60000"
+  size="512"
+  readOnly="true"/>
+	- 以上配置创建了一个 FIFO 缓存,并每隔 60 秒刷新,存数结果对象或列表的 512 个引用,而且返回的对象被认为是只读的
+
+- 收回策略
+
+	- LRU – 最近最少使用的:移除最长时间不被使用的对象。
+	- FIFO – 先进先出:按对象进入缓存的顺序来移除它们。
+	- SOFT – 软引用:移除基于垃圾回收器状态和软引用规则的对象。
+	- WEAK – 弱引用:更积极地移除基于垃圾收集器状态和弱引用规则的对象
+	- 默认的是 LRU
 
 ### 参数
 
-- #{key}：预编译到SQL中。安全。是把#{}替换为?号，调用PreparedStatement的set方法来赋值；
-- ${key}：拼接到SQL中。有SQL注入问题。是把${}替换成变量的值。
+- #{}和${}的区别
+
+	- #{key}  获取参数的值，预编译到SQL中.安全
+
+	  PreparedStatement ps = conn.prepareStatement(sql);
+	  ps.setInt(1,id);
+	  解析后执行的SQL：Select * from emp where name = ？
+
+	- ${key}  获取参数的值，拼接到SQL中.有SQL注入问题
+字符串替换使用：ORDER BY ${columnName}
+
+	  Statement st = conn.createStatement();
+	  ResultSet rs = st.executeQuery(sql);
+	  解析后执行的SQL：Select * from emp where name =Smith
+
+- 特殊类型参数
+
+  #{property,javaType=int,jdbcType=NUMERIC}
+
+	- 可能为空的列名指定 jdbcType
+	- javaType、jdbcType、mode、numericScale、resultMap、typeHandler、jdbcTypeName
 
 ### 动态SQL
 
@@ -243,6 +452,27 @@ mapper逐个注册SQL映射文件
 - 这种机制MyBatis自身不会去实现事务管理，而是让程序的容器如（JBOSS，Weblogic）来实现对事务的管理
 
 ## Mybatis 缓存机制
+
+### 为了提高数据利用率和减小服务器和数据库的压力，MyBatis 会对于一些查询提供会话级别的数据缓存，会将对某一次查询，放置到SqlSession 中，在允许的时间间隔内，对于完全相同的查询，MyBatis 会直接将缓存结果返回给用户，而不用再到数据库中查找。
+
+### 一级缓存
+
+- SqlSession级别的缓存，也称为本地缓存
+- 默认只有一级缓存开启
+- 同一次会话期间只要查询过的数据都会保存在当前SqlSession的一个Map中
+- 失效的四种情况
+
+	- 1、不同的SqlSession对应不同的一级缓存
+	- 2、同一个SqlSession但是查询条件不同
+	- 3、同一个SqlSession两次查询期间执行了任何一次增删改操作
+	- 4、同一个SqlSession两次查询期间手动清空了缓存
+
+### 二级缓存
+
+- 全局作用域缓存
+- 手动开启和配置
+- 通过实现Cache接口来自定义二级缓存,要求POJO实现Serializable接口
+- 二级缓存在 SqlSession 关闭或提交之后才会生效
 
 ## Spring 整合 Mybatis
 
