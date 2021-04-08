@@ -183,17 +183,71 @@ JDBC事务处理
 
 [orm-mybatis](database/orm/database-orm.xmind)
 
+[orm-mybatis.md](database/orm/orm-mybatis.md)
+
 ```
 简介
 全局配置文件 mybatis-config.xml
 映射文件 XXMapper.xml
+	cache – 该命名空间的缓存配置。
+    cache-ref – 引用其它命名空间的缓存配置。
+    sql – 可被其它语句引用的可重用语句块。
+    insert – 映射插入语句。
+    update – 映射更新语句。
+    delete – 映射删除语句。
+    select – 映射查询语句。
+    resultMap – 描述如何从数据库结果集中加载对象，是最复杂也是最强大的元素。
+    主键的自动生成（insert）
+	缓存cache
+	#{}和${}的区别
+	动态SQL
 Mybatis 执行过程
+	加载配置并初始化： Configuration对象
+	接收调用请求 
+	SQL解析与执行
+	结果映射
+	释放连接资源，返回处理结果
 层次结构与架构
+	图
 Mybatis事务管理（不常用）：常用Spring事务
 Mybatis缓存机制
+	一级缓存
+	二级缓存
 Spring 整合Mybatis
 逆向工程：MyBatis Generator
 Mybatis优缺点
+	优点
+		1. 易于上手和掌握。
+        2. sql写在xml里，便于统一管理和优化。
+        3. 解除sql与程序代码的耦合。
+        4. 提供映射标签，支持对象与数据库的orm字段关系映射
+        5. 提供对象关系映射标签，支持对象关系组建维护
+        6. 提供xml标签，支持编写动态sql。
+	缺点
+		1. sql工作量很大，尤其是字段多、关联表多时，更是如此。
+        2. sql依赖于数据库，导致数据库移植性差。
+        3. 由于xml里标签id必须唯一，导致DAO中方法不支持方法重载。
+        4. 字段映射标签和对象关系映射标签仅仅是对映射关系的描述，具体实现仍然依赖于sql。（比如配置了一对多Collection标签，如果sql里没有join子表或查询子表的话，查询后返回的对象是不具备对象关系的，即Collection的对象为null）
+        5. DAO层过于简单，对象组装的工作量较大。
+        6.  不支持级联更新、级联删除。
+        7. 编写动态sql时,不方便调试，尤其逻辑复杂时。
+        8 提供的写动态sql的xml标签功能简单（连struts都比不上），编写动态sql仍然受限，且可读性低。
+        9. 若不查询主键字段，容易造成查询出的对象有“覆盖”现象。
+        10. 参数的数据类型支持不完善。（如参数为Date类型时，容易报没有get、set方法，需在参数上加@param）
+        11. 多参数时，使用不方便，功能不够强大。（目前支持的方法有map、对象、注解@param以及默认采用012索引位的方式）
+        12. 缓存使用不当，容易产生脏数据。
+```
+
+[orm-mybatis-resultmap.md](database/orm/orm-mybatis-resultmap.md)
+
+```
+select子元素：resultType
+	列名匹配：幕后创建ResultMap
+	列名不匹配
+		可以在列名上使用 select 字句的别名来匹配标签
+高级结果映射：元素 resultMap
+	使用
+	resultMap子元素
 ```
 
 ### TODO	ORM-Hibernate
@@ -203,8 +257,6 @@ Mybatis优缺点
 ```
 
 ```
-
-
 
 ## Spring
 ### Spring IOC
