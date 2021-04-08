@@ -8,6 +8,67 @@
 
 ### MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 Java 的 POJOs映射成数据库中的记录
 
+## Mybatis 开发步骤
+
+### 添加MyBatis的坐标
+
+### 编写数据库表的实体类 
+
+### 编写映射文件UserMapper.xml
+
+### 编写核心配置文件SqlMapConfig.xml
+
+### 手动调用，或者Spring管理
+
+- //加载核心配置文件
+InputStream resourceAsStream = 
+	Resources.getResourceAsStream("SqlMapConfig.xml");
+//获得sqlSession工厂对象
+SqlSessionFactory sqlSessionFactory = new            
+    SqlSessionFactoryBuilder().build(resourceAsStream);
+//获得sqlSession对象
+SqlSession sqlSession = sqlSessionFactory.openSession();
+//执行sql语句
+List<User> userList = sqlSession.selectList("userMapper.findAll");
+//结果分析
+System.out.println(userList);
+//释放资源
+sqlSession.close();
+- Spring创建SQLSessionFactoryBean，注入全局配置文件和注册mapper的xml
+
+## Mybatis 执行过程
+
+### 加载配置并初始化： Configuration对象
+
+- 加载配置文件mybatis-config.xml到MyBatis内部
+- 使用 org.apache.ibatis.session.Configuration对象作为一个所有配置信息的容器，Configuration对象的组织结构和XML配置文件的组织结构几乎完全一样，这样配置文件的信息就存到了Configuration这个类中了
+
+### 接收调用请求 
+
+- org.apache.ibatis.session.SqlSessionFactoryBuilder
+
+	- InputStream resourceAsStream = Resources.getResourceAsStream("mybatis-config.xml");
+	- SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+
+- org.apache.ibatis.session.SqlSessionFactory
+
+	- SqlSession sqlSession = sqlSessionFactory.openSession();
+
+- org.apache.ibatis.session.SqlSession表示和数据库交互的会话，完成必要数据库增删改查功能
+
+	- UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+	- List<User> all = mapper.findAll();
+
+### SQL解析与执行
+
+- 根据SQL的ID查找对应的MappedStatement对象。 
+- 根据传入参数对象解析MappedStatement对象，得到最终要执行的SQL和执行传入参数。 
+- 获取数据库连接，根据得到的最终SQL语句和执行传入参数到数据库执行，并得到执行结果。 
+
+### 结果映射
+
+### 释放连接资源，返回处理结果
+
 ## 全局配置文件：
 
 ### configuration（顶层）
@@ -388,39 +449,6 @@ mapper逐个注册SQL映射文件
 - choose (when, otherwise):分支选择；带了break的swtich-case如果带了id就用id查，如果带了lastName就用lastName查;只会进入其中一个
 - trim:字符串截取(where(封装查询条件), set(封装修改条件))
 - foreach 遍历集合
-
-## Mybatis 执行过程
-
-### 加载配置并初始化： Configuration对象
-
-- 加载配置文件mybatis-config.xml到MyBatis内部
-- 使用 org.apache.ibatis.session.Configuration对象作为一个所有配置信息的容器，Configuration对象的组织结构和XML配置文件的组织结构几乎完全一样，这样配置文件的信息就存到了Configuration这个类中了
-
-### 接收调用请求 
-
-- org.apache.ibatis.session.SqlSessionFactoryBuilder
-
-	- InputStream resourceAsStream = Resources.getResourceAsStream("mybatis-config.xml");
-	- SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
-
-- org.apache.ibatis.session.SqlSessionFactory
-
-	- SqlSession sqlSession = sqlSessionFactory.openSession();
-
-- org.apache.ibatis.session.SqlSession表示和数据库交互的会话，完成必要数据库增删改查功能
-
-	- UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-	- List<User> all = mapper.findAll();
-
-### SQL解析与执行
-
-- 根据SQL的ID查找对应的MappedStatement对象。 
-- 根据传入参数对象解析MappedStatement对象，得到最终要执行的SQL和执行传入参数。 
-- 获取数据库连接，根据得到的最终SQL语句和执行传入参数到数据库执行，并得到执行结果。 
-
-### 结果映射
-
-### 释放连接资源，返回处理结果
 
 ## 层次结构与架构
 

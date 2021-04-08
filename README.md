@@ -179,7 +179,7 @@ SQL操作和结果集
 JDBC事务处理
 ```
 
-### TODO	ORM-Mybatis
+### ORM-Mybatis
 
 [orm-mybatis](database/orm/database-orm.xmind)
 
@@ -187,6 +187,19 @@ JDBC事务处理
 
 ```
 简介
+Mybatis 开发步骤
+	添加MyBatis的坐标
+    编写数据库表的实体类 
+    编写映射文件UserMapper.xml
+    编写核心配置文件SqlMapConfig.xml
+    手动调用，或者Spring管理
+	//加载核心配置文件
+Mybatis 执行过程
+	加载配置并初始化： Configuration对象
+	接收调用请求 
+	SQL解析与执行
+	结果映射
+	释放连接资源，返回处理结果
 全局配置文件 mybatis-config.xml
 映射文件 XXMapper.xml
 	cache – 该命名空间的缓存配置。
@@ -201,12 +214,6 @@ JDBC事务处理
 	缓存cache
 	#{}和${}的区别
 	动态SQL
-Mybatis 执行过程
-	加载配置并初始化： Configuration对象
-	接收调用请求 
-	SQL解析与执行
-	结果映射
-	释放连接资源，返回处理结果
 层次结构与架构
 	图
 Mybatis事务管理（不常用）：常用Spring事务
