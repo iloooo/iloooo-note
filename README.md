@@ -179,7 +179,7 @@ SQL操作和结果集
 JDBC事务处理
 ```
 
-### ORM-Mybatis
+### Mybatis
 
 [orm-mybatis](database/orm/database-orm.xmind)
 
@@ -257,7 +257,7 @@ select子元素：resultType
 	resultMap子元素
 ```
 
-### TODO	ORM-Hibernate
+### Hibernate
 
 [orm-hibernate](database/orm/database-orm.xmind)
 
@@ -315,6 +315,7 @@ AOP 实现的两种方式（基于AspectJ）
 TODO	SpringMVC
 Mybatis
 TODO	Hibernate
+TODO	Junit
 ```
 ### Spring 事务
 [Spring 事务](java/spring/spring-note.xmind)
