@@ -183,7 +183,7 @@ JDBC事务处理
 
 [orm-mybatis](database/orm/database-orm.xmind)
 
-[orm-mybatis.md](database/orm/orm-mybatis.md)
+[orm-mybatis.md](markdown/orm-mybatis.md)
 
 ```
 简介
@@ -245,7 +245,7 @@ Mybatis优缺点
         12. 缓存使用不当，容易产生脏数据。
 ```
 
-[orm-mybatis-resultmap.md](database/orm/orm-mybatis-resultmap.md)
+[orm-mybatis-resultmap.md](markdown/orm-mybatis-resultmap.md)
 
 ```
 select子元素：resultType
@@ -317,6 +317,37 @@ Mybatis
 TODO	Hibernate
 TODO	Junit
 ```
+### Spring 容器初始化总结
+
+[spring-init.md](markdown/spring-init.md)
+
+```
+创建IOC容器（ApplicationContext）
+	web
+	手动
+定义XML配置位置
+注解驱动
+```
+
+### Spring XML配置总结
+
+[Spring XML配置总结](java/spring/spring-note.xmind)
+
+```
+Spring整合
+```
+
+
+### TODO Spring 注解总结
+
+[Spring 相关注解总结](java/spring/spring-note.xmind)
+
+```
+Spring容器初始化总结
+TODO	Spring
+Spring MVC
+TODO	Spring 事务
+```
 ### Spring 事务
 [Spring 事务](java/spring/spring-note.xmind)
 
@@ -329,23 +360,6 @@ TODO	Junit
 		注解：使用 @Transactional 相当于：<tx:method>
 		注解：xml开启事务的注解驱动<tx:annotation-driven />
 ```
-### Spring XML配置总结
-[Spring XML配置总结](java/spring/spring-note.xmind)
-
-```
-Spring整合
-```
-### TODO Spring 相关注解总结
-
-[Spring 相关注解总结](java/spring/spring-note.xmind)
-
-```
-Spring容器初始化总结
-TODO	Spring
-Spring MVC
-TODO	Spring 事务
-```
-
 ### Spring MVC
 
 [spring-mvc-note.xmind](java/spring/spring-mvc-note.xmind)
