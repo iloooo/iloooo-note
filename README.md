@@ -388,3 +388,115 @@ Exception 异常处理机制
 TODO	文件上传
 ```
 
+## architecture 架构
+
+### monolithic-单体架构
+
+[monolithic-单体架构.xmind](architecture/monolithic-单体架构.xmind)
+
+```
+分析
+	大家都会进行分层
+	将软件拆分为各种模块，以便重用和管理代码
+	负载均衡器之后同时部署若干个相同的单体系统副本，以达到分摊流量压力的效果
+	规模小是优势，规模大是劣势
+		类比大公司和小公司拆分
+缺陷
+	拆分之后的隔离与自治能力上的欠缺
+	所有代码都运行在同一个进程空间之内，任何一部分代码出现了缺陷，过度消耗了进程空间内的资源，所造成的影响也是全局性的、难以隔离的。
+		譬如内存泄漏、线程爆炸、阻塞、死循环等问题，都将会影响整个程序，而不仅仅是影响某一个功能、模块本身的正常运作。
+		如果消耗的是某些更高层次的公共资源，譬如端口号或者数据库连接池泄漏，影响还将会波及整台机器，甚至是集群中其他单体副本的正常工作。
+	不利于维护
+		程序升级、修改缺陷往往需要制定专门的停机更新计划，做灰度发布、A/B测试也相对更复杂。
+```
+
+### distributed-system-分布式系统
+
+[distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
+
+
+
+### soa-webservice-面向服务
+
+[soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
+
+```
+起因和解决问题
+	解决单体架构的问题
+		允许程序出错
+		获得隔离、自治的能力
+		为了可以技术异构等目标
+	开发分布式程序也并不意味着一定要依靠微服务架构才能实现，人们曾经探索过几种服务拆分方法，将一个大的单体系统拆分为若干个更小的、不运行在同一个进程的独立服务
+优缺
+	可以实现多个异构大型系统之间的复杂集成交互，却很难作为一种具有广泛普适性的软件架构风格来推广
+Web Service
+RPC 远程服务调用
+SOAP
+基于REST风格构建的API-RESTful API
+```
+
+#### Web Service
+
+[soa-webservice.md](markdown/soa-webservice.md)
+
+```
+介绍
+开发规范
+	JAX-WS（JAX-RPC）
+	JAXM&SAAJ
+	JAX RS
+三要素
+	SOAP (简易对象访问协议)
+	WSDL (Web services 描述语言)
+	UDDI (通用描述、发现及整合)
+Apache CXF 开发步骤
+	SOAP服务端
+	SOAP客户端
+	RESTful客户端
+	RESTful服务端
+RESTful注解
+```
+
+#### SOAP和RESTful的实现对比总结
+
+[SOAP和RESTful的实现对比总结.md](markdown/SOAP和RESTful的实现对比总结.md)
+
+```
+介绍
+开发规范
+	JAX-WS（JAX-RPC）
+	JAXM&SAAJ
+	JAX RS
+三要素
+	SOAP (简易对象访问协议)
+	WSDL (Web services 描述语言)
+	UDDI (通用描述、发现及整合)
+Apache CXF 开发步骤
+	SOAP服务端
+	SOAP客户端
+	RESTful客户端
+	RESTful服务端
+RESTful注解
+```
+
+#### RPC 远程服务调用
+
+[soa-rpc.md
+
+[](markdown/soa-rpc.md)
+
+#### RESTful
+
+[soa-restful.md](markdown/soa-restful.md)
+
+```
+基于REST风格构建的API
+每种资源对应一个特定的URI
+操作（请求行）：DELETE http://api.qc.com/v1/friends  HTTP/1.1
+有点像数据库操作，增删改查
+```
+
+### microservices-微服务
+
+[microservices-微服务.xmind](architecture/microservices-微服务.xmind)
+
