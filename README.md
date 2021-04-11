@@ -462,28 +462,19 @@ RESTful注解
 [SOAP和RESTful的实现对比总结.md](markdown/SOAP和RESTful的实现对比总结.md)
 
 ```
-介绍
-开发规范
-	JAX-WS（JAX-RPC）
-	JAXM&SAAJ
-	JAX RS
-三要素
-	SOAP (简易对象访问协议)
-	WSDL (Web services 描述语言)
-	UDDI (通用描述、发现及整合)
-Apache CXF 开发步骤
-	SOAP服务端
-	SOAP客户端
-	RESTful客户端
-	RESTful服务端
-RESTful注解
+SOAP更像是本地调用接口和接口实现类的感觉
+RESTful更像是数据库，要定义实体类接收结果
+
+SOAP的服务接口前后端要一致，客户端类似注入服务这个接口，调用远端的实现类
+RESTful不用定义服务接口，不同URI对应访问服务接口实现的不同方法
+RESTful因为不用写服务接口，它必须要有结果实体类来接收服务
 ```
 
 #### RPC 远程服务调用
 
-[soa-rpc.md
+[soa-rpc.md](markdown/soa-rpc.md)
 
-[](markdown/soa-rpc.md)
+
 
 #### RESTful
 
