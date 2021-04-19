@@ -18,10 +18,33 @@
 
 ***
 
+&#x1F4CA;  代表图片
+
+&#x1F4C4;  代表xmind脑图
+
+&#x1F4BE;  代2表markdown笔记（脑图导出，用来备份、概览、比较差异等）
+
 ## Java
 
+### 基础
+
+&#x1F4C4;  [java-note.xmind](java/java-note.xmind)
+
+&#x1F4CA;  [Java基础脑图](1.pic/java-note.png)
+
+&#x1F4BE;  [java-note.md](0.markdown/java-note.md)
+
+```
+
+```
+
 ### 注解
-[annotation-note.xmind](java/annotation/annotation-note.xmind)
+
+&#x1F4C4;  [java-annotation-note.xmind](java/java-annotation-note.xmind)
+
+&#x1F4CA;  [Java注解脑图](1.pic/java-annotation.png)
+
+&#x1F4BE;  [java-annotation-note.md](0.markdown/java-annotation-note.md)
 
 ```
 定义注解
@@ -36,7 +59,13 @@
 
 ### 集合
 
-#### [collection-note.mmap](java/collection/collection-note.mmap)
+&#x1F4CA;  [集合继承实现关系图](1.pic/java-collection-diagram.png)
+
+&#x1F4C4;  [collection-note.xmind](java/collection/collection-note.xmind)
+
+&#x1F4CA;  [Java集合脑图](1.pic/java-collection.png)
+
+&#x1F4BE;  [java-collection.md](0.markdown/java-collection.md)
 
 ```
 List：有序、可重复
@@ -72,8 +101,11 @@ Map：key（无序的、不可重复的）、value（无序的、可重复的）
 
 #### HashMap各遍历方式分析
 
-[hashmap-iterate.mmap](java/collection/hashmap-iterate.mmap)
+&#x1F4C4;  [collection-hashmap-iterate.xmind](java/collection/collection-hashmap-iterate.xmind)
 
+&#x1F4CA;  [HashMap各遍历方式分析脑图](1.pic/java-collection-hashmap-iterate.png)
+
+&#x1F4BE;  [java-collection-hashmap-iterate.md](0.markdown/java-collection-hashmap-iterate.md)
 ```
 迭代器（Iterator）
 	 EntrySet 性能最好、循环删除数据安全
@@ -85,7 +117,6 @@ Lambda 表达式（JDK 1.8+）
 Streams API（JDK 1.8+）
 	单线程
 	多线程
-
 性能分析、遍历时删除数据的安全性分析
 ```
 
@@ -96,9 +127,15 @@ Streams API（JDK 1.8+）
 
 ### JaveEE
 
-#### [javaweb.xmind](java/javaee/javaweb.xmind)
+&#x1F4C4;  [javaee.xmind](web/javaee.xmind)
+
+&#x1F4BE;  [web-javaee.md](0.markdown/web-javaee.md)
 
 #### Servlet
+
+&#x1F4CA;  [Servlet脑图](1.pic/web-servlet.png)
+
+&#x1F4BE;  [web-servlet.md](0.markdown/web-servlet.md)
 
 ```
 ServletContext
@@ -109,6 +146,10 @@ request域对象：Attribute 范围和操作
 
 #### Filter
 
+&#x1F4CA;  [Filter脑图](1.pic/web-servlet.png)
+
+&#x1F4BE;  [web-filter.md](0.markdown/web-filter.md)
+
 ```
 概念、作用、使用（注解、XML）
     路径的选项
@@ -118,6 +159,10 @@ Servlet Filter
 
 #### Listener
 
+&#x1F4CA;  [Listener脑图](1.pic/web-listener.png)
+
+&#x1F4BE;  [web-listener.md](0.markdown/web-listener.md)
+
 ```
 事件监听机制概念、作用
 ServletContextListener 注解和XML方式
@@ -126,7 +171,10 @@ ServletContextListener 注解和XML方式
 #### 会话技术
 
 - [ ] TODO	Cookie
+
 - [ ] TODO	Session
+
+&#x1F4BE;  [web-cookie-session.md](0.markdown/web-cookie-session.md)
 
 ```
 概念、功能
@@ -141,7 +189,11 @@ ServletContextListener 注解和XML方式
 
 ### 数据库事务
 
-[database-transaction.xmind](database/database-transaction.xmind)
+&#x1F4C4;  [database-transaction.xmind](database/database-transaction.xmind)
+
+&#x1F4CA;  [数据库事务脑图](1.pic/database-transaction.png)
+
+&#x1F4BE;  [database-transaction.md](0.markdown/database-transaction.md)
 
 - [ ] TODO	oracle/redis事务
 
@@ -166,7 +218,11 @@ Mybatis事务管理
 
 ### JDBC
 
-[database-jdbc.xmind](database/database-jdbc.xmind)
+&#x1F4C4;  [database-jdbc.xmind](database/database-jdbc.xmind)
+
+&#x1F4CA;  [JDBC脑图](1.pic/database-jdbc.png)
+
+&#x1F4BE;  [database-jdbc.md](0.markdown/database-jdbc.md)
 
 - [ ] TODO	Resultset详解（数据类型对应）
 
@@ -183,9 +239,11 @@ JDBC事务处理
 
 ### Mybatis
 
-[orm-mybatis](database/orm/database-orm.xmind)
+&#x1F4C4;  [database-orm](database/orm/database-orm.xmind)
 
-[orm-mybatis.md](markdown/orm-mybatis.md)
+&#x1F4CA;  [Mybatis脑图](1.pic/database-mybatis.png)
+
+&#x1F4BE;  [database-orm-mybatis.md](0.markdown/database-orm-mybatis.md)
 
 ```
 简介
@@ -247,7 +305,9 @@ Mybatis优缺点
         12. 缓存使用不当，容易产生脏数据。
 ```
 
-[orm-mybatis-resultmap.md](markdown/orm-mybatis-resultmap.md)
+&#x1F4CA;  [Mybatis结果映射脑图](1.pic/database-mybatis-resultmap.png)
+
+&#x1F4BE;  [database-orm-mybatis-resultmap.md](0.markdown/database-orm-mybatis-resultmap.md)
 
 ```
 select子元素：resultType
@@ -261,9 +321,11 @@ select子元素：resultType
 
 ### Hibernate
 
-#### [orm-hibernate](database/orm/database-orm.xmind)
+&#x1F4C4;  [orm-hibernate](database/orm/database-orm.xmind)
 
-[database-orm-hibernate.md](0.markdown/database-orm-hibernate.md)
+&#x1F4CA;  [Hibernate脑图](1.pic/database-hibernate.png)
+
+&#x1F4BE;  [database-orm-hibernate.md](0.markdown/database-orm-hibernate.md)
 
 ```
 Hibernate 开发步骤
@@ -275,7 +337,12 @@ Hibernate 检索策略、方式
 Hibernate 调用存储过程
 ```
 
-#### [映射配置文件*.hbm.xml](0.markdown/database-orm-hibernate-hbm.xml.md)
+#### 映射配置文件*.hbm.xml
+&#x1F4C4;  [orm-hibernate](database/orm/database-orm.xmind)
+
+&#x1F4CA;  [Hibernate映射配置文件*.hbm.xml脑图](1.pic/database-hibernate-hbmxml.png)
+
+&#x1F4BE;  [database-orm-hibernate-hbm.xml.md](0.markdown/database-orm-hibernate-hbm.xml.md)
 
 ```
 hibernate-mapping
@@ -286,7 +353,12 @@ component
 映射关联关系
 ```
 
-#### [Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 ](0.markdown/database-orm-hibernate-类型之间对应关系.md)
+#### Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
+&#x1F4C4;  [Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 ](0.markdown/database-orm-hibernate-类型之间对应关系.md)
+
+&#x1F4CA;  [Hibernate-映射关系对应脑图](1.pic/database-hibernate-映射关系对应.png)
+
+&#x1F4BE;  [database-orm-hibernate-类型之间对应关系.md](0.markdown/database-orm-hibernate-类型之间对应关系.md)
 
 ```
 Java时间和日期类型的 Hibernate 映射
@@ -296,7 +368,11 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 
 ## Spring
 ### Spring IOC
-[Spring IOC](java/spring/spring-note.xmind)
+&#x1F4C4;  [Spring IOC](spring/spring-note.xmind)
+
+&#x1F4CA;  [Spring IOC 脑图](1.pic/spring-ioc.png)
+
+&#x1F4BE;  [spring-ioc.md](0.markdown/spring-ioc.md)
 
 ```
 IOC解决问题
@@ -313,7 +389,11 @@ TODO	Spring5新特性
 实际应用
 ```
 ### Spring AOP
-[Spring AOP](java/spring/spring-note.xmind)
+&#x1F4C4;  [Spring AOP](spring/spring-note.xmind)
+
+&#x1F4CA;  [spring AOP 脑图](1.pic/spring-aop.png)
+
+&#x1F4BE;  [spring-aop.md](0.markdown/spring-aop.md)
 
 ```
 AOP解决的问题
@@ -337,7 +417,11 @@ AOP 实现的两种方式（基于AspectJ）
 	注解
 ```
 ### Spring 整合总结
-[Spring 整合总结](java/spring/spring-note.xmind)
+&#x1F4C4;  [Spring 整合总结](spring/spring-note.xmind)
+
+&#x1F4CA;  [Spring 整合脑图](1.pic/spring-integration.png)
+
+&#x1F4BE;  [spring-integration.md](0.markdown/spring-integration.md)
 
 ```
 数据源DataSource
@@ -348,7 +432,11 @@ TODO	Junit
 ```
 ### Spring 容器初始化总结
 
-[spring-init.md](markdown/spring-init.md)
+&#x1F4C4;  [Spring 容器初始化总结](spring/spring-note.xmind)
+
+&#x1F4CA;  [Spring 容器初始化总结脑图](1.pic/spring-init.png)
+
+&#x1F4BE;  [spring-init.md](0.markdown/spring-init.md)
 
 ```
 创建IOC容器（ApplicationContext）
@@ -360,7 +448,11 @@ TODO	Junit
 
 ### Spring XML配置总结
 
-[Spring XML配置总结](java/spring/spring-note.xmind)
+&#x1F4C4;  [Spring XML配置总结](spring/spring-note.xmind)
+
+&#x1F4CA;  [TODO](1.pic/TODO.png)
+
+&#x1F4BE;  [spring-xml.md](0.markdown/spring-xml.md)
 
 ```
 Spring整合
@@ -369,7 +461,11 @@ Spring整合
 
 ### TODO Spring 注解总结
 
-[Spring 相关注解总结](java/spring/spring-note.xmind)
+&#x1F4C4;  [Spring 相关注解总结](spring/spring-note.xmind)
+
+&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-注解总结.png)
+
+&#x1F4BE;  [spring-annotation.md](0.markdown/spring-annotation.md)
 
 ```
 Spring容器初始化总结
@@ -378,7 +474,11 @@ Spring MVC
 TODO	Spring 事务
 ```
 ### Spring 事务
-[Spring 事务](java/spring/spring-note.xmind)
+&#x1F4C4;  [Spring 事务](spring/spring-note.xmind)
+
+&#x1F4CA;  [Spring 事务脑图](1.pic/spring-transaction.png)
+
+&#x1F4BE;  [spring-transaction](0.markdown/spring-transaction.md)
 
 ```
 编程式事务管理
@@ -391,7 +491,11 @@ TODO	Spring 事务
 ```
 ### Spring MVC
 
-[spring-mvc-note.xmind](java/spring/spring-mvc-note.xmind)
+&#x1F4C4;  [spring-mvc-note.xmind](spring/spring-mvc-note.xmind)
+
+&#x1F4CA;  [Spring MVC脑图](1.pic/spring-mvc.png)
+
+&#x1F4BE;  [spring-mvc-note.md](0.markdown/spring-mvc-note.md)
 
 ```
 解决的问题
@@ -421,7 +525,11 @@ TODO	文件上传
 
 ### monolithic-单体架构
 
-[monolithic-单体架构.xmind](architecture/monolithic-单体架构.xmind)
+&#x1F4C4;  [monolithic-单体架构.xmind](architecture/monolithic-单体架构.xmind)
+
+&#x1F4CA;  [大型单体架构-Monolithic脑图](1.pic/arch-monolithic-大型单体架构.png)
+
+&#x1F4BE;  [arch-monolithic-大型单体架构.md](0.markdown/arch-monolithic-大型单体架构.md)
 
 ```
 分析
@@ -439,15 +547,25 @@ TODO	文件上传
 		程序升级、修改缺陷往往需要制定专门的停机更新计划，做灰度发布、A/B测试也相对更复杂。
 ```
 
-### distributed-system-分布式系统
+### TODO distributed-分布式系统
 
-[distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
+&#x1F4C4;  [distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
 
+&#x1F4CA;  [TODO脑图](1.pic/TODO.png)
 
+&#x1F4BE;  [arch-distributed-分布式系统.md](0.markdown/arch-distributed-分布式系统.md)
+
+```
+
+```
 
 ### soa-webservice-面向服务
 
-[soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
+&#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
+
+&#x1F4CA;  [SOA面向服务脑图](1.pic/arch-soa面向服务架构.png)
+
+&#x1F4BE;  [arch-soa面向服务架构.md](0.markdown/arch-soa面向服务架构.md)
 
 ```
 起因和解决问题
@@ -466,7 +584,11 @@ SOAP
 
 #### Web Service
 
-[soa-webservice.md](markdown/soa-webservice.md)
+&#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
+
+&#x1F4CA;  [Web Service脑图](1.pic/arch-soa-webservice.png)
+
+&#x1F4BE;  [arch-soa-webservice.md](0.markdown/arch-soa-webservice.md)
 
 ```
 介绍
@@ -488,7 +610,11 @@ RESTful注解
 
 #### SOAP和RESTful的实现对比总结
 
-[SOAP和RESTful的实现对比总结.md](markdown/SOAP和RESTful的实现对比总结.md)
+&#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
+
+&#x1F4CA;  [SOAP和RESTful的实现对比总结脑图](1.pic/arch-soa-SOAP和RESTful的实现对比总结.png)
+
+&#x1F4BE;  [arch-soa-SOAP和RESTful的实现对比总结.md](0.markdown/arch-soa-SOAP和RESTful的实现对比总结.md)
 
 ```
 SOAP更像是本地调用接口和接口实现类的感觉
@@ -499,15 +625,23 @@ RESTful不用定义服务接口，不同URI对应访问服务接口实现的不�
 RESTful因为不用写服务接口，它必须要有结果实体类来接收服务
 ```
 
-#### RPC 远程服务调用
+#### TODO RPC 远程服务调用
 
-[soa-rpc.md](markdown/soa-rpc.md)
+&#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
+&#x1F4BE;  [arch-soa-rpc.md](0.markdown/arch-soa-rpc.md)
 
+```
+
+```
 
 #### RESTful
 
-[soa-restful.md](markdown/soa-restful.md)
+&#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
+
+&#x1F4CA;  [RESTful脑图](1.pic/arch-soa-restful.png)
+
+&#x1F4BE;  [arch-soa-restful.md](0.markdown/arch-soa-restful.md)
 
 ```
 基于REST风格构建的API
@@ -518,5 +652,13 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 
 ### microservices-微服务
 
-[microservices-微服务.xmind](architecture/microservices-微服务.xmind)
+&#x1F4C4;  [microservices-微服务.xmind](architecture/microservices-微服务.xmind)
+
+&#x1F4CA;  [微服务脑图](1.pic/arch-microservices微服务.png)
+
+&#x1F4BE;  [arch-microservices微服务.md](0.markdown/arch-microservices微服务.md)
+
+```
+
+```
 
