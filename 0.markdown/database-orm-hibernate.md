@@ -273,6 +273,7 @@ Configuration cfg = new Configuration().configure(file);
 
 ### 一级缓存（Session缓存）
 
+- 它是属于事务范围的缓存。由 hibernate 管理
 - API
 
 	- session.flush()
@@ -290,6 +291,29 @@ Configuration cfg = new Configuration().configure(file);
 	- 显式调用 Session 的 flush() 方法
 	- 调用 Transaction 的 commit（）方法的时, 该方法先 flush，再commit
 	- 执行一些查询(HQL, Criteria)操作，如果缓存中持久化对象的属性已经发生了变化，会先 flush 缓存，以保证查询结果能够反映持久化对象的最新状态
+
+### 二级缓存（SessionFactory缓存）
+
+- 属于进程范围的缓存
+- 内置缓存
+
+	- Hibernate 自带的, 不可卸载
+	- 通常在 Hibernate 的初始化阶段, Hibernate 会把映射元数据和预定义的 SQL 语句放到 SessionFactory 的缓存中, 映射元数据是映射文件中数据（.hbm.xml 文件中的数据）的复制. 该内置缓存是只读的. 
+
+- 外置缓存(二级缓存)
+
+	- 一个可配置的缓存插件
+	- 在默认情况下, SessionFactory 不会启用这个缓存插件. 外置缓存中的数据是数据库数据的复制, 外置缓存的物理介质可以是内存或硬盘
+	- 适合放入二级缓存中的数据
+
+		- 很少被修改
+		- 不是很重要的数据, 允许出现偶尔的并发问题
+
+	- 不适合放入二级缓存中的数据
+
+		- 经常被修改
+		- 财务数据, 绝对不允许出现并发问题
+		- 与其他应用程序共享的数据
 
 ## Hibernate 事务
 
@@ -316,11 +340,13 @@ hibernate.connection.isolation
 	- Oracle
 	- MySQL
 
-## Hibernate 调用存储过程
+## Hibernate 检索策略、方式
 
-## 数据库事务
+## Hibernate 调用存储过程
 
 ## 
 
 ## 用操作对象的思想去思考问题
+
+## 数据库事务
 

@@ -14,7 +14,7 @@
 
 我认为很多知识的学习不是一蹴而就。就像一门成熟的技术，也是伴随着版本的不断迭代，解决错误也会推陈出新。随着认识的深入和平时的实践，我们会对知识有新的理解感悟，会发现之前错误的认识。知识的总结是一个迭代的过程，记录好每次迭代的认识也是一项重要的工作。世上难有完美，一次次的增删改是我追寻完美的路程。
 
-# 知识大纲
+# 知识大纲：
 
 ***
 
@@ -23,6 +23,7 @@
 ### 注解
 [annotation-note.xmind](java/annotation/annotation-note.xmind)
 
+```
 定义注解
 	元注解:修饰定义注解
 使用注解
@@ -31,6 +32,7 @@
 	注意注解的参数，使用时显式赋值或者使用default值
 解析注解：反射（注解完成特殊操作的核心）
 	必须是@Retention为RUNTIME的才可以代码运行时通过反射解析
+```
 
 ### 集合
 
@@ -90,7 +92,7 @@ Streams API（JDK 1.8+）
 
 ***
 
-## JavaWeb
+## Web
 
 ### JaveEE
 
@@ -259,10 +261,37 @@ select子元素：resultType
 
 ### Hibernate
 
-[orm-hibernate](database/orm/database-orm.xmind)
+#### [orm-hibernate](database/orm/database-orm.xmind)
+
+[database-orm-hibernate.md](0.markdown/database-orm-hibernate.md)
 
 ```
+Hibernate 开发步骤
+Hibernate 执行过程
+核心配置文件hibernate.cfg.xml
+Hibernate 缓存
+Hibernate 事务
+Hibernate 检索策略、方式
+Hibernate 调用存储过程
+```
 
+#### [映射配置文件*.hbm.xml](0.markdown/database-orm-hibernate-hbm.xml.md)
+
+```
+hibernate-mapping
+class
+id
+property
+component
+映射关联关系
+```
+
+#### [Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 ](0.markdown/database-orm-hibernate-类型之间对应关系.md)
+
+```
+Java时间和日期类型的 Hibernate 映射
+Java大对象类型的 Hiberante 映射
+Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 
 ```
 
 ## Spring
