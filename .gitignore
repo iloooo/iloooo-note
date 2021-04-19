@@ -2,3 +2,6 @@
 Thumbs.db
 *.lnk
 *.url
+database/orm/Hibernate
+database/orm/Mybatis
+database/orm/MyBatisPlus
