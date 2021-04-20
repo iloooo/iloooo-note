@@ -5,6 +5,7 @@ Thumbs.db
 database/orm/Hibernate
 database/orm/Mybatis
 database/orm/MyBatisPlus
+databse/mysql
 spring/spring-boot
 spring/spring-mvc
 spring/spring
