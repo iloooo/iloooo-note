@@ -37,6 +37,7 @@
 
 - 1.设置状态码为302response.setStatus(302);
 - 2.设置响应头location response.setHeader("location","/day15/responseDemo2");
+- response.sendRedirect("/day15/responseDemo2")
 
 ## Bak-Home
 
