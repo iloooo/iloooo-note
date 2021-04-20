@@ -22,7 +22,7 @@
 
 &#x1F4C4;  代表xmind脑图
 
-&#x1F4BE;  代2表markdown笔记（脑图导出，用来备份、概览、比较差异等）
+&#x1F4BE;  代表markdown笔记（脑图导出，用来备份、概览、比较差异等）
 
 ## Java
 
@@ -35,7 +35,55 @@
 &#x1F4BE;  [java-note.md](0.markdown/java-note.md)
 
 ```
+Java核心
+	Java跨平台原理
+	面向对象
+标识符和命名规范
+	标识符规则
+	命名规范
+运算符
+	自增自减
+	算法+赋值运算符
+	==和 equals 的区别
+	逻辑与或、短路与或：区别在于短路不符合条件后，后面表达式不执行
+	运算符优先级
+注释
+流程控制
+数据类型
+	基本数据类型
+	基本数据类型默认值
+	包装类：装箱拆箱
+	引用数据类型
+	基本数据类型的转换
+		自动类型转换
+变量
+常量
+```
 
+### 关键字
+
+&#x1F4C4;  [java-note.xmind](java/java-note.xmind)
+
+&#x1F4CA;  [Java关键字脑图](1.pic/java-关键字.png)
+
+&#x1F4BE;  [java-关键字.md](0.markdown/java-关键字.md)
+
+```
+break、continue、return区别
+final修饰类、方法、成员变量、局部变量
+static 注意，修饰成员变量、方法、代码块、内部类
+```
+
+### 类和类的成员
+
+&#x1F4C4;  [java-note.xmind](java/java-note.xmind)
+
+&#x1F4CA;  [类和类的成员.脑图](1.pic/java-类和类的成员.png)
+
+&#x1F4BE;  [java-类和类的成员.md](0.markdown/java-类和类的成员.md)
+
+```
+类成员的执行和初始化顺序
 ```
 
 ### 注解
@@ -120,6 +168,20 @@ Streams API（JDK 1.8+）
 性能分析、遍历时删除数据的安全性分析
 ```
 
+### 设计模式
+
+&#x1F4C4;  [java-pattern.xmind](java/pattern/java-pattern.xmind)
+
+&#x1F4CA;  [Java基础脑图](1.pic/java-note.png)
+
+&#x1F4BE;  [java-note.md](
+
+```
+
+```
+
+
+
 
 ***
 
@@ -182,9 +244,26 @@ ServletContextListener 注解和XML方式
 
 - [ ] TODO	JSP
 
+### JavaScript
+
+&#x1F4C4;  [javascript-note.xmind](web/javascript-note.xmind)
+
+&#x1F4CA;  [JavaScript脑图](1.pic/web-javascript-note.png)
+
+&#x1F4BE;  [web-javascript-note.md](0.markdown/web-javascript-note.md)
+
+```
+基本语法
+JavaScript事件
+JavaScript内置对象
+BOM对象
+DOM对象
+```
+
+TODO 拆分
+
+
 ****
-
-
 ## Database
 
 ### 数据库事务
@@ -214,6 +293,51 @@ ServletContextListener 注解和XML方式
 Spring事务管理
 JDBC事务管理	database-jdbc.xmind
 Mybatis事务管理	
+```
+
+### 存储过程
+
+&#x1F4C4;  [database-produce.xmind](database/database-produce.xmind)
+
+&#x1F4CA;  [存储过程脑图](1.pic/database-produce.png)
+
+&#x1F4BE;  [database-produce.md](0.markdown/database-produce.md)
+
+```
+Oracle存储过程
+	简介
+	*存储过程和存储函数的区别
+		- 都可以封装一定的业务逻辑并返回结果（相同）
+        - 存储函数中有返回值，且必须返回；而存储过程没有返回值，可以通过传出参数返回多个值。（返回值）
+        - 存储函数可以在 select 语句中直接使用，而存储过程不能。过程多数是被应用程序所调用（调用）
+        - 存储函数一般都是封装一个查询结果，而存储过程一般都封装一段事务代码（使用）
+	存储过程的语法结构
+	过程参数
+	示例
+	调用（PL/SQL、JDBC）
+```
+
+### Oracle数据库
+
+&#x1F4C4;  [database-note.xmind](database/database-note.xmind)
+
+&#x1F4CA;  [Oracle数据库脑图](1.pic/database-oracle.png)
+
+&#x1F4BE;  [database-oracle.md](0.markdown/database-oracle.md)
+
+```
+视图
+索引
+序列
+同义词
+PL/SQL
+存储函数
+	简介
+	语法结构
+	示例
+	调用
+存储过程
+触发器
 ```
 
 ### JDBC
@@ -416,7 +540,10 @@ AOP 实现的两种方式（基于AspectJ）
 	XML
 	注解
 ```
+TODO 拆分
+
 ### Spring 整合总结
+
 &#x1F4C4;  [Spring 整合总结](spring/spring-note.xmind)
 
 &#x1F4CA;  [Spring 整合脑图](1.pic/spring-integration.png)
@@ -520,6 +647,16 @@ Interceptor 拦截器
 Exception 异常处理机制
 TODO	文件上传
 ```
+
+### Spring Boot
+
+&#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
+
+&#x1F4CA;  [Spring MVC脑图](1.pic/spring-mvc.png)
+
+&#x1F4BE;  [spring-mvc-note.md](
+
+
 
 ## architecture 架构
 
