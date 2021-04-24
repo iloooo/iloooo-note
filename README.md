@@ -710,7 +710,7 @@ TODO	文件上传
 		程序升级、修改缺陷往往需要制定专门的停机更新计划，做灰度发布、A/B测试也相对更复杂。
 ```
 
-### TODO distributed-分布式系统
+## TODO distributed-分布式系统
 
 &#x1F4C4;  [distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
 
@@ -722,7 +722,7 @@ TODO	文件上传
 
 ```
 
-### soa-webservice-面向服务
+## soa-webservice-面向服务
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -813,7 +813,7 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 有点像数据库操作，增删改查
 ```
 
-### microservices-微服务
+## microservices-微服务
 
 &#x1F4C4;  [microservices-微服务.xmind](architecture/microservices-微服务.xmind)
 
@@ -823,5 +823,20 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 
 ```
 
+```
+
+## Other 其他
+
+### 字符编码
+
+&#x1F4C4;  [字符编码.xmind](other/字符编码.xmind)
+
+&#x1F4CA;  [字符编码脑图](1.pic/other-字符编码.png)
+
+&#x1F4BE;  [other-字符编码.md](0.markdown/other-字符编码.md)
+
+```
+ASCII 字符集
+Unicode 字符集
 ```
 
