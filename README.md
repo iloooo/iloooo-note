@@ -172,9 +172,9 @@ Streams API（JDK 1.8+）
 
 &#x1F4C4;  [java-pattern.xmind](java/pattern/java-pattern.xmind)
 
-&#x1F4CA;  [Java基础脑图](1.pic/java-note.png)
+&#x1F4CA;  [Java设计模式脑图](1.pic/java-pattern.png)
 
-&#x1F4BE;  [java-note.md](
+&#x1F4BE;  [java-pattern.md](0.markdown/java-pattern)
 
 ```
 代理模式
@@ -192,11 +192,11 @@ Streams API（JDK 1.8+）
 
 ### Java8
 
-&#x1F4C4;  [java-pattern.xmind](java/pattern/java-pattern.xmind)
+&#x1F4C4;  [java8-note.xmind](java/java8/java8-note.xmind)
 
-&#x1F4CA;  [Java基础脑图](1.pic/java-note.png)
+&#x1F4CA;  [JDK8 脑图](1.pic/java-jdk8.png)
 
-&#x1F4BE;  [java-note.md](
+&#x1F4BE;  [java-jdk8.md](0.markdown/java-jdk8.md)
 
 ```
 新特性
@@ -205,10 +205,6 @@ Streams API（JDK 1.8+）
 	JVM配置问题
 	sun.* 包缺失
 ```
-
-
-
-
 
 
 
