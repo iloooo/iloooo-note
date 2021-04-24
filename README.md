@@ -180,6 +180,22 @@ Streams API（JDK 1.8+）
 
 ```
 
+### Java8
+
+&#x1F4C4;  [java-pattern.xmind](java/pattern/java-pattern.xmind)
+
+&#x1F4CA;  [Java基础脑图](1.pic/java-note.png)
+
+&#x1F4BE;  [java-note.md](
+
+```
+新特性
+升级引来的问题
+	依赖组件的兼容性问题
+	JVM配置问题
+	sun.* 包缺失
+```
+
 
 
 
