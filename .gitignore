@@ -5,12 +5,12 @@ Thumbs.db
 /database/orm/Hibernate
 /database/orm/Mybatis
 /database/orm/MyBatisPlus
+/database/redis
 /database/mysql
 /spring/spring-boot
 /spring/spring-mvc
 /spring/spring
 /spring/spring-transaction
+/spring/spring-cloud
 /database/oracle
 /web/javascript
-/spring/spring-cloud
-/database/redis
