@@ -250,6 +250,20 @@ Constructor
 Lombok原理
 ```
 
+### MapStruct
+
+&#x1F4C4;  [java-mapstruct.xmind](java/java-mapstruct.xmind)
+
+&#x1F4CA;  [MapStruct 脑图](1.pic/java-mapstruct.png)
+
+&#x1F4BE;  [java-mapstruct.md](0.markdown/java-mapstruct.md)
+
+```
+Java映射框架
+version
+注解
+```
+
 
 
 
@@ -433,9 +447,9 @@ JDBC事务处理
 
 ### Mybatis
 
-&#x1F4C4;  [database-orm](database/orm/database-orm.xmind)
+&#x1F4C4;  [database-orm.xmind](database/orm/database-orm.xmind)
 
-&#x1F4CA;  [Mybatis脑图](1.pic/database-mybatis.png)
+&#x1F4CA;  [Mybatis脑图](1.pic/database-orm-mybatis.png)
 
 &#x1F4BE;  [database-orm-mybatis.md](0.markdown/database-orm-mybatis.md)
 
@@ -499,7 +513,7 @@ Mybatis优缺点
         12. 缓存使用不当，容易产生脏数据。
 ```
 
-&#x1F4CA;  [Mybatis结果映射脑图](1.pic/database-mybatis-resultmap.png)
+&#x1F4CA;  [Mybatis结果映射脑图](1.pic/database-orm-mybatis-resultmap.png)
 
 &#x1F4BE;  [database-orm-mybatis-resultmap.md](0.markdown/database-orm-mybatis-resultmap.md)
 
@@ -513,11 +527,25 @@ select子元素：resultType
 	resultMap子元素
 ```
 
+### MyBatisPlus
+
+&#x1F4C4;  [database-orm-mybatisplus.xmind](database/orm/database-orm-mybatisplus.xmind)
+
+&#x1F4CA;  [MyBatisPlus 脑图](1.pic/database-orm-mybatisplus.png)
+
+&#x1F4BE;  [database-orm-mybatisplus.md](0.markdown/database-orm-mybatisplus.md)
+
+```
+简介
+```
+
+
+
 ### Hibernate
 
 &#x1F4C4;  [orm-hibernate](database/orm/database-orm.xmind)
 
-&#x1F4CA;  [Hibernate脑图](1.pic/database-hibernate.png)
+&#x1F4CA;  [Hibernate脑图](1.pic/database-orm-hibernate.png)
 
 &#x1F4BE;  [database-orm-hibernate.md](0.markdown/database-orm-hibernate.md)
 
@@ -534,7 +562,7 @@ Hibernate 调用存储过程
 #### 映射配置文件*.hbm.xml
 &#x1F4C4;  [orm-hibernate](database/orm/database-orm.xmind)
 
-&#x1F4CA;  [Hibernate映射配置文件*.hbm.xml脑图](1.pic/database-hibernate-hbmxml.png)
+&#x1F4CA;  [Hibernate映射配置文件*.hbm.xml脑图](1.pic/database-orm-hibernate-hbm.xml.png)
 
 &#x1F4BE;  [database-orm-hibernate-hbm.xml.md](0.markdown/database-orm-hibernate-hbm.xml.md)
 
@@ -550,7 +578,7 @@ component
 #### Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 &#x1F4C4;  [Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 ](0.markdown/database-orm-hibernate-类型之间对应关系.md)
 
-&#x1F4CA;  [Hibernate-映射关系对应脑图](1.pic/database-hibernate-映射关系对应.png)
+&#x1F4CA;  [Hibernate-映射关系对应脑图](1.pic/database-orm-hibernate-类型之间对应关系.png)
 
 &#x1F4BE;  [database-orm-hibernate-类型之间对应关系.md](0.markdown/database-orm-hibernate-类型之间对应关系.md)
 
