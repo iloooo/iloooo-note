@@ -206,6 +206,50 @@ Streams API（JDK 1.8+）
 	sun.* 包缺失
 ```
 
+### Lombok
+
+&#x1F4C4;  [java-lombok.xmind](java/java-lombok.xmind)
+
+&#x1F4CA;  [Lombok 脑图](1.pic/java-lombok.png)
+
+&#x1F4BE;  [java-lombok.md](0.markdown/java-lombok.md)
+
+```
+https://projectlombok.org/
+https://github.com/projectlombok/lombok/releases
+https://repo1.maven.org/maven2/org/projectlombok/lombok/
+val
+var
+@NonNull
+@Cleanup
+@Getter/@Setter
+@ToString
+@EqualsAndHashCode
+Constructor
+	@NoArgsConstructor
+	@RequiredArgsConstructor
+	@AllArgsConstructor
+	staticName = “of ” 参数
+@Data
+@Value
+@SneakyThrows
+@Synchronized
+@Log
+	@CommonsLog
+	@Flogger
+	@JBossLog
+	@Log
+	@Log4j
+	@Log4j2
+	@Slf4j
+	@XSlf4j
+	@CustomLog
+@Getter(lazy=true)
+@Builder
+@With
+Lombok原理
+```
+
 
 
 
@@ -701,12 +745,24 @@ TODO	Spring 事务
 &#x1F4BE;  [spring-boot.md](0.markdown/spring-boot.md)
 
 ```
+SpringBoot是整合Spring技术栈的一站式框架
+SpringBoot是简化Spring技术栈的快速开发脚手架
 
 ```
 
 
 
 ### Spring Boot 整合
+
+&#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
+
+&#x1F4CA;  [Spring Boot 脑图](1.pic/spring-boot.png)
+
+&#x1F4BE;  [spring-boot.md](0.markdown/spring-boot.md)
+
+```
+
+```
 
 
 
