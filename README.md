@@ -950,3 +950,17 @@ ASCII 字符集
 Unicode 字符集
 ```
 
+### IDE：IDEA
+
+&#x1F4C4;  [IDE-IDEA.xmind](other/IDE-IDEA.xmind)
+
+&#x1F4CA;  [IDEA脑图](1.pic/other-IDE-IDEA.png)
+
+&#x1F4BE;  [other-IDE-IDEA.md](0.markdown/other-IDE-IDEA.md)
+
+```
+system
+config
+Settings
+```
+
