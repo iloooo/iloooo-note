@@ -962,5 +962,7 @@ Unicode 字符集
 system
 config
 Settings
+plugin
+	Jrebel
 ```
 
