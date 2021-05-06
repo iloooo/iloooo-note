@@ -264,6 +264,27 @@ version
 注解
 ```
 
+### log4j2
+
+&#x1F4C4;  [java-log4j2.xmind](java/java-log4j2.xmind)
+
+&#x1F4CA;  [log4j2 脑图](1.pic/java-log4j2.png)
+
+&#x1F4BE;  [java-log4j2.md](0.markdown/java-log4j2.md)
+
+```
+配置
+	configuration
+	Properties
+	appenders
+		Console
+		RollingFile
+	loggers
+		logger
+		root
+		AsyncLogger 
+```
+
 
 
 
