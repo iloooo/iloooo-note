@@ -781,6 +781,7 @@ Spring容器初始化总结
 TODO	Spring
 Spring MVC
 TODO	Spring 事务
+Spring Security
 ```
 
 
@@ -801,16 +802,19 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 
 
 
-### Spring Boot 整合
+### Spring Boot 整合和配置（application.yml）
 
-&#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
+&#x1F4C4;  [spring-yml.xmind](spring/spring-yml.xmind)
 
-&#x1F4CA;  [Spring Boot 脑图](1.pic/spring-boot.png)
+&#x1F4CA;  [Spring Boot 整合和配置脑图](1.pic/spring-boot.png)
 
-&#x1F4BE;  [spring-boot.md](0.markdown/spring-boot.md)
+&#x1F4BE;  [spring-yml.md](0.markdown/spring-yml.md)
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties
 
 ```
-
+tomcat
+spring security
 ```
 
 
