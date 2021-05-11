@@ -23,12 +23,8 @@
 	- shutdownTimeout
 	- status：log事件级别
 
-		- trace
-		- debug
-		- info
-		- warn
-		- error
-		- fatal
+		- ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+		- 打印高于或等于所设置级别的日志
 
 	- strict
 	- verbose
@@ -92,10 +88,11 @@
 		- Logger节点用来单独指定日志的形式，name为包路径,比如要为org.springframework包下所有日志指定为INFO级别等
 		- <logger name="org.springframework" level="INFO"></logger>
 		- <logger name="org.mybatis" level="INFO"></logger>
-		- root 
 
-			- Root节点用来指定项目的根日志，如果没有单独指定Logger，那么就会默认使用该Root日志输出
-			- <root level="all">
+	- root 
+
+		- Root节点用来指定项目的根日志，如果没有单独指定Logger，那么就会默认使用该Root日志输出
+		- <root level="all">
     <appender-ref ref="Console"/>
     <appender-ref ref="RollingFileInfo"/>
     <appender-ref ref="RollingFileWarn"/>
