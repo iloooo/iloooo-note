@@ -206,6 +206,8 @@ Streams API（JDK 1.8+）
 	sun.* 包缺失
 ```
 
+## Java 框架
+
 ### Lombok
 
 &#x1F4C4;  [java-lombok.xmind](java/java-lombok.xmind)
@@ -275,6 +277,9 @@ version
 ```
 配置
 	configuration
+	属性
+		status：log事件级别 
+		ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
 	Properties
 	appenders
 		Console
@@ -714,6 +719,18 @@ TODO	Junit
 Spring整合
 ```
 
+### Spring API
+
+&#x1F4C4;  [spring-api.xmind](spring/spring-api.xmind)
+
+&#x1F4CA;  [spring-api 脑图](1.pic/spring-api.png)
+
+&#x1F4BE;  [spring-api.md](0.markdown/spring-api.md)
+
+```
+org.springframework.util.StopWatch	获取时钟，用来代码段计时
+```
+
 
 
 ### Spring 事务
@@ -767,22 +784,6 @@ Exception 异常处理机制
 TODO	文件上传
 ```
 
-### Spring/Spring Boot 注解总结
-
-&#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
-
-&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-springboot-注解总结.png)
-
-&#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
-
-```
-spring-springboot-annotation
-Spring容器初始化总结
-TODO	Spring
-Spring MVC
-TODO	Spring 事务
-```
-
 
 
 ### Spring Boot
@@ -799,19 +800,47 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 
 ```
 
+#### Spring/Spring Boot 注解总结
 
+&#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
 
-### Spring Boot 整合
+&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-springboot-注解总结.png)
 
-&#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
+&#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
 
-&#x1F4CA;  [Spring Boot 脑图](1.pic/spring-boot.png)
+```
+Spring容器初始化总结
+TODO	Spring
+Spring MVC
+TODO	Spring 事务
+Spring Security
+```
 
-&#x1F4BE;  [spring-boot.md](0.markdown/spring-boot.md)
+#### Spring Boot 整合和配置（application.yml）
+
+&#x1F4C4;  [spring-yml.xmind](spring/spring-yml.xmind)
+
+&#x1F4CA;  [Spring Boot 整合和配置脑图](1.pic/spring-boot.png)
+
+&#x1F4BE;  [spring-yml.md](0.markdown/spring-yml.md)
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties
 
 ```
 
 ```
+### Spring Security
+
+&#x1F4C4;  [spring-security.xmind](spring/spring-security.xmind)
+
+&#x1F4CA;  [Spring Security 脑图](1.pic/spring-security.png)
+
+&#x1F4BE;  [spring-security.md](0.markdown/spring-security.md)
+
+```
+
+```
+
 
 
 
