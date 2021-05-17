@@ -1,0 +1,43 @@
+server:
+  port: 8999
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: knife4j-springfox-boot-v3
+knife4j:
+  enable: true
+  documents:
+    -
+      group: 1.2.x
+      name: 测试自定义标题分组
+      locations: classpath:md/*
+  setting:
+    enableSwaggerModels: true
+    enableDocumentManage: true
+    enableHost: false
+    enableHostText: http://localhost:18568
+    enableRequestCache: true
+    enableFilterMultipartApis: false
+    enableFilterMultipartApiMethodType: POST
+    language: zh-CN
+    enableAfterScript: false
+    enableHomeCustom: true
+    homeCustomLocation: classpath:test/home.md
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: 八一菜刀研究中心
+    enableSearch: true
+    enableDebug: true
+    enableOpenApi: true
+    enableGroup: true
+  cors: false
+  production: false
+  basic:
+    enable: false
+    username: test
+    password: 123
+springfox:
+  documentation:
+    open-api:
+      enabled: true

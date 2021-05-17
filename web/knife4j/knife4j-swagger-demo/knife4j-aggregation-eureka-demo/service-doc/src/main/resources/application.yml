@@ -1,0 +1,16 @@
+server:
+  port: 10909
+knife4j:
+  enableAggregation: true
+  eureka:
+    enable: true
+    serviceUrl: http://localhost:10000/eureka/
+    routes:
+      - name: 订单服务
+        serviceName: service-order
+        location: /v2/api-docs?group=default
+        servicePath: /order
+      - name: 用户体系
+        serviceName: service-user
+        location: /aub/v2/api-docs?group=default
+        servicePath: /

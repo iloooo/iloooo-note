@@ -1,0 +1,13 @@
+server:
+  port: 19081
+knife4j:
+  enableAggregation: true
+  cloud:
+    enable: true
+    routes:
+      - name: 测试分组1
+        uri: knife4j.xiaominfo.com
+        location: /v2/api-docs?group=2.X版本
+      - name: 测试分组2
+        uri: knife4j.xiaominfo.com
+        location: /v2/api-docs?group=3.默认接口

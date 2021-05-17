@@ -1,0 +1,393 @@
+{
+  "swagger": "2.0",
+  "info": {
+      "title": "在线文档",
+      "description": "在线API文档",
+      "termsOfService": "https://github.com/996icu/996.ICU/blob/master/LICENSE",
+      "version": "1.0",
+      "contact": {
+          "name": "linBq",
+          "email": "526509994@qq.com"
+      },
+      "license": {
+          "name": "linBq",
+          "url": "http://www.jfinal.com/user/43453"
+      }
+  },
+  "host": "0.0.0.0:8088",
+  "basePath": "/api",
+  "schemes": [
+         
+         "http"
+         ,
+         "https"
+  ],
+  "externalDocs": {
+      "description": "Find out more about Swagger",
+      "url": "https://swagger.io/"
+  },
+
+  "definitions": {
+           "SwaggerRes": {
+                "type": "object",
+                "title": "响应结果",
+                "properties": {
+                      "success": {
+                                      "type": "boolean",
+                                  "format": "",
+                              "description": "请求状态"
+                      }
+                      ,
+                      "data": {
+                                  "originalRef": "data",
+                                  "$ref": "#/definitions/data",
+                              "description": "请求状态"
+                      }
+                      ,
+                      "errorCode": {
+                                      "type": "string",
+                                          "example": "-1",
+                                  "format": "",
+                              "description": "错误码"
+                      }
+                      ,
+                      "errorMessage": {
+                                      "type": "string",
+                                          "example": "错误信息",
+                                  "format": "",
+                              "description": "错误信息"
+                      }
+                      ,
+                      "showType": {
+                                      "type": "int",
+                                          "example": "2",
+                                  "format": "",
+                              "description": "前端错误处理： 0 silent; 1 message.warn; 2 message.error; 4 notification; 9 page"
+                      }
+                      ,
+                      "traceId": {
+                                      "type": "string",
+                                          "example": "someid",
+                                  "format": "",
+                              "description": "方便后端故障排除：唯一请求ID"
+                      }
+                      ,
+                      "host": {
+                                      "type": "string",
+                                          "example": "127.0.0.1",
+                                  "format": "",
+                              "description": "当前访问服务器的主机"
+                      }
+                      
+                }
+            }
+          ,
+           "DeviceParamBean": {
+                "type": "object",
+                "title": "网关附加数据",
+                "properties": {
+                      "vobcId": {
+                                      "type": "integer",
+                                          "example": 1,
+                                  "format": "",
+                              "description": "车载设备id"
+                      }
+                      ,
+                      "machineId": {
+                                      "type": "integer",
+                                          "example": 2,
+                                  "format": "",
+                              "description": "机具id"
+                      }
+                      ,
+                      "machineStateThreshold": {
+                                      "type": "string",
+                                          "example": "20",
+                                  "format": "",
+                              "description": "农机状态阈值"
+                      }
+                      ,
+                      "posReportRate": {
+                                      "type": "string",
+                                          "example": "3",
+                                  "format": "",
+                              "description": "轨迹上报频率"
+                      }
+                      
+                }
+            }
+          ,
+           "EquipDto": {
+                "type": "object",
+                "title": "农机具",
+                "properties": {
+                      "equipId": {
+                                      "type": "int",
+                                          "example": "11",
+                                  "format": "",
+                              "description": "农机具id"
+                      }
+                      ,
+                      "equipCode": {
+                                      "type": "string",
+                                          "example": "2009080002",
+                                  "format": "",
+                              "description": "农机具号"
+                      }
+                      ,
+                      "equipTypeId": {
+                                      "type": "string",
+                                          "example": "2009080002",
+                                  "format": "",
+                              "description": "农机具号"
+                      }
+                      ,
+                      "status": {
+                                      "type": "int",
+                                          "example": "0",
+                                  "format": "",
+                              "description": "状态 0 正常"
+                      }
+                      ,
+                      "taskWidth": {
+                                      "type": "string",
+                                          "example": "20",
+                                  "format": "",
+                              "description": "作业宽幅"
+                      }
+                      ,
+                      "pointStateThresholdStart": {
+                                      "type": "string",
+                                          "example": "40",
+                                  "format": "",
+                              "description": "点位状态阈值上限"
+                      }
+                      ,
+                      "pointStateThresholdEnd": {
+                                      "type": "string",
+                                          "example": "60",
+                                  "format": "",
+                              "description": "点位状态阈值下限"
+                      }
+                      ,
+                      "createTime": {
+                                      "type": "string",
+                                          "example": "yyyy-MM-dd HH:mm:ss",
+                                  "format": "",
+                              "description": "创建时间"
+                      }
+                      ,
+                      "updateTime": {
+                                      "type": "string",
+                                          "example": "yyyy-MM-dd HH:mm:ss",
+                                  "format": "",
+                              "description": "创建时间"
+                      }
+                      
+                }
+            }
+          ,
+           "swa_test": {
+                "type": "object",
+                "title": "",
+                "properties": {
+                      "resA": {
+                                          "example": "hello word1",
+                              "description": "返回值A"
+                      }
+                      ,
+                      "resB": {
+                                          "example": "hello word2",
+                              "description": "返回值b"
+                      }
+                      ,
+                      "equip": {
+                                  "originalRef": "EquipDto",
+                                  "$ref": "#/definitions/EquipDto",
+                              "description": "农机具信息"
+                      }
+                      ,
+                      "equipList": {
+                                  "type": "array",
+                                  "items": {
+                                      "originalRef": "EquipDto",
+                                      "$ref": "#/definitions/EquipDto"
+                                  },
+                              "description": "农机具信息"
+                      }
+                      
+                }
+            }
+          ,
+           "SwaggerRes«swa_test»": {
+                "type": "object",
+                "title": "",
+                "properties": {
+                      "success": {
+                                      "type": "boolean",
+                                  "format": "",
+                              "description": "请求状态"
+                      }
+                      ,
+                      "data": {
+                                  "originalRef": "data",
+                                  "$ref": "#/definitions/data",
+                              "description": "请求状态"
+                      }
+                      ,
+                      "errorCode": {
+                                      "type": "string",
+                                          "example": "-1",
+                                  "format": "",
+                              "description": "错误码"
+                      }
+                      ,
+                      "errorMessage": {
+                                      "type": "string",
+                                          "example": "错误信息",
+                                  "format": "",
+                              "description": "错误信息"
+                      }
+                      ,
+                      "showType": {
+                                      "type": "int",
+                                          "example": "2",
+                                  "format": "",
+                              "description": "前端错误处理： 0 silent; 1 message.warn; 2 message.error; 4 notification; 9 page"
+                      }
+                      ,
+                      "traceId": {
+                                      "type": "string",
+                                          "example": "someid",
+                                  "format": "",
+                              "description": "方便后端故障排除：唯一请求ID"
+                      }
+                      ,
+                      "host": {
+                                      "type": "string",
+                                          "example": "127.0.0.1",
+                                  "format": "",
+                              "description": "当前访问服务器的主机"
+                      }
+                      ,
+                      "data": {
+                                  "originalRef": "swa_test",
+                                  "$ref": "#/definitions/swa_test",
+                              "description": "返回值"
+                      }
+                      
+                }
+            }
+          
+  },
+  "securityDefinitions": {
+          
+          "token": {
+              "type": "apiKey",
+              "name": "token",
+              "in": "header"
+          }
+          ,
+          "testPara": {
+              "type": "apiKey",
+              "name": "testPara",
+              "in": "query"
+          }
+  },
+  "tags": [
+          {
+              "name": "返回值文档",
+              "description": "/api/swa (SwaggerAnnotationsController)"
+          }
+          
+  ],
+  "paths": {
+          "/swa/test": {
+                  "get": {
+                      "tags": [
+                              "返回值文档"
+                              
+                      ],
+                      "summary": "测试方法",
+                      "description": "我是详细描述",
+                      "operationId": "get_swa_test",
+                      "produces": [
+                              "*/*"
+                              
+                      ],
+                      "parameters": [
+                              {
+                                  "name": "paramA",
+                                  "description": "参数a",
+                                  "in": "query",
+
+                                      "type": "String",
+                                      "default": "1111",
+
+
+                                  "required": false
+                              }
+                              ,
+                              {
+                                  "name": "paramB",
+                                  "description": "参数b",
+                                  "in": "query",
+
+                                      "type": "String",
+                                      "default": "222",
+
+
+                                  "required": false
+                              }
+                              ,
+                              {
+                                  "name": "device",
+                                  "description": "网关附加数据",
+                                  "in": "query",
+
+                                      "schema": {
+                                          "originalRef": "DeviceParamBean",
+                                          "$ref": "#/definitions/DeviceParamBean"
+                                      },
+
+
+                                  "required": false
+                              }
+                              
+                      ],
+                      "responses": {
+                              "200": {
+                                      "schema": {
+                                          "originalRef": "SwaggerRes«swa_test»",
+                                          "$ref": "#/definitions/SwaggerRes«swa_test»"
+                                      },
+                                  "description": "请求成功"
+                              }
+                              ,
+                              "400": {
+                                  "description": "服务器不理解请求的语法"
+                              }
+                              ,
+                              "403": {
+                                  "description": "服务器拒绝请求"
+                              }
+                              ,
+                              "404": {
+                                  "description": "服务器找不到请求的网页"
+                              }
+                              ,
+                              "405": {
+                                  "description": "禁用请求中指定的方法"
+                              }
+                              ,
+                              "500": {
+                                  "description": "服务器遇到错误，无法完成请求"
+                              }
+                              
+                      }
+                  }
+                  
+          }
+          
+  }
+}

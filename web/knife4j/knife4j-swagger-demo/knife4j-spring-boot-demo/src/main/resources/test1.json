@@ -1,0 +1,154 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "# swagger-bootstrap-ui-demo RESTful APIs",
+    "version": "1.0",
+    "termsOfService": "http://www.xx.com/",
+    "contact": {
+      "name": "xx@qq.com"
+    }
+  },
+  "host": "https://www.baidu.com",
+  "basePath": "/",
+  "schemes": [],
+  "consumes": [
+    "*/*"
+  ],
+  "produces": [
+    "*/*"
+  ],
+  "paths": {
+    "/api/nxew205/reqEnumArr": {
+      "post": {
+        "tags": [
+          "2.0.5版本-20200809"
+        ],
+        "summary": "枚举多选",
+        "operationId": "reqEnumArrUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "errorCodes",
+            "in": "query",
+            "description": "枚举类型",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "SUCCESS",
+                "FAIL"
+              ]
+            },
+            "collectionFormat": "multi",
+            "enum": [
+              "SUCCESS",
+              "FAIL"
+            ]
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "OK",
+            "schema": {
+              "properties":{
+                "results":{
+                  "description":"Hello",
+                  "$ref": "#/definitions/RequestDTO"
+                }
+              },
+              "$ref": "#/definitions/Rest«RequestEnumArr»",
+              "originalRef": "Rest«RequestEnumArr»"
+            }
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "RequestDTO": {
+      "type": "object",
+      "properties": {
+        "clientDTO": {
+          "description": "明细",
+          "$ref": "#/definitions/ClientDTO",
+          "originalRef": "ClientDTO",
+          "refType": "ClientDTO"
+        },
+        "requestAllDTO": {
+          "description": "body",
+          "$ref": "#/definitions/RequestAllDTO",
+          "originalRef": "RequestAllDTO",
+          "refType": "RequestAllDTO"
+        }
+      },
+      "title": "RequestDTO"
+    },
+    "Rest«RequestEnumArr»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/RequestEnumArr",
+          "originalRef": "RequestEnumArr"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«RequestEnumArr»"
+    },
+    "RequestEnumArr": {
+      "type": "object",
+      "properties": {
+        "errorCodes": {
+          "type": "array",
+          "description": "枚举类型",
+          "items": {
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "FAIL"
+            ]
+          },
+          "refType": "string"
+        },
+        "name": {
+          "type": "string",
+          "refType": null
+        }
+      },
+      "title": "RequestEnumArr"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+server:
+  port: 8999
+spring:
+  application:
+    name: SwaggerBootstrapUi-Demo
+swagger:
+  markdowns: classpath:markdown/*
+  basic:
+    enable: false
+    username: zhangsan
+    password: 123456
+logging:
+  config: classpath:logback-spring.xml

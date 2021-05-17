@@ -1,0 +1,1 @@
+undertow.resourcePath = classpath:META-INF/resources/

@@ -1,0 +1,5 @@
+server:
+  port: 18010
+spring:
+  application:
+    name: knife4j-oauth2-authorization-code

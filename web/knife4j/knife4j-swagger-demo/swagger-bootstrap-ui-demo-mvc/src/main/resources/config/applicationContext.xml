@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        ">
+	<!--ApplicationContext.xml配置中需要配置扫描目录,否则XmlWebApplicationContext容器对象获取不到所有接口地址-->
+	<!-- 设置注解扫描目录 -->
+	<!--<context:component-scan base-package="com.xiaominfo.swagger">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>-->
+
+	<!--引入swagger相关配置信息-->
+	<context:property-placeholder location="classpath:swagger.properties"/>
+
+
+
+</beans>	

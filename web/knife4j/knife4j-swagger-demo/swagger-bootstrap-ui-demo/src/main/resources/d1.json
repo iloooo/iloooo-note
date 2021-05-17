@@ -1,0 +1,1496 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "swagger-bootstrap-ui-demo RESTful APIs",
+    "version": "1.0",
+    "title": "分组Api",
+    "termsOfService": "http://www.group.com/",
+    "contact": {
+      "name": "group@qq.com"
+    }
+  },
+  "host": "127.0.0.1:8999",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "API注释",
+      "description": "Api Controller"
+    },
+    {
+      "name": "分组测试",
+      "description": "Group Controller"
+    },
+    {
+      "name": "图片预览",
+      "description": "Image Controller"
+    },
+    {
+      "name": "枚举测试",
+      "description": "Enum Controller"
+    }
+  ],
+  "paths": {
+    "/api/aci/deepRequest": {
+      "post": {
+        "tags": [
+          "API注释"
+        ],
+        "summary": "请求参数多层",
+        "description": "请求参数多层",
+        "operationId": "deepRequestUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "sendUserRequest",
+            "description": "sendUserRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeepRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«DeepRequest»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/aci/requestActInteger": {
+      "post": {
+        "tags": [
+          "API注释"
+        ],
+        "summary": "字符类型",
+        "description": "字符类型",
+        "operationId": "requestActIntegerUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "sendUserRequest",
+            "description": "sendUserRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ActInteger"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«ActInteger»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/aci/sendReciptUser": {
+      "post": {
+        "tags": [
+          "API注释"
+        ],
+        "summary": "用户注册sendReciptUser",
+        "description": "填写用户信息注册用户sendReciptUser",
+        "operationId": "sendReciptUserUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "recipt",
+            "description": "recipt",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Recipt"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«Recipt»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/aci/sendUser": {
+      "post": {
+        "tags": [
+          "API注释"
+        ],
+        "summary": "用户注册",
+        "description": "填写用户信息注册用户",
+        "operationId": "requestRestUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "sendUserRequest",
+            "description": "sendUserRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendUserRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«SendUserRequest»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/aci/sendUser1": {
+      "get": {
+        "tags": [
+          "API注释"
+        ],
+        "summary": "用户注册",
+        "description": "填写用户信息注册用户",
+        "operationId": "requestGetRestUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "email",
+            "description": "email",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«SendUserRequest»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/aci/xxx": {
+      "post": {
+        "tags": [
+          "API注释",
+          "API自定义"
+        ],
+        "summary": "ModelAttribute",
+        "description": "ModelAttribute类型参数",
+        "operationId": "reqbody1UsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "姓名",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tel",
+            "in": "query",
+            "description": "电话号码",
+            "required": true,
+            "type": "string",
+            "x-example": "555"
+          },
+          {
+            "name": "workExperiences[0].company",
+            "in": "query",
+            "description": "公司",
+            "required": true,
+            "type": "string",
+            "x-example": "牛B的公司"
+          },
+          {
+            "name": "workExperiences[0].end",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workExperiences[0].role",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workExperiences[0].start",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestMessage"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/aci/xxx1": {
+      "post": {
+        "tags": [
+          "API注释",
+          "API自定义"
+        ],
+        "summary": "ModelAttribute1",
+        "description": "ModelAttribute类型参数1",
+        "operationId": "reqbody2UsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "doub1",
+            "in": "query",
+            "description": "double类型属性",
+            "required": false,
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "name": "float1",
+            "in": "query",
+            "description": "float类型属性",
+            "required": false,
+            "type": "number",
+            "format": "float"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "number",
+            "in": "query",
+            "description": "Long类型",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "price",
+            "in": "query",
+            "description": "BigDecimal类型属性",
+            "required": false,
+            "type": "number"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "int类型",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestMessage"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/enum/actEumList": {
+      "post": {
+        "tags": [
+          "枚举测试"
+        ],
+        "summary": "简单枚举类型",
+        "description": "递归参数-enum-简单枚举",
+        "operationId": "actEumListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "language",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "en",
+              "zh",
+              "kr"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«Recipt»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/enum/actEumsList": {
+      "post": {
+        "tags": [
+          "枚举测试"
+        ],
+        "summary": "复杂枚举类型",
+        "description": "递归参数-enum-复杂枚举",
+        "operationId": "actEumsListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "errorCode",
+            "in": "query",
+            "description": "errorCode",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "FAIL"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«Recipt»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/enum/actEumssList": {
+      "post": {
+        "tags": [
+          "枚举测试"
+        ],
+        "summary": "复杂枚举类型-domain",
+        "description": "递归参数-enum-复杂枚举-domain",
+        "operationId": "actEumssListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "errorCode",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "SUCCESS",
+              "FAIL"
+            ]
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "en",
+              "zh",
+              "kr"
+            ]
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«EnumDomain»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/group/actList": {
+      "post": {
+        "tags": [
+          "分组测试",
+          "测试用例"
+        ],
+        "summary": "actList",
+        "description": "递归参数",
+        "operationId": "actListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«Recipt»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/group/reqbody2": {
+      "post": {
+        "tags": [
+          "分组测试"
+        ],
+        "summary": "ModelAttribute",
+        "description": "ModelAttribute类型参数",
+        "operationId": "reqbody2UsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "姓名",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tel",
+            "in": "query",
+            "description": "电话号码",
+            "required": true,
+            "type": "string",
+            "x-example": "555"
+          },
+          {
+            "name": "workExperiences[0].company",
+            "in": "query",
+            "description": "公司",
+            "required": true,
+            "type": "string",
+            "x-example": "牛B的公司"
+          },
+          {
+            "name": "workExperiences[0].end",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workExperiences[0].role",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workExperiences[0].start",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestMessage"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/group/reqbody3": {
+      "post": {
+        "tags": [
+          "分组测试"
+        ],
+        "summary": "ModelAttribute3",
+        "description": "ModelAttribute类型参数3",
+        "operationId": "reqbody3UsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestMessage"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/group/responseListRest": {
+      "post": {
+        "tags": [
+          "分组测试",
+          "测试用例"
+        ],
+        "summary": "responseListRest",
+        "description": "responseListRest类型参数",
+        "operationId": "responseListRestUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Rest«ResponseList»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/group/xxx": {
+      "post": {
+        "tags": [
+          "分组测试",
+          "测试用例"
+        ],
+        "summary": "ModelAttribute",
+        "description": "ModelAttribute类型参数",
+        "operationId": "reqbody1UsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "姓名",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tel",
+            "in": "query",
+            "description": "电话号码",
+            "required": true,
+            "type": "string",
+            "x-example": "555"
+          },
+          {
+            "name": "workExperiences[0].company",
+            "in": "query",
+            "description": "公司",
+            "required": true,
+            "type": "string",
+            "x-example": "牛B的公司"
+          },
+          {
+            "name": "workExperiences[0].end",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workExperiences[0].role",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "workExperiences[0].start",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/RestMessage"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/image/preview": {
+      "get": {
+        "tags": [
+          "图片预览"
+        ],
+        "summary": "preview",
+        "operationId": "previewUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "security": [
+          {
+            "BearerToken": [
+              "global"
+            ]
+          },
+          {
+            "BearerToken1": [
+              "global"
+            ]
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "securityDefinitions": {
+    "BearerToken": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    },
+    "BearerToken1": {
+      "type": "apiKey",
+      "name": "Authorization-x",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "ActInteger": {
+      "type": "object",
+      "properties": {
+        "doub1": {
+          "type": "number",
+          "format": "double",
+          "description": "double类型属性"
+        },
+        "float1": {
+          "type": "number",
+          "format": "float",
+          "description": "float类型属性"
+        },
+        "name": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer",
+          "format": "int64",
+          "description": "Long类型"
+        },
+        "price": {
+          "type": "number",
+          "description": "BigDecimal类型属性"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "int类型"
+        }
+      },
+      "title": "ActInteger"
+    },
+    "Actor": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "deepOne": {
+          "$ref": "#/definitions/DeepOne"
+        },
+        "recipt": {
+          "$ref": "#/definitions/Recipt"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "Actor"
+    },
+    "DeepOne": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "DeepOne"
+    },
+    "DeepRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "recipt": {
+          "$ref": "#/definitions/Recipt"
+        }
+      },
+      "title": "DeepRequest"
+    },
+    "EnumDomain": {
+      "type": "object",
+      "properties": {
+        "errorCode": {
+          "type": "string",
+          "enum": [
+            "SUCCESS",
+            "FAIL"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "en",
+            "zh",
+            "kr"
+          ]
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "EnumDomain"
+    },
+    "Menu": {
+      "type": "object",
+      "properties": {
+        "childrens": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Menu"
+          }
+        },
+        "label": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "title": "Menu"
+    },
+    "Recipt": {
+      "type": "object",
+      "properties": {
+        "actors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Actor"
+          }
+        },
+        "enumDomain": {
+          "$ref": "#/definitions/EnumDomain"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "Recipt"
+    },
+    "ReqEntity": {
+      "type": "object",
+      "required": [
+        "name",
+        "tel"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "姓名"
+        },
+        "tel": {
+          "type": "string",
+          "example": 555,
+          "description": "电话号码"
+        },
+        "workExperiences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/WorkExperience"
+          }
+        }
+      },
+      "title": "ReqEntity"
+    },
+    "ResponseList": {
+      "type": "object",
+      "properties": {
+        "menus": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Menu"
+          }
+        },
+        "reqEntity": {
+          "$ref": "#/definitions/ReqEntity"
+        }
+      },
+      "title": "ResponseList"
+    },
+    "RestMessage": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object",
+          "description": "返回对象"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "RestMessage",
+      "description": "返回接口类"
+    },
+    "Rest«ActInteger»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/ActInteger"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«ActInteger»"
+    },
+    "Rest«DeepRequest»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/DeepRequest"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«DeepRequest»"
+    },
+    "Rest«EnumDomain»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/EnumDomain"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«EnumDomain»"
+    },
+    "Rest«Recipt»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/Recipt"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«Recipt»"
+    },
+    "Rest«ResponseList»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/ResponseList"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«ResponseList»"
+    },
+    "Rest«SendUserRequest»": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "返回对象",
+          "$ref": "#/definitions/SendUserRequest"
+        },
+        "errCode": {
+          "type": "integer",
+          "format": "int32",
+          "description": "错误编号"
+        },
+        "message": {
+          "type": "string",
+          "description": "错误信息"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "是否成功"
+        }
+      },
+      "title": "Rest«SendUserRequest»"
+    },
+    "SendUserRequest": {
+      "type": "object",
+      "required": [
+        "email"
+      ],
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "登录账户"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "title": "SendUserRequest",
+      "description": "请求对应方法时使用"
+    },
+    "WorkExperience": {
+      "type": "object",
+      "required": [
+        "company"
+      ],
+      "properties": {
+        "company": {
+          "type": "string",
+          "example": "牛B的公司",
+          "description": "公司"
+        },
+        "end": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string"
+        }
+      },
+      "title": "WorkExperience",
+      "description": "工作经验"
+    }
+  }
+}
