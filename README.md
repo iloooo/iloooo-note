@@ -140,6 +140,7 @@ Map：key（无序的、不可重复的）、value（无序的、可重复的）
 	HashMap底层、线程、使用注意、重要常量、方法
 		get
 		put
+		clear 清空
 	LinkedHashMap底层
 	LinkedHashMap较HashMap保证了遍历时，可以按照添加顺序实现遍历
 	TreeMap底层、自然和定制排序
@@ -370,7 +371,24 @@ BOM对象
 DOM对象
 ```
 
-TODO 拆分
+### web security
+
+&#x1F4C4;  [web-security.xmind](web/web-security.xmind)
+
+&#x1F4CA;  [web-security脑图](1.pic/web-security.png)
+
+&#x1F4BE;  [web-security.md](0.markdown/web-security.md)
+
+```
+权限管理模型
+CSRF 跨站请求伪造
+JWT
+	头部.载荷.签名
+	和Session方式存储id的差异
+CORS 跨域资源共享
+```
+
+
 
 
 ****
@@ -808,13 +826,26 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 
 &#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
 
-```
-Spring容器初始化总结
-TODO	Spring
-Spring MVC
-TODO	Spring 事务
-Spring Security
-```
+| 注解                                        | 描述                                                         |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| **Java**                                    |                                                              |
+| @PostConstruct                              | 方法会在服务器加载Servlet的时候运行                          |
+| **Spring**                                  |                                                              |
+| @Component/@Controller/@Service/@Repository | 类/web层/service层/dao层                                     |
+| **Spring MVC**                              |                                                              |
+| @RequestMapping                             | 用于建立请求 URL 和处理请求方法之间的对应关系支持Ant风格资源地址 |
+| **Spring Boot**                             |                                                              |
+| @RestController                             | @Controller+@ResponseBody                                    |
+| **Spring 事务**                             |                                                              |
+| @Transactional                              |                                                              |
+| **Spring Security**                         |                                                              |
+| @EnableWebSecurity                          | 开启对 Spring Security 注解的方法，进行权限验证，用在配置类  |
+| **Hibernate-Validator**                     |                                                              |
+| @Valid                                      | 开启验证                                                     |
+| **Mybatis**                                 |                                                              |
+| @MapperScan                                 | 扫描包获得Mapper-XML                                         |
+
+
 
 #### Spring Boot 整合和配置（application.yml）
 
@@ -838,6 +869,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-applicat
 &#x1F4BE;  [spring-security.md](0.markdown/spring-security.md)
 
 ```
+Web 权限方案
 
 ```
 

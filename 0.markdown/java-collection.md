@@ -1,4 +1,4 @@
-# 集合
+# java-collection
 
 ## List<interface>：有序、可重复
 
@@ -171,6 +171,9 @@
 				- HashMap(int initialCapacity, float loadFactor)指定容量和加载因子
 
 	- remove
+	- clear
+
+		- 清空
 
 - 遍历
 
