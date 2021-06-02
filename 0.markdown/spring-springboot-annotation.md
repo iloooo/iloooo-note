@@ -1,11 +1,11 @@
-# Spring/Spring Boot 注解总结
+# spring-springboot-annotation
 
 ## Java
 
 ### @PostConstruct
 
 - METHOD
-- 方法方法会在服务器加载Servlet的时候运行
+- 方法会在服务器加载Servlet的时候运行
 
 	- 只会被服务器执行一次
 
@@ -56,7 +56,7 @@
 
 					- required() default true
 
-		- @Resource //根据类型进行注入
+		- @Resource //根据名称进行注入
 
 	- byName:
 
@@ -123,17 +123,19 @@
 - 用于建立请求 URL 和处理请求方法之间的对应关系支持Ant风格资源地址
 
   Ant 风格资源地址支持 3 种匹配符：
-    ?：匹配文件名中的一个字符
+   ?：匹配文件名中的一个字符
   *：匹配文件名中的任意字符
   **：** 匹配多层路径
-    
+   
   @RequestMapping 支持 Ant 风格的 URL：
-    – /user/*/createUser: 匹配
+   – /user/*/createUser: 匹配
   /user/aaa/createUser、/user/bbb/createUser 等 URL
   – /user/**/createUser: 匹配
   /user/createUser、/user/aaa/bbb/createUser 等 URL
   – /user/createUser??: 匹配
   /user/createUseraa、/user/createUserbb 等 URL
+  
+  
 
 - 注解作用域
 
@@ -287,6 +289,8 @@
 	          return new DruidDataSource();
 	      }
 	  
+
+		- 读取yml文件
 
 - prefix属性
 

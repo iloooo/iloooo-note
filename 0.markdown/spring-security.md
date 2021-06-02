@@ -1,4 +1,4 @@
-# Spring Security
+# spring-security
 
 ## Web 权限方案
 
@@ -494,6 +494,27 @@ boolean isEnabled();
 		- 方式2
 
 			- 重写userDetailsService方法
+
+## 记住我
+
+### 一般没配置的话，用户关闭浏览器再访问某个接口需要重新登录
+
+### 原理
+
+- 配置了HttpSecurity.rememberMe()
+- 登录成功多了一个参数remember-me：on；访问其他接口，cookie多了remember-me：.....
+
+	- remember-me
+
+		- 用户名
+		- 过期时间戳
+		- username + ":" + tokenExpiryTime + ":" + password + ":" + key
+
+			- key防治令牌被修改
+
+### remember-me 生成和解析过程
+
+### 携带着 cookie 中的 remember-me 到服务端，服务到拿到值之后，可以方便的计算出用户名和过期时间，再根据用户名查询到用户密码，然后通过 MD5 散列函数计算出散列值，再将计算出的散列值和浏览器传递来的散列值进行对比，就能确认这个令牌是否有效。
 
 ## 授权
 

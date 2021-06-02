@@ -105,6 +105,16 @@ static 注意，修饰成员变量、方法、代码块、内部类
 	必须是@Retention为RUNTIME的才可以代码运行时通过反射解析
 ```
 
+### 并发
+
+&#x1F4C4;  [java-annotation-note.xmind](java/java-annotation-note.xmind)
+
+&#x1F4CA;  [Java并发脑图](1.pic/java-annotation.png)
+
+&#x1F4BE;  [java-annotation-note.md](0.markdown/java-annotation-note.md)
+
+
+
 ### 集合
 
 &#x1F4CA;  [集合继承实现关系图](1.pic/java-collection-diagram.png)
@@ -158,6 +168,12 @@ Map：key（无序的、不可重复的）、value（无序的、可重复的）
 ```
 迭代器（Iterator）
 	 EntrySet 性能最好、循环删除数据安全
+	 	Iterator<Map.Entry<String, User>> iterator = usernameCacheMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, User> next = iterator.next();
+            System.out.println(next.getKey());
+            System.out.println(next.getValue());
+        }
 	 KeySet 
 For Each
 	EntrySet 
@@ -388,7 +404,13 @@ JWT
 CORS 跨域资源共享
 ```
 
+### Hibernate Validation
 
+&#x1F4C4;  [web-security.xmind](web/web-security.xmind)
+
+&#x1F4CA;  [web-security脑图](1.pic/web-security.png)
+
+&#x1F4BE;  [web-security.md](0.markdown/web-security.md)
 
 
 ****
@@ -413,10 +435,10 @@ CORS 跨域资源共享
 	4.持久性（Durability）
 		多个事务期间操作相同数据可能导致的并发问题
 		事务隔离级别：
-			1、read uncommitted （读未提交数据）
-			2、read committed （读已提交数据）可以避免脏读
-			3、repeatable read（可重复读）可以避免脏读、不可重复读和一部分幻读
-			4、serializable（串行化）可以避免脏读、不可重复读和幻读
+			1、read uncommitted （读未提交数据）MySQL 
+			2、read committed （读已提交数据）可以避免脏读 Oracle（默认）、MySQL
+			3、repeatable read（可重复读）可以避免脏读、不可重复读和一部分幻读 MySQL（默认）
+			4、serializable（串行化）可以避免脏读、不可重复读和幻读 Oracle、MySQL
 事务管理操作（TCL）
 Spring事务管理
 JDBC事务管理	database-jdbc.xmind
@@ -445,6 +467,20 @@ Oracle存储过程
 	调用（PL/SQL、JDBC）
 ```
 
+### Mysql 数据库
+
+&#x1F4C4;  [database-note.xmind](database/database-mysql.xmind)
+
+&#x1F4CA;  [Mysql数据库脑图](1.pic/database-mysql.png)
+
+&#x1F4BE;  [database-mysql.md](0.markdown/database-mysql.md)
+
+```
+
+```
+
+
+
 ### Oracle数据库
 
 &#x1F4C4;  [database-note.xmind](database/database-note.xmind)
@@ -467,6 +503,20 @@ PL/SQL
 存储过程
 触发器
 ```
+
+### Redis 数据库
+
+&#x1F4C4;  [database-note.xmind](database/database-redis.xmind)
+
+&#x1F4CA;  [Redis数据库脑图](1.pic/database-redis.png)
+
+&#x1F4BE;  [database-redis.md](0.markdown/database-redis.md)
+
+```
+
+```
+
+
 
 ### JDBC
 
@@ -822,7 +872,7 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 
 &#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
 
-&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-springboot-注解总结.png)
+&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-springboot-annotation.png)
 
 &#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
 
