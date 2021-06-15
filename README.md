@@ -774,6 +774,8 @@ AOP 实现的两种方式（基于AspectJ）
 
 org.springframework.util.StopWatch	获取时钟，用来代码段计时
 
+### Spring Task(Schedule)
+
 
 
 ### Spring 事务
@@ -1100,5 +1102,17 @@ config
 Settings
 plugin
 	Jrebel
+```
+
+### version-control：git
+
+&#x1F4C4;  [IDE-IDEA.xmind](other/other-git.xmind.xmind)
+
+&#x1F4CA;  [脑图导出图](1.pic/other-git.png)
+
+&#x1F4BE;  [脑图导出Markdown](0.markdown/other-git.md)
+
+```
+
 ```
 
