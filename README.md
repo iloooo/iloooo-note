@@ -30,9 +30,9 @@
 
 &#x1F4C4;  [java-note.xmind](java/java-note.xmind)
 
-&#x1F4CA;  [Java基础脑图](1.pic/java-note.png)
+&#x1F4CA;  [Java基础脑图](1.pic)
 
-&#x1F4BE;  [java-note.md](0.markdown/java-note.md)
+&#x1F4BE;  [java-note.md](0.markdown/)
 
 ```
 Java核心
@@ -60,7 +60,7 @@ Java核心
 常量
 ```
 
-### 关键字
+### 关键字 TODO
 
 &#x1F4C4;  [java-note.xmind](java/java-note.xmind)
 
@@ -74,7 +74,7 @@ final修饰类、方法、成员变量、局部变量
 static 注意，修饰成员变量、方法、代码块、内部类
 ```
 
-### 类和类的成员
+### 类和类的成员 TODO
 
 &#x1F4C4;  [java-note.xmind](java/java-note.xmind)
 
@@ -105,11 +105,11 @@ static 注意，修饰成员变量、方法、代码块、内部类
 	必须是@Retention为RUNTIME的才可以代码运行时通过反射解析
 ```
 
-### 并发
+### 并发 TODO
 
 &#x1F4C4;  [java-annotation-note.xmind](java/java-annotation-note.xmind)
 
-&#x1F4CA;  [Java并发脑图](1.pic/java-annotation.png)
+&#x1F4CA;  [Java并发脑图](1.pic/java-.png)
 
 &#x1F4BE;  [java-annotation-note.md](0.markdown/java-annotation-note.md)
 
@@ -185,7 +185,7 @@ Streams API（JDK 1.8+）
 性能分析、遍历时删除数据的安全性分析
 ```
 
-### 设计模式
+### 设计模式 TODO
 
 &#x1F4C4;  [java-pattern.xmind](java/pattern/java-pattern.xmind)
 
@@ -269,7 +269,7 @@ Constructor
 Lombok原理
 ```
 
-### MapStruct
+### MapStruct TODO
 
 &#x1F4C4;  [java-mapstruct.xmind](java/java-mapstruct.xmind)
 
@@ -318,8 +318,6 @@ version
 
 &#x1F4C4;  [javaee.xmind](web/javaee.xmind)
 
-&#x1F4BE;  [web-javaee.md](0.markdown/web-javaee.md)
-
 #### Servlet
 
 &#x1F4CA;  [Servlet脑图](1.pic/web-servlet.png)
@@ -359,9 +357,9 @@ ServletContextListener 注解和XML方式
 
 #### 会话技术
 
-- [ ] TODO	Cookie
+TODO	Cookie
 
-- [ ] TODO	Session
+TODO	Session
 
 &#x1F4BE;  [web-cookie-session.md](0.markdown/web-cookie-session.md)
 
@@ -369,7 +367,7 @@ ServletContextListener 注解和XML方式
 概念、功能
 ```
 
-- [ ] TODO	JSP
+TODO	JSP
 
 ### JavaScript
 
@@ -404,11 +402,11 @@ JWT
 CORS 跨域资源共享
 ```
 
-### Hibernate Validation
+### Hibernate Validation TODO
 
 &#x1F4C4;  [web-security.xmind](web/web-security.xmind)
 
-&#x1F4CA;  [web-security脑图](1.pic/web-security.png)
+&#x1F4CA;  [web-security脑图](1.pic/)
 
 &#x1F4BE;  [web-security.md](0.markdown/web-security.md)
 
@@ -445,29 +443,7 @@ JDBC事务管理	database-jdbc.xmind
 Mybatis事务管理	
 ```
 
-### 存储过程
-
-&#x1F4C4;  [database-produce.xmind](database/database-produce.xmind)
-
-&#x1F4CA;  [存储过程脑图](1.pic/database-produce.png)
-
-&#x1F4BE;  [database-produce.md](0.markdown/database-produce.md)
-
-```
-Oracle存储过程
-	简介
-	*存储过程和存储函数的区别
-		- 都可以封装一定的业务逻辑并返回结果（相同）
-        - 存储函数中有返回值，且必须返回；而存储过程没有返回值，可以通过传出参数返回多个值。（返回值）
-        - 存储函数可以在 select 语句中直接使用，而存储过程不能。过程多数是被应用程序所调用（调用）
-        - 存储函数一般都是封装一个查询结果，而存储过程一般都封装一段事务代码（使用）
-	存储过程的语法结构
-	过程参数
-	示例
-	调用（PL/SQL、JDBC）
-```
-
-### Mysql 数据库
+### Mysql 数据库 TODO
 
 &#x1F4C4;  [database-note.xmind](database/database-mysql.xmind)
 
@@ -504,7 +480,31 @@ PL/SQL
 触发器
 ```
 
-### Redis 数据库
+### 存储过程
+
+&#x1F4C4;  [database-produce.xmind](database/database-produce.xmind)
+
+&#x1F4CA;  [存储过程脑图](1.pic/database-produce.png)
+
+&#x1F4BE;  [database-produce.md](0.markdown/database-produce.md)
+
+```
+Oracle存储过程
+	简介
+	*存储过程和存储函数的区别
+		- 都可以封装一定的业务逻辑并返回结果（相同）
+        - 存储函数中有返回值，且必须返回；而存储过程没有返回值，可以通过传出参数返回多个值。（返回值）
+        - 存储函数可以在 select 语句中直接使用，而存储过程不能。过程多数是被应用程序所调用（调用）
+        - 存储函数一般都是封装一个查询结果，而存储过程一般都封装一段事务代码（使用）
+	存储过程的语法结构
+	过程参数
+	示例
+	调用（PL/SQL、JDBC）
+```
+
+
+
+### Redis 数据库 TODO
 
 &#x1F4C4;  [database-note.xmind](database/database-redis.xmind)
 
@@ -621,7 +621,7 @@ select子元素：resultType
 	resultMap子元素
 ```
 
-### MyBatisPlus
+### MyBatisPlus TODO
 
 &#x1F4C4;  [database-orm-mybatisplus.xmind](database/orm/database-orm-mybatisplus.xmind)
 
@@ -682,14 +682,17 @@ Java大对象类型的 Hiberante 映射
 Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 
 ```
 
+
+
 ## Spring
+
 ### Spring IOC
 
-&#x1F4C4;  [Spring IOC](spring/spring-note.xmind)
+&#x1F4C4;  [Spring IOC](spring/spring-framework-ioc.xmind)
 
-&#x1F4CA;  [Spring IOC 脑图](1.pic/spring-ioc.png)
+&#x1F4CA;  [Spring IOC 脑图](1.pic/spring-framework-ioc.png)
 
-&#x1F4BE;  [spring-ioc.md](0.markdown/spring-ioc.md)
+&#x1F4BE;  [spring-ioc.md](0.markdown/spring-framework-ioc.md)
 
 ```
 IOC解决问题
@@ -707,13 +710,14 @@ TODO	Spring5新特性
 ```
 
 
+
 ### Spring AOP
 
-&#x1F4C4;  [Spring AOP](spring/spring-note.xmind)
+&#x1F4C4;  [Spring AOP](spring/spring-framework-aop.xmind)
 
-&#x1F4CA;  [spring AOP 脑图](1.pic/spring-aop.png)
+&#x1F4CA;  [spring AOP 脑图](1.pic/spring-framework-aop.png)
 
-&#x1F4BE;  [spring-aop.md](0.markdown/spring-aop.md)
+&#x1F4BE;  [spring-aop.md](0.markdown/spring-framework-aop.md)
 
 ```
 AOP解决的问题
@@ -736,34 +740,15 @@ AOP 实现的两种方式（基于AspectJ）
 	XML
 	注解
 ```
-TODO 拆分
-
-
-
-### Spring 整合总结
-
-&#x1F4C4;  [Spring 整合总结](spring/spring-note.xmind)
-
-&#x1F4CA;  [Spring 整合脑图](1.pic/spring-integration.png)
-
-&#x1F4BE;  [spring-integration.md](0.markdown/spring-integration.md)
-
-```
-数据源DataSource
-TODO	SpringMVC
-Mybatis
-TODO	Hibernate
-TODO	Junit
-```
 
 
 ### Spring 容器初始化总结
 
-&#x1F4C4;  [Spring 容器初始化总结](spring/spring-note.xmind)
+&#x1F4C4;  [Spring 容器初始化总结](spring/spring-容器初始化.xmind)
 
-&#x1F4CA;  [Spring 容器初始化总结脑图](1.pic/spring-init.png)
+&#x1F4CA;  [Spring 容器初始化总结脑图](1.pic/spring-容器初始化.png)
 
-&#x1F4BE;  [spring-init.md](0.markdown/spring-init.md)
+&#x1F4BE;  [spring-容器初始化.md](0.markdown/spring-容器初始化.md)
 
 ```
 创建IOC容器（ApplicationContext）
@@ -773,9 +758,7 @@ TODO	Junit
 注解驱动
 ```
 
-
-
-### Spring XML配置总结
+### Spring XML配置总结  TODO
 
 &#x1F4C4;  [Spring XML配置总结](spring/spring-note.xmind)
 
@@ -784,26 +767,18 @@ TODO	Junit
 &#x1F4BE;  [spring-xml.md](0.markdown/spring-xml.md)
 
 ```
-Spring整合
+
 ```
 
 ### Spring API
 
-&#x1F4C4;  [spring-api.xmind](spring/spring-api.xmind)
-
-&#x1F4CA;  [spring-api 脑图](1.pic/spring-api.png)
-
-&#x1F4BE;  [spring-api.md](0.markdown/spring-api.md)
-
-```
 org.springframework.util.StopWatch	获取时钟，用来代码段计时
-```
 
 
 
 ### Spring 事务
 
-&#x1F4C4;  [Spring 事务](spring/spring-note.xmind)
+&#x1F4C4;  [Spring 事务](spring/spring-transaction.xmind)
 
 &#x1F4CA;  [Spring 事务脑图](1.pic/spring-transaction.png)
 
@@ -822,11 +797,11 @@ org.springframework.util.StopWatch	获取时钟，用来代码段计时
 
 ### Spring MVC
 
-&#x1F4C4;  [spring-mvc-note.xmind](spring/spring-mvc-note.xmind)
+&#x1F4C4;  [spring-mvc.xmind](spring/spring-mvc.xmind)
 
 &#x1F4CA;  [Spring MVC脑图](1.pic/spring-mvc.png)
 
-&#x1F4BE;  [spring-mvc-note.md](0.markdown/spring-mvc-note.md)
+&#x1F4BE;  [spring-mvc-note.md](0.markdown/spring-mvc.md)
 
 ```
 解决的问题
@@ -854,21 +829,23 @@ TODO	文件上传
 
 
 
-### Spring Boot
+### Spring Boot TODO
 
 &#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
 
-&#x1F4CA;  [Spring Boot 脑图](1.pic/spring-boot.png)
+&#x1F4CA;  [Spring Boot 脑图](1.pic/xx)
 
-&#x1F4BE;  [spring-boot.md](0.markdown/spring-boot.md)
+&#x1F4BE;  [spring-boot.md](0.markdown/xx.md)
 
 ```
 SpringBoot是整合Spring技术栈的一站式框架
 SpringBoot是简化Spring技术栈的快速开发脚手架
+快速入门
+Spring Boot配置
 
 ```
 
-#### Spring/Spring Boot 注解总结
+#### Spring/Spring Boot及各种框架注解总结
 
 &#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
 
@@ -876,40 +853,61 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 
 &#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
 
-| 注解                                        | 描述                                                         |
-| ------------------------------------------- | ------------------------------------------------------------ |
-| **Java**                                    |                                                              |
-| @PostConstruct                              | 方法会在服务器加载Servlet的时候运行                          |
-| **Spring**                                  |                                                              |
-| @Component/@Controller/@Service/@Repository | 类/web层/service层/dao层                                     |
-| **Spring MVC**                              |                                                              |
-| @RequestMapping                             | 用于建立请求 URL 和处理请求方法之间的对应关系支持Ant风格资源地址 |
-| **Spring Boot**                             |                                                              |
-| @RestController                             | @Controller+@ResponseBody                                    |
-| **Spring 事务**                             |                                                              |
-| @Transactional                              |                                                              |
-| **Spring Security**                         |                                                              |
-| @EnableWebSecurity                          | 开启对 Spring Security 注解的方法，进行权限验证，用在配置类  |
-| **Hibernate-Validator**                     |                                                              |
-| @Valid                                      | 开启验证                                                     |
-| **Mybatis**                                 |                                                              |
-| @MapperScan                                 | 扫描包获得Mapper-XML                                         |
+| 注解                                                         | 描述                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Java**                                                     |                                                              |
+| @PostConstruct                                               | 方法会在服务器加载Servlet的时候运行,Constructor(构造方法) -> @Autowired(依赖注入) -> @PostConstruct(注释的方法) |
+|                                                              |                                                              |
+| **Spring**                                                   |                                                              |
+| @Configuration / @ComponentScan(basePackages = {"com.atguigu"}) | 作为配置类，替代xml配置文件 / 组件扫描                       |
+| @Component/@Controller/@Service/@Repository                  | 类/web层/service层/dao层                                     |
+| @import                                                      | 4.x新特性：多个配置文件引入到一个文件;classpath:spring-mvc.xml |
+| **依赖注入**                                                 |                                                              |
+| @Value                                                       | 注入普通属性，也可以读取spring boot的yml文件：@Value("${token.header}") |
+| @Autowired / @Qualifier("userDaoImpl")                       | Bean自动装配byType / 配合@Autowired用byName                  |
+| @Resource                                                    | Bean自动装配byType也可以byName                               |
+| @Bean("xxxx")                                                | 标注将该方法的返回值存储到 Spring 容器中，相当于单独一个bean |
+|                                                              |                                                              |
+| **Spring MVC**                                               |                                                              |
+| @RequestMapping                                              | 用于建立请求 URL 和处理请求方法之间的对应关系支持Ant风格资源地址 |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Spring Boot**                                              |                                                              |
+| @RestController                                              | @Controller+@ResponseBody                                    |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Spring 事务**                                              |                                                              |
+| @Transactional                                               |                                                              |
+|                                                              |                                                              |
+| **Spring Security**                                          |                                                              |
+| @EnableWebSecurity                                           | 开启对 Spring Security 注解的方法，进行权限验证，用在配置类  |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Hibernate-Validator**                                      |                                                              |
+| @Valid                                                       | 开启验证                                                     |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Mybatis**                                                  |                                                              |
+| @MapperScan                                                  | 扫描包获得Mapper-XML                                         |
+|                                                              |                                                              |
 
+#### Spring/SpringBoot 整合
 
+&#x1F4C4;  [Spring 整合总结](spring/spring-springboot-整合.xmind)
 
-#### Spring Boot 整合和配置（application.yml）
+&#x1F4CA;  [Spring 整合脑图](1.pic/spring-springboot-整合.png)
 
-&#x1F4C4;  [spring-yml.xmind](spring/spring-yml.xmind)
-
-&#x1F4CA;  [Spring Boot 整合和配置脑图](1.pic/spring-boot.png)
-
-&#x1F4BE;  [spring-yml.md](0.markdown/spring-yml.md)
+&#x1F4BE;  [spring-integration.md](0.markdown/spring-springboot-整合.md)
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties
 
 ```
-
+Spring整合-数据源DataSource
+Spring整合-Mybatis
 ```
+
+
+
 ### Spring Security
 
 &#x1F4C4;  [spring-security.xmind](spring/spring-security.xmind)
@@ -920,7 +918,13 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-applicat
 
 ```
 Web 权限方案
-
+术语与原理
+源码分析
+过滤器链 SpringSecurityFilterChain
+认证
+记住我
+授权
+项目实战
 ```
 
 
@@ -952,7 +956,7 @@ Web 权限方案
 		程序升级、修改缺陷往往需要制定专门的停机更新计划，做灰度发布、A/B测试也相对更复杂。
 ```
 
-## TODO distributed-分布式系统
+### distributed-分布式系统
 
 &#x1F4C4;  [distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
 
@@ -964,7 +968,7 @@ Web 权限方案
 
 ```
 
-## soa-webservice-面向服务
+### soa-webservice-面向服务
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -1055,7 +1059,7 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 有点像数据库操作，增删改查
 ```
 
-## microservices-微服务
+### microservices-微服务
 
 &#x1F4C4;  [microservices-微服务.xmind](architecture/microservices-微服务.xmind)
 
@@ -1069,7 +1073,7 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 
 ## Other 其他
 
-### 字符编码
+### 字符编码 TODO
 
 &#x1F4C4;  [字符编码.xmind](other/字符编码.xmind)
 

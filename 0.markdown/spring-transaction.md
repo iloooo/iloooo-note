@@ -1,4 +1,4 @@
-# Spring 事务管理
+# spring-transaction
 
 ## 编程式事务管理
 
@@ -129,6 +129,4 @@
 	- ④xml开启事务的注解驱动<tx:annotation-driven />
 
 ## 数据库事务
-
-## back-home
 
