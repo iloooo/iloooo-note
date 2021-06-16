@@ -24,9 +24,11 @@
 
 &#x1F4BE;  代表markdown笔记（脑图导出，用来备份、概览、比较差异等）
 
-## Java
+[TOC]
 
-### 基础
+# Java
+
+## 基础
 
 &#x1F4C4;  [java-note.xmind](java/java-note.xmind)
 
@@ -60,7 +62,7 @@ Java核心
 常量
 ```
 
-### 关键字 TODO
+## 关键字 TODO
 
 &#x1F4C4;  [java-note.xmind](java/java-note.xmind)
 
@@ -74,7 +76,7 @@ final修饰类、方法、成员变量、局部变量
 static 注意，修饰成员变量、方法、代码块、内部类
 ```
 
-### 类和类的成员 TODO
+## 类和类的成员 TODO
 
 &#x1F4C4;  [java-note.xmind](java/java-note.xmind)
 
@@ -86,7 +88,7 @@ static 注意，修饰成员变量、方法、代码块、内部类
 类成员的执行和初始化顺序
 ```
 
-### 注解
+## 注解
 
 &#x1F4C4;  [java-annotation-note.xmind](java/java-annotation-note.xmind)
 
@@ -105,7 +107,7 @@ static 注意，修饰成员变量、方法、代码块、内部类
 	必须是@Retention为RUNTIME的才可以代码运行时通过反射解析
 ```
 
-### 并发 TODO
+## 并发 TODO
 
 &#x1F4C4;  [java-annotation-note.xmind](java/java-annotation-note.xmind)
 
@@ -113,9 +115,14 @@ static 注意，修饰成员变量、方法、代码块、内部类
 
 &#x1F4BE;  [java-annotation-note.md](0.markdown/java-annotation-note.md)
 
+### 并发压测 Apache JMeter
+
+[官网](https://mirrors.tuna.tsinghua.edu.cn/apache/jmeter/binaries/)
+[镜像下载](https://mirrors.bfsu.edu.cn/apache/jmeter/binaries/)
 
 
-### 集合
+
+## 集合
 
 &#x1F4CA;  [集合继承实现关系图](1.pic/java-collection-diagram.png)
 
@@ -158,7 +165,7 @@ Map：key（无序的、不可重复的）、value（无序的、可重复的）
 	Properties的key、value都是字符串类型
 ```
 
-#### HashMap各遍历方式分析
+### HashMap各遍历方式分析
 
 &#x1F4C4;  [collection-hashmap-iterate.xmind](java/collection/collection-hashmap-iterate.xmind)
 
@@ -185,7 +192,7 @@ Streams API（JDK 1.8+）
 性能分析、遍历时删除数据的安全性分析
 ```
 
-### 设计模式 TODO
+## 设计模式 TODO
 
 &#x1F4C4;  [java-pattern.xmind](java/pattern/java-pattern.xmind)
 
@@ -207,7 +214,7 @@ Streams API（JDK 1.8+）
 模板方法
 ```
 
-### Java8
+## Java8
 
 &#x1F4C4;  [java8-note.xmind](java/java8/java8-note.xmind)
 
@@ -223,9 +230,9 @@ Streams API（JDK 1.8+）
 	sun.* 包缺失
 ```
 
-## Java 框架
+# Java 框架
 
-### Lombok
+## Lombok
 
 &#x1F4C4;  [java-lombok.xmind](java/java-lombok.xmind)
 
@@ -269,7 +276,7 @@ Constructor
 Lombok原理
 ```
 
-### MapStruct TODO
+## MapStruct TODO
 
 &#x1F4C4;  [java-mapstruct.xmind](java/java-mapstruct.xmind)
 
@@ -283,7 +290,7 @@ version
 注解
 ```
 
-### log4j2
+## log4j2
 
 &#x1F4C4;  [java-log4j2.xmind](java/java-log4j2.xmind)
 
@@ -312,13 +319,13 @@ version
 
 ***
 
-## Web
+# Web
 
-### JaveEE
+## JaveEE
 
 &#x1F4C4;  [javaee.xmind](web/javaee.xmind)
 
-#### Servlet
+### Servlet
 
 &#x1F4CA;  [Servlet脑图](1.pic/web-servlet.png)
 
@@ -331,7 +338,7 @@ request域对象：Attribute 范围和操作
 重定向redirect特点和实现
 ```
 
-#### Filter
+### Filter
 
 &#x1F4CA;  [Filter脑图](1.pic/web-servlet.png)
 
@@ -344,7 +351,7 @@ request域对象：Attribute 范围和操作
 Servlet Filter
 ```
 
-#### Listener
+### Listener
 
 &#x1F4CA;  [Listener脑图](1.pic/web-listener.png)
 
@@ -355,7 +362,7 @@ Servlet Filter
 ServletContextListener 注解和XML方式
 ```
 
-#### 会话技术
+## 会话技术
 
 TODO	Cookie
 
@@ -369,7 +376,7 @@ TODO	Session
 
 TODO	JSP
 
-### JavaScript
+## JavaScript
 
 &#x1F4C4;  [javascript-note.xmind](web/javascript-note.xmind)
 
@@ -385,7 +392,7 @@ BOM对象
 DOM对象
 ```
 
-### web security
+## web security
 
 &#x1F4C4;  [web-security.xmind](web/web-security.xmind)
 
@@ -402,19 +409,13 @@ JWT
 CORS 跨域资源共享
 ```
 
-### Hibernate Validation TODO
 
-&#x1F4C4;  [web-security.xmind](web/web-security.xmind)
-
-&#x1F4CA;  [web-security脑图](1.pic/)
-
-&#x1F4BE;  [web-security.md](0.markdown/web-security.md)
 
 
 ****
-## Database
+# Database
 
-### 数据库事务
+## 数据库事务
 
 &#x1F4C4;  [database-transaction.xmind](database/database-transaction.xmind)
 
@@ -443,7 +444,7 @@ JDBC事务管理	database-jdbc.xmind
 Mybatis事务管理	
 ```
 
-### Mysql 数据库 TODO
+## Mysql 数据库 TODO
 
 &#x1F4C4;  [database-note.xmind](database/database-mysql.xmind)
 
@@ -457,7 +458,7 @@ Mybatis事务管理
 
 
 
-### Oracle数据库
+## Oracle数据库
 
 &#x1F4C4;  [database-note.xmind](database/database-note.xmind)
 
@@ -504,7 +505,7 @@ Oracle存储过程
 
 
 
-### Redis 数据库 TODO
+## Redis 数据库 TODO
 
 &#x1F4C4;  [database-note.xmind](database/database-redis.xmind)
 
@@ -518,7 +519,7 @@ Oracle存储过程
 
 
 
-### JDBC
+## JDBC
 
 &#x1F4C4;  [database-jdbc.xmind](database/database-jdbc.xmind)
 
@@ -539,7 +540,7 @@ SQL操作和结果集
 JDBC事务处理
 ```
 
-### Mybatis
+## Mybatis
 
 &#x1F4C4;  [database-orm.xmind](database/orm/database-orm.xmind)
 
@@ -635,7 +636,7 @@ select子元素：resultType
 
 
 
-### Hibernate
+## Hibernate
 
 &#x1F4C4;  [orm-hibernate](database/orm/database-orm.xmind)
 
@@ -653,7 +654,7 @@ Hibernate 检索策略、方式
 Hibernate 调用存储过程
 ```
 
-#### 映射配置文件*.hbm.xml
+### 映射配置文件*.hbm.xml
 &#x1F4C4;  [orm-hibernate](database/orm/database-orm.xmind)
 
 &#x1F4CA;  [Hibernate映射配置文件*.hbm.xml脑图](1.pic/database-orm-hibernate-hbm.xml.png)
@@ -669,7 +670,7 @@ component
 映射关联关系
 ```
 
-#### Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
+### Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 &#x1F4C4;  [Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系 ](0.markdown/database-orm-hibernate-类型之间对应关系.md)
 
 &#x1F4CA;  [Hibernate-映射关系对应脑图](1.pic/database-orm-hibernate-类型之间对应关系.png)
@@ -684,7 +685,9 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 
 
 
-## Spring
+# Spring
+
+## Spring Framework
 
 ### Spring IOC
 
@@ -708,8 +711,6 @@ IOC实现：Bean管理
 TODO	Spring5新特性
 实际应用
 ```
-
-
 
 ### Spring AOP
 
@@ -770,11 +771,15 @@ AOP 实现的两种方式（基于AspectJ）
 
 ```
 
-### Spring API
+### Spring Framework API
 
 org.springframework.util.StopWatch	获取时钟，用来代码段计时
 
 ### Spring Task(Schedule)
+
+
+
+### Spring Websocket
 
 
 
@@ -831,7 +836,7 @@ TODO	文件上传
 
 
 
-### Spring Boot TODO
+## Spring Boot TODO
 
 &#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
 
@@ -847,7 +852,7 @@ Spring Boot配置
 
 ```
 
-#### Spring/Spring Boot及各种框架注解总结
+### Spring/Spring Boot及各种框架注解总结
 
 &#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
 
@@ -893,7 +898,7 @@ Spring Boot配置
 | @MapperScan                                                  | 扫描包获得Mapper-XML                                         |
 |                                                              |                                                              |
 
-#### Spring/SpringBoot 整合
+### Spring/SpringBoot 整合
 
 &#x1F4C4;  [Spring 整合总结](spring/spring-springboot-整合.xmind)
 
@@ -910,7 +915,7 @@ Spring整合-Mybatis
 
 
 
-### Spring Security
+## Spring Security
 
 &#x1F4C4;  [spring-security.xmind](spring/spring-security.xmind)
 
@@ -932,9 +937,9 @@ Web 权限方案
 
 
 
-## architecture 架构
+# architecture 架构
 
-### monolithic-单体架构
+## monolithic-单体架构
 
 &#x1F4C4;  [monolithic-单体架构.xmind](architecture/monolithic-单体架构.xmind)
 
@@ -958,7 +963,7 @@ Web 权限方案
 		程序升级、修改缺陷往往需要制定专门的停机更新计划，做灰度发布、A/B测试也相对更复杂。
 ```
 
-### distributed-分布式系统
+## distributed-分布式系统
 
 &#x1F4C4;  [distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
 
@@ -970,7 +975,7 @@ Web 权限方案
 
 ```
 
-### soa-webservice-面向服务
+## soa-webservice-面向服务
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -993,7 +998,7 @@ SOAP
 基于REST风格构建的API-RESTful API
 ```
 
-#### Web Service
+## Web Service
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -1019,7 +1024,7 @@ Apache CXF 开发步骤
 RESTful注解
 ```
 
-#### SOAP和RESTful的实现对比总结
+### SOAP和RESTful的实现对比总结
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -1036,7 +1041,7 @@ RESTful不用定义服务接口，不同URI对应访问服务接口实现的不�
 RESTful因为不用写服务接口，它必须要有结果实体类来接收服务
 ```
 
-#### TODO RPC 远程服务调用
+### TODO RPC 远程服务调用
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -1046,7 +1051,7 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 
 ```
 
-#### RESTful
+### RESTful
 
 &#x1F4C4;  [soa-webservice-面向服务.xmind](architecture/soa-webservice-面向服务.xmind)
 
@@ -1061,7 +1066,7 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 有点像数据库操作，增删改查
 ```
 
-### microservices-微服务
+## microservices-微服务
 
 &#x1F4C4;  [microservices-微服务.xmind](architecture/microservices-微服务.xmind)
 
@@ -1073,9 +1078,9 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 
 ```
 
-## Other 其他
+# Other 其他
 
-### 字符编码 TODO
+## 字符编码 TODO
 
 &#x1F4C4;  [字符编码.xmind](other/字符编码.xmind)
 
@@ -1088,7 +1093,7 @@ ASCII 字符集
 Unicode 字符集
 ```
 
-### IDE：IDEA
+## IDE：IDEA
 
 &#x1F4C4;  [IDE-IDEA.xmind](other/IDE-IDEA.xmind)
 
@@ -1104,7 +1109,7 @@ plugin
 	Jrebel
 ```
 
-### version-control：git
+## version-control：git
 
 &#x1F4C4;  [IDE-IDEA.xmind](other/other-git.xmind.xmind)
 
@@ -1113,6 +1118,8 @@ plugin
 &#x1F4BE;  [脑图导出Markdown](0.markdown/other-git.md)
 
 ```
-
+原理
+config
+命令大全
 ```
 
