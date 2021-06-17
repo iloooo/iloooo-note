@@ -1,4 +1,4 @@
-# IDEA
+# other-IDE-IDEA
 
 ## system
 
@@ -7,6 +7,12 @@
 ## Settings
 
 ### Appearance & Behavior
+
+- Appearance
+
+	- Override default fonts by (not recommended)
+
+		- 菜单栏字体大小
 
 - System Settings
 - Menus and Toolbars
@@ -29,7 +35,158 @@
 		- 类注解
 		- 方法注解
 
-## plugin
+- 阿里规约的IDEA方法注释模板
 
-### Jrebel
+- File Types
+
+	- ignore files and folders
+
+		- 添加过滤文件或目录
+
+### Build, Execution, Deployment
+
+- Build Tools
+
+	- Maven 
+
+		- Importing
+
+			- 勾选自动下载 Sources，Documentation
+			- maven自动下载源码和文档
+
+## Keymap
+
+### 代码开发
+
+- Complete Current Statement
+
+	- 代码自动补齐
+
+		- Ctrl+Alt+Enter
+		- eclipses手动配置
+
+- surround with
+
+	- 选择的代码块增加 if 等操作
+
+		- Ctrl
+
+			- Alt
+
+				- T
+
+- duplicate entire lines
+
+	- 向下复制一行
+
+		- IDEA手动配置
+		- Eclipse
+
+			- Ctrl
+
+				- Alt
+
+					- 上下箭头
+
+- generate
+
+	- 生成构造器/get/set/toString
+
+		- Alt
+
+			- insert
+
+		- Eclipse：alt +shift + S
+
+- Toggle Case
+
+	- 大小写转换
+
+		- Ctrl
+
+			- Shift
+
+				- U
+
+- join lines
+
+	- 两行合并一样并删除多余空格
+
+		- Ctrl
+
+			- Shift
+
+				- J
+
+- rename
+
+	- 重命名
+
+		- Shift
+
+			- F6
+
+		- Eclipse：Alt+Shift+R
+
+- Go to Implementations
+
+	- 进入实现类
+
+		- Ctrl
+
+			- Alt
+
+				- B或者点击
+
+		- Eclipse：Ctrl + T
+
+- New
+
+	- 新建
+
+		- Ctrl
+
+			- Shift
+
+				- N
+
+- Navigate  
+
+	- Declaration or Usages
+
+		- 声明和使用
+
+			- Ctrl
+
+				- 左击
+
+	- Super Method
+
+		- 去父类（接口）方法
+
+			- Alt
+
+				- 左击
+
+### Ctrl
+
+### Shift
+
+### Alt
+
+### 注释
+
+- Comment with Line Commenty 
+
+	- Ctrl
+
+		- /
+
+- Comment with Block Comment'
+
+	- Ctrl
+
+		- Shift
+
+			- /
 
