@@ -36,31 +36,31 @@
 
 &#x1F4BE;  [java-note.md](0.markdown/)
 
-```
-Java核心
-	Java跨平台原理
-	面向对象
-标识符和命名规范
-	标识符规则
-	命名规范
-运算符
-	自增自减
-	算法+赋值运算符
-	==和 equals 的区别
-	逻辑与或、短路与或：区别在于短路不符合条件后，后面表达式不执行
-	运算符优先级
-注释
-流程控制
-数据类型
-	基本数据类型
-	基本数据类型默认值
-	包装类：装箱拆箱
-	引用数据类型
-	基本数据类型的转换
-		自动类型转换
-变量
-常量
-```
+> Java核心
+>
+> ​	Java跨平台原理
+> ​	面向对象
+>
+> 标识符和命名规范
+> 	标识符规则
+> 	命名规范
+> 运算符
+> 	自增自减
+> 	算法+赋值运算符
+> 	==和 equals 的区别
+> 	逻辑与或、短路与或：区别在于短路不符合条件后，后面表达式不执行
+> 	运算符优先级
+> 注释
+> 流程控制
+> 数据类型
+> 	基本数据类型
+> 	基本数据类型默认值
+> 	包装类：装箱拆箱
+> 	引用数据类型
+> 	基本数据类型的转换
+> 		自动类型转换
+> 变量
+> 常量
 
 ## 关键字 TODO
 
@@ -107,13 +107,17 @@ static 注意，修饰成员变量、方法、代码块、内部类
 	必须是@Retention为RUNTIME的才可以代码运行时通过反射解析
 ```
 
-## 并发 TODO
+## 并发多线程 TODO
 
-&#x1F4C4;  [java-annotation-note.xmind](java/java-annotation-note.xmind)
+&#x1F4C4;  [java-multithreading.xmind](java/java-multithreading.xmind)
 
-&#x1F4CA;  [Java并发脑图](1.pic/java-.png)
+&#x1F4CA;  [Java并发脑图](1.pic/java-multithreading.png)
 
-&#x1F4BE;  [java-annotation-note.md](0.markdown/java-annotation-note.md)
+&#x1F4BE;  [java-multithreading.md](0.markdown/java-multithreading.md)
+
+
+
+
 
 ### 并发压测 Apache JMeter
 
