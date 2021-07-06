@@ -689,7 +689,53 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 
 
 
-# Spring
+# Spring 全家桶
+
+### Spring/Spring Boot及各种框架注解总结
+
+&#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
+
+&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-springboot-annotation.png)
+
+&#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
+
+| 注解                                                         | 描述                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Java**                                                     |                                                              |
+| @PostConstruct                                               | 方法会在服务器加载Servlet的时候运行,Constructor(构造方法) -> @Autowired(依赖注入) -> @PostConstruct(注释的方法) |
+|                                                              |                                                              |
+| **Spring**                                                   |                                                              |
+| @Configuration / @ComponentScan(basePackages = {"com.atguigu"}) | 作为配置类，替代xml配置文件 / 组件扫描                       |
+| @Component/@Controller/@Service/@Repository                  | 类/web层/service层/dao层                                     |
+| @import                                                      | 4.x新特性：多个配置文件引入到一个文件;classpath:spring-mvc.xml |
+| **依赖注入**                                                 |                                                              |
+| @Value                                                       | 注入普通属性，也可以读取spring boot的yml文件：@Value("${token.header}") |
+| @Autowired / @Qualifier("userDaoImpl")                       | Bean自动装配byType / 配合@Autowired用byName                  |
+| @Resource                                                    | Bean自动装配byType也可以byName                               |
+| @Bean("xxxx")                                                | 标注将该方法的返回值存储到 Spring 容器中，相当于单独一个bean |
+|                                                              |                                                              |
+| **Spring MVC**                                               |                                                              |
+| @RequestMapping                                              | 用于建立请求 URL 和处理请求方法之间的对应关系支持Ant风格资源地址 |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Spring Boot**                                              |                                                              |
+| @RestController                                              | @Controller+@ResponseBody                                    |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Spring 事务**                                              |                                                              |
+| @Transactional                                               |                                                              |
+|                                                              |                                                              |
+| **Spring Security**                                          |                                                              |
+| @EnableWebSecurity                                           | 开启对 Spring Security 注解的方法，进行权限验证，用在配置类  |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Hibernate-Validator**                                      |                                                              |
+| @Valid                                                       | 开启验证                                                     |
+| TODO                                                         |                                                              |
+|                                                              |                                                              |
+| **Mybatis**                                                  |                                                              |
+| @MapperScan                                                  | 扫描包获得Mapper-XML                                         |
+|                                                              |                                                              |
 
 ## Spring Framework
 
@@ -838,8 +884,6 @@ Exception 异常处理机制
 TODO	文件上传
 ```
 
-
-
 ## Spring Boot TODO
 
 &#x1F4C4;  [spring-boot.xmind](spring/spring-boot.xmind)
@@ -855,52 +899,6 @@ SpringBoot是简化Spring技术栈的快速开发脚手架
 Spring Boot配置
 
 ```
-
-### Spring/Spring Boot及各种框架注解总结
-
-&#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
-
-&#x1F4CA;  [Spring-注解总结脑图](1.pic/spring-springboot-annotation.png)
-
-&#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
-
-| 注解                                                         | 描述                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Java**                                                     |                                                              |
-| @PostConstruct                                               | 方法会在服务器加载Servlet的时候运行,Constructor(构造方法) -> @Autowired(依赖注入) -> @PostConstruct(注释的方法) |
-|                                                              |                                                              |
-| **Spring**                                                   |                                                              |
-| @Configuration / @ComponentScan(basePackages = {"com.atguigu"}) | 作为配置类，替代xml配置文件 / 组件扫描                       |
-| @Component/@Controller/@Service/@Repository                  | 类/web层/service层/dao层                                     |
-| @import                                                      | 4.x新特性：多个配置文件引入到一个文件;classpath:spring-mvc.xml |
-| **依赖注入**                                                 |                                                              |
-| @Value                                                       | 注入普通属性，也可以读取spring boot的yml文件：@Value("${token.header}") |
-| @Autowired / @Qualifier("userDaoImpl")                       | Bean自动装配byType / 配合@Autowired用byName                  |
-| @Resource                                                    | Bean自动装配byType也可以byName                               |
-| @Bean("xxxx")                                                | 标注将该方法的返回值存储到 Spring 容器中，相当于单独一个bean |
-|                                                              |                                                              |
-| **Spring MVC**                                               |                                                              |
-| @RequestMapping                                              | 用于建立请求 URL 和处理请求方法之间的对应关系支持Ant风格资源地址 |
-| TODO                                                         |                                                              |
-|                                                              |                                                              |
-| **Spring Boot**                                              |                                                              |
-| @RestController                                              | @Controller+@ResponseBody                                    |
-| TODO                                                         |                                                              |
-|                                                              |                                                              |
-| **Spring 事务**                                              |                                                              |
-| @Transactional                                               |                                                              |
-|                                                              |                                                              |
-| **Spring Security**                                          |                                                              |
-| @EnableWebSecurity                                           | 开启对 Spring Security 注解的方法，进行权限验证，用在配置类  |
-| TODO                                                         |                                                              |
-|                                                              |                                                              |
-| **Hibernate-Validator**                                      |                                                              |
-| @Valid                                                       | 开启验证                                                     |
-| TODO                                                         |                                                              |
-|                                                              |                                                              |
-| **Mybatis**                                                  |                                                              |
-| @MapperScan                                                  | 扫描包获得Mapper-XML                                         |
-|                                                              |                                                              |
 
 ### Spring/SpringBoot 整合
 
@@ -939,8 +937,6 @@ Web 权限方案
 ```
 
 
-
-
 # architecture 架构
 
 ## monolithic-单体架构
@@ -967,17 +963,7 @@ Web 权限方案
 		程序升级、修改缺陷往往需要制定专门的停机更新计划，做灰度发布、A/B测试也相对更复杂。
 ```
 
-## distributed-分布式系统
 
-&#x1F4C4;  [distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
-
-&#x1F4CA;  [TODO脑图](1.pic/TODO.png)
-
-&#x1F4BE;  [arch-distributed-分布式系统.md](0.markdown/arch-distributed-分布式系统.md)
-
-```
-
-```
 
 ## soa-webservice-面向服务
 
@@ -1070,7 +1056,19 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 有点像数据库操作，增删改查
 ```
 
-## microservices-微服务
+## distributed-分布式系统
+
+&#x1F4C4;  [distributed-system-分布式系统.xmind](architecture/distributed-system-分布式系统.xmind)
+
+&#x1F4CA;  [TODO脑图](1.pic/TODO.png)
+
+&#x1F4BE;  [arch-distributed-分布式系统.md](0.markdown/arch-distributed-分布式系统.md)
+
+```
+
+```
+
+### microservices-微服务
 
 &#x1F4C4;  [microservices-微服务.xmind](architecture/microservices-微服务.xmind)
 
