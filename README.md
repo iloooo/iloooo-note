@@ -24,6 +24,14 @@
 
 &#x1F4BE;  代表markdown笔记（脑图导出，用来备份、概览、比较差异等）
 
+> Temp
+
+&#x1F4C4;  [AAA.xmind](other/AAA.xmind)
+
+&#x1F4CA;  [脑图截图](1.pic/脑图.png)
+
+&#x1F4BE;  [AAA.md](0.markdown/AAA.md)
+
 [TOC]
 
 # Java
@@ -1103,6 +1111,23 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 
 
 
+# 前端
+
+## JavaScript
+
+### Vue
+
+
+
+| 指令                    | 功能          | 简洁写法       | 描述                                        | 举例                                                         |
+| ----------------------- | ------------- | -------------- | ------------------------------------------- | ------------------------------------------------------------ |
+| **v-bind**:属性='参数'  | 强制数据绑定  | **:**xxx='yyy' | data:{参数}                                 | ```<a  v-bind:href="url">v-bind</a><br>```                   |
+| **v-on**:click='方法名' | 绑定事件监听, | @click='xxx'   | 绑定指定事件名的回调函数  method:{方法(){}} | ```<button  v-on:click="test">绑定事件监听：点击</button>``` |
+|                         |               |                |                                             |                                                              |
+|                         |               |                |                                             |                                                              |
+
+​	
+
 # Other 其他
 
 ## 字符编码 TODO
@@ -1147,4 +1172,8 @@ plugin
 config
 命令大全
 ```
+
+## Markdown
+
+&#x1F4BE;  [Markdown示例.md](other/other-markdown.md)
 
