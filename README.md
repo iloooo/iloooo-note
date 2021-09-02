@@ -175,6 +175,25 @@ Map：key（无序的、不可重复的）、value（无序的、可重复的）
 	TreeMap底层、自然和定制排序
 	Hashtable原理和功能同HashMap，但是不允许nul
 	Properties的key、value都是字符串类型
+相互转换
+	Array转List 
+		String[] s = new String[]{"A", "B", "C", "D","E"};
+		List<String> list = Arrays.asList(s);
+		对s的修改，直接影响list
+	List转Array
+		String[] dest = list.toArray(new String[0]);//new String[0]是指定返回数组的类型
+		System.out.println("dest: " + Arrays.toString(dest));
+		对list中关于元素的修改，不会影响dest。 
+    List转Set
+        Set<String> set = new HashSet<>(list);
+        或者：
+        Set<String> result = new HashSet<>();
+        result.addAll(list);
+	Set转List
+		List<String> list_1 = new ArrayList<>(set);
+		或者：
+		List<String> result= new ArrayList<>();
+		result.addAll(set);
 ```
 
 ### HashMap各遍历方式分析
@@ -699,7 +718,7 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 
 # Spring 全家桶
 
-### Spring/Spring Boot及各种框架注解总结
+## Spring注解总结
 
 &#x1F4C4;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
 
@@ -718,7 +737,7 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 | @import                                                      | 4.x新特性：多个配置文件引入到一个文件;classpath:spring-mvc.xml |
 | **依赖注入**                                                 |                                                              |
 | @Value                                                       | 注入普通属性，也可以读取spring boot的yml文件：@Value("${token.header}") |
-| @Autowired / @Qualifier("userDaoImpl")                       | Bean自动装配byType / 配合@Autowired用byName                  |
+| @Autowired / @Qualifier("userDaoImpl")                       | Bean自动装配byType / 配合@Qualifier用byName                  |
 | @Resource                                                    | Bean自动装配byType也可以byName                               |
 | @Bean("xxxx")                                                | 标注将该方法的返回值存储到 Spring 容器中，相当于单独一个bean |
 |                                                              |                                                              |
@@ -1158,6 +1177,8 @@ Settings
 plugin
 	Jrebel
 ```
+
+
 
 ## version-control：git
 

@@ -213,3 +213,37 @@
 
 - key、value都是字符串类型
 
+## 相互转换
+
+### Array转List 
+
+- String[] s = new String[]{"A", "B", "C", "D","E"};
+- List<String> list = Arrays.asList(s);
+- 注意这里list里面的元素直接是s里面的元素( list backed by the specified array)
+
+	- 对s的修改，直接影响list
+
+### List转Array
+
+- String[] dest = list.toArray(new String[0]);//new String[0]是指定返回数组的类型
+- System.out.println("dest: " + Arrays.toString(dest));
+- 注意这里的dest里面的元素不是list里面的元素
+
+	- 对list中关于元素的修改，不会影响dest。 
+
+### List转Set
+
+- Set<String> set = new HashSet<>(list);
+- 或者：
+
+	- Set<String> result = new HashSet<>();
+	- result.addAll(list);
+
+### Set转List
+
+- List<String> list_1 = new ArrayList<>(set);
+- 或者：
+
+	- List<String> result= new ArrayList<>();
+	- result.addAll(set);
+
