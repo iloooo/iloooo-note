@@ -261,6 +261,27 @@ Streams API（JDK 1.8+）
 	sun.* 包缺失
 ```
 
+## VO、DTO、DO、PO对象
+
+| 对象                        | 描述                                                         |      |
+| --------------------------- | ------------------------------------------------------------ | ---- |
+| VO（View Object）           | 视图对象，把某个指定页面（或组件）的所有数据封装起来         |      |
+| DTO（Data Transfer Object） | 数据传输对象，这个概念来源于J2EE的设计模式，原来的目的是为了EJB的分布式应用提供粗粒度的数据实体，以减少分布式调用的次数，从而提高分布式调用的性能和降低网络负载，但在这里，泛指用于展示层与服务层之间的数据传输对象。 |      |
+| DO（Domain Object）         | 领域对象，就是从现实世界中抽象出来的有形或无形的业务实体     |      |
+| PO（Persistent Object）     | 持久化对象，它跟持久层（通常是关系型数据库）的数据结构形成一一对应的映射关系，如果持久层是关系型数据库，那么，数据表中的每个字段（或若干个）就对应PO的一个（或若干个）属性。 |      |
+
+![](https://mmbiz.qpic.cn/mmbiz_png/JdLkEI9sZfdBn4DKicCMN9ylzS4sMnml4XyybuVVCVX9TyhVfO4sMAHjPRIIMpQPtCgWoCXw3W6yTlfCzaUGwzw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+```
+用户发出请求（可能是填写表单），表单的数据在展示层被匹配为VO。
+    展示层把VO转换为服务层对应方法所要求的DTO，传送给服务层。
+    服务层首先根据DTO的数据构造（或重建）一个DO，调用DO的业务方法完成具体业务。
+    服务层把DO转换为持久层对应的PO（可以使用ORM工具，也可以不用），调用持久层的持久化方法，把PO传递给它，完成持久化操作。
+    对于一个逆向操作，如读取数据，也是用类似的方式转换和传递，略。
+```
+
+> 参考：[浅析 VO、DTO、DO、PO 的概念、区别和用处](https://mp.weixin.qq.com/s/nLl9Pg9ZS-9YlX5bVREarg)
+
 # Java 框架
 
 ## Lombok
@@ -321,7 +342,9 @@ version
 注解
 ```
 
-## log4j2
+## 日志
+
+### log4j2
 
 &#x1F4C4;  [java-log4j2.xmind](java/java-log4j2.xmind)
 
@@ -345,7 +368,23 @@ version
 		AsyncLogger 
 ```
 
+## 安全
 
+### 同源政策 和 跨域资源共享 CORS
+
+[同源政策和跨域资源共享CORS.md](3.doc/同源政策和跨域资源共享CORS.md)
+
+TODO：VUE 配置CROS
+
+TODO：Apache Shiro 配置CROS
+
+TODO：Spring Security 配置CROS
+
+TODO：SpringMVC，Boot配置CROS
+
+### Apache Shiro
+
+[WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析](3.doc/WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析.docx)
 
 
 ***
@@ -1180,7 +1219,9 @@ plugin
 
 
 
-## version-control：git
+## version-control
+
+### Git
 
 &#x1F4C4;  [other-git.xmind](other/other-git.xmind)
 
@@ -1193,6 +1234,10 @@ plugin
 config
 命令大全
 ```
+
+### Gitlab
+
+[Gitlab成员权限分配规则](https://www.xiejiahe.com/blog/detail/5c6912212bbcb67b4a5f3ece)
 
 ## Markdown
 
