@@ -71,3 +71,23 @@ TODO：Apache Shiro 配置CROS
 TODO：Spring Security 配置CROS
 
 TODO：SpringMVC，Boot配置CROS
+
+### SpringBoot 配置CORS
+
+Spring Boot默认对请求方法**只支持GET、HEAD和POST方式**，如果采用其他方式的请求，如DELETE,PUT等，**会变成option请求**。为了满足标准的Restful API，需要对默认的进行扩充
+
+```java
+@Bean
+public WebMvcConfigurer corsConfigurer() {
+    return new WebMvcConfigurer() {
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**")
+                .allowedOrigins("*") //允许所有的url
+                .allowCredentials(true)
+                .allowedMethods("GET", "POST", "PUT", "DELETE");
+        }
+    };
+}
+```
+

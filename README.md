@@ -32,7 +32,35 @@
 
 &#x1F4BE;  [AAA.md](0.markdown/AAA.md)
 
-[TOC]
+# TODO
+
+- [ ] Java-关键字
+- [ ] Java-类和类的成员
+- [ ] Java-并发多线程
+- [ ] Java-设计模式
+- [ ] 框架-MapStruct
+- [ ] 安全-CORS
+- [ ] 会话技术-Cookie
+- [ ] 会话技术-Session
+- [ ] JavaWeb-JSP
+- [ ] oracle/redis事务
+- [ ] Mysql数据库
+- [ ] Redis数据库
+- [ ] JDBC-Resultset详解（数据类型对应）
+- [ ] ORM-MyBatisPlus
+- [ ] SpringMVC注解
+- [ ] SpringBoot注解
+- [ ] SpringSecurity注解
+- [ ] Hibernate-Validator注解
+- [ ] Spring5新特性
+- [ ] SpringXML配置总结
+- [ ] SpringBoot
+- [ ] RPC远程服务调用
+- [ ] 字符编码
+- [ ] 文档-Swagger
+- [ ] 文档-Knife4j
+- [x] ~~文档-Smart-Doc~~
+- [x] ~~文档管理框架~~
 
 # Java
 
@@ -370,21 +398,41 @@ version
 
 ## 安全
 
-### 同源政策 和 跨域资源共享 CORS
+### 同源政策 和 跨域资源共享 CORS TODO
 
 [同源政策和跨域资源共享CORS.md](3.doc/同源政策和跨域资源共享CORS.md)
 
-TODO：VUE 配置CROS
+- [ ] TODO：VUE 配置CROS
 
-TODO：Apache Shiro 配置CROS
+- [ ] TODO：Apache Shiro 配置CROS
 
-TODO：Spring Security 配置CROS
+- [ ] TODO：Spring Security 配置CROS
 
-TODO：SpringMVC，Boot配置CROS
+- [ ] TODO：SpringMVC，Boot配置CROS
 
 ### Apache Shiro
 
 [WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析](3.doc/WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析.docx)
+
+## 文档
+
+### API文档集成
+
+TODO：Swagger
+
+TODO：Knife4j
+
+[smart-doc介绍与使用.md](3.doc/smart-doc.md)
+
+### 文档管理框架
+
+[Torna](http://torna.cn/)
+
+[Showdoc](https://www.showdoc.com.cn/)
+
+[Yapi](https://hellosean1025.github.io/yapi/)
+
+
 
 
 ***
@@ -1184,7 +1232,19 @@ RESTful因为不用写服务接口，它必须要有结果实体类来接收服�
 |                         |               |                |                                             |                                                              |
 |                         |               |                |                                             |                                                              |
 
-​	
+# 运维工具
+
+## Maven
+
+[archetype](https://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
+
+[POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)
+
+[POM Reference](https://maven.apache.org/pom.html)
+
+[Dependency Mechanism 依赖机制](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
+
+[Settings Reference](https://maven.apache.org/settings.html)
 
 # Other 其他
 
