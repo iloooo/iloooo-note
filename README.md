@@ -813,6 +813,8 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 
 &#x1F4BE;  [spring-springboot-annotation.md](0.markdown/spring-springboot-annotation.md)
 
+> 参考：[SpringBoot+Spring常用注解总结.md](3.doc/SpringBoot+Spring常用注解总结.md)
+
 | 注解                                                         | 描述                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Java**                                                     |                                                              |
