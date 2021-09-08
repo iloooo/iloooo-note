@@ -398,9 +398,9 @@ version
 
 ## 安全
 
-### 同源政策 和 跨域资源共享 CORS TODO
+### CORS 同源政策和跨域资源共享 TODO
 
-[同源政策和跨域资源共享CORS.md](3.doc/同源政策和跨域资源共享CORS.md)
+[CORS同源政策和跨域资源共享.md](3.doc/CORS同源政策和跨域资源共享.md)
 
 - [ ] TODO：VUE 配置CROS
 
@@ -410,9 +410,13 @@ version
 
 - [ ] TODO：SpringMVC，Boot配置CROS
 
+### CSRF跨域请求伪造
+
+### XSS跨站脚本漏洞
+
 ### Apache Shiro
 
-[WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析](3.doc/WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析.docx)
+#### [WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析](3.doc/WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析.docx)
 
 ## 文档
 

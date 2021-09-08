@@ -1,10 +1,23 @@
 # 同源政策 和 跨域资源共享 CORS
 
+## 403 Forbidden 禁止访问
+
+当页面跨域访问触发同源政策，后端服务器没有进行跨域配置时，会返回页面
+
+HTTP/1.1 403 Forbidden 
+
+Invalid CORS request
+
+有时会出现：vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+
 ## 同源政策
 
-[浏览器安全的基石同源政策](https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+> [阮一峰：浏览器安全的基石同源政策](https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
+> [MDN：浏览器的同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
 
-浏览器从一个域名的网页去请求另一个域名的资源时，**域名、端口、协议任一不同**
+如果两个 URL 的 域名、端口、协议都相同的话，则这两个 URL 是同源。
+
+浏览器从网页去请求不同域名、端口或协议的资源时**（域名、端口、协议任一不同）**，导致非同源访问
 
 > "不同"注意:  域名和域名ip ,localhost和127.0.0.1虽然都指向本机，但也属于跨域
 
@@ -15,6 +28,10 @@
 （2） DOM 无法获得。
 （3） AJAX 请求不能发送。
 ```
+
+
+
+## 跨域访问解决方案
 
 #### Cookie非同源共享：
 
@@ -34,9 +51,13 @@ Set-Cookie: key=value; domain=.example.com; path=/
 ◾CORS
 ```
 
-## 跨域资源共享 CORS
 
-概念："跨域资源共享"（Cross-origin resource sharing）,它允许浏览器向跨源服务器，发出[`XMLHttpRequest`](https://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html)请求，从而克服了AJAX只能同源使用的限制。
+
+### 跨域资源共享 CORS
+
+CORS 是一种基于[HTTP](https://developer.mozilla.org/zh-CN/docs/Glossary/HTTP) 头的机制，它允许服务端来指定哪些主机[origin](https://developer.mozilla.org/zh-CN/docs/Glossary/Origin)（域，协议和端口）可以从这个服务端加载资源。
+
+缩写："跨域资源共享"（Cross-origin resource sharing）
 
 ### 浏览器CROS分类
 
@@ -91,3 +112,8 @@ public WebMvcConfigurer corsConfigurer() {
 }
 ```
 
+## 防止跨源伪造访问
+
+* 防止**CSRF跨域请求伪造**（客户在B网站访问源网站时默认带上客户的cookie）攻击，可以通过在前端请求时拿取cookie中csrf标识字段（因为攻击者不知道你cookie，如果XSS漏洞拿取了客户cookie还有其他防御办法）
+
+> [CSRF跨域请求伪造.md](CSRF跨域请求伪造.md)
