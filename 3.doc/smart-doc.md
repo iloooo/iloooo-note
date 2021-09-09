@@ -21,27 +21,63 @@ https://gitee.com/smart-doc-team/smart-doc#features
 
 
 
-## 使用
+## Get Start
 
-### Maven 插件
+### 引入Maven 插件
 
 https://gitee.com/smart-doc-team/smart-doc#add-plugin
 
 https://gitee.com/smart-doc-team/smart-doc/wikis/smart-doc%20maven%E6%8F%92%E4%BB%B6?sort_id=1791450
 
+[maven中央仓库版本](https://repo1.maven.org/maven2/com/github/shalousun/smart-doc-maven-plugin/)
 
+Demo:
 
-### smart-doc.json
+```xml
+<plugin>
+    <groupId>com.github.shalousun</groupId>
+    <artifactId>smart-doc-maven-plugin</artifactId>
+    <version>[最新版本 2.2.6]</version>
+    <configuration>
+        <!--指定生成文档的使用的配置文件,配置文件放在自己的项目中-->
+        <configFile>./src/main/resources/smart-doc.json</configFile>
+        <!--指定项目名称-->
+        <projectName>测试</projectName>
+    </configuration>
+    <executions>
+        <execution>
+            <!--如果不需要在执行编译时启动smart-doc，则将phase注释掉-->
+            <phase>compile</phase>
+            <goals>
+                <!--smart-doc提供了html、openapi、markdown等goal，可按需配置-->
+                <goal>markdown</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
+
+### 根据maven plugin中自定义设置的路径创建 smart-doc.json
 
 https://gitee.com/smart-doc-team/smart-doc#configuration
 
+最小配置单位：
+
+```json
+{
+   "outPath": "D://md2" //指定文档的输出路径,相对路径时请用./开头，eg:./src/main/resources/static/doc
+}
+```
+
+创建好smart-doc.json后，直接在IDE maven中执行mvn compile时即在指定目录生成文档。
+
+执行`Plugins` / `smart-doc` / ` smart-doc:postman`即可在同目录获得postman.json，可以直接导入此json到postman中（smart-doc会自动填写一些示例数据，通过@mock注释可以指定示例数据数值）
+
+[生成文档效图](https://gitee.com/smart-doc-team/smart-doc/wikis/%E6%96%87%E6%A1%A3%E6%95%88%E6%9E%9C%E5%9B%BE?sort_id=1652819)
 
 
-### 生成文档效图
 
-https://gitee.com/smart-doc-team/smart-doc/wikis/%E6%96%87%E6%A1%A3%E6%95%88%E6%9E%9C%E5%9B%BE?sort_id=1652819
-
-
+## 其他配置
 
 ### smart-doc自定义注释tag
 
@@ -70,8 +106,6 @@ https://gitee.com/smart-doc-team/smart-doc/wikis/%E5%93%8D%E5%BA%94%E5%AD%97%E6%
 ### 导出数据字典
 
 https://gitee.com/smart-doc-team/smart-doc/wikis/%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8?sort_id=1713399
-
-
 
 ### swagger ui集成
 
