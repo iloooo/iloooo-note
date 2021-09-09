@@ -83,11 +83,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 方式3：One-Time Tokens(不同的表单包含一个不同的伪随机值)
 
-
+效果同方式1
 
 ## 参考
 
 > [SpringBoot 如何防御 CSRF 攻击](https://mp.weixin.qq.com/s/CFchihImcC3_J4uqmgzE3w)
 >
-> https://blog.csdn.net/qq_41499808/article/details/108710843
+> [Cross-site request forgery攻击方式](https://blog.csdn.net/qq_41499808/article/details/108710843)
 

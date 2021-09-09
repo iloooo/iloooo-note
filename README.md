@@ -396,11 +396,40 @@ version
 		AsyncLogger 
 ```
 
+
+
 ## 安全
 
-### CORS 同源政策和跨域资源共享 TODO
+### 同源政策及跨源解决方案 TODO
+
+[同源策略.md](3.doc/同源策略.md)
+
+* 可以跨源访问情况
+  * 资源嵌入跨源（标签）
+  * 数据存储跨源（localStorage/IndexedDB/Cookie）
+  * JavaScript API 跨源（window/location）
+
+* 非同源行为受到限制（不能共享）
+* 解决方案
+
+```
+1、 JSONP跨域
+2、 todo：document.domain + iframe跨域
+3、 todo：location.hash + iframe
+4、 todo：window.name + iframe跨域
+5、 todo：postMessage跨域
+6、 CORS同源政策和跨域资源共享
+7、 todo：nginx代理跨域
+8、 todo：nodejs中间件代理跨域
+9、 todo：WebSocket协议跨域
+```
+
+### CORS跨域资源共享 TODO
 
 [CORS同源政策和跨域资源共享.md](3.doc/CORS同源政策和跨域资源共享.md)
+
+* CORS实现
+  * SpringBoot 配置CORS
 
 - [ ] TODO：VUE 配置CROS
 
@@ -410,13 +439,29 @@ version
 
 - [ ] TODO：SpringMVC，Boot配置CROS
 
+* 防止跨源伪造访问
+
 ### CSRF跨域请求伪造
 
-### XSS跨站脚本漏洞
+[CSRF跨域请求伪造.md](3.doc/CSRF跨域请求伪造.md)
+
+* CSRF原理
+* CSRF防御
+  * Spring Security CSRF
+  * TODO Apache Shiro CSRF
+  * 验证码
+
+### XSS跨站脚本漏洞 TODO
+
+[XSS跨站脚本漏洞.md](3.doc/XSS跨站脚本漏洞.md)
+
+
 
 ### Apache Shiro
 
 #### [WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析](3.doc/WebMvcConfigurationSupport子类配置影响Shiro跨域配置的分析.docx)
+
+
 
 ## 文档
 

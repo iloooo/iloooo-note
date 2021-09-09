@@ -1,33 +1,6 @@
-# 同源政策 和 跨域资源共享 CORS
+# 跨域资源共享 CORS
 
-## 403 Forbidden 禁止访问
-
-当页面跨域访问触发同源政策，后端服务器没有进行跨域配置时，会返回页面
-
-HTTP/1.1 403 Forbidden 
-
-Invalid CORS request
-
-有时会出现：vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
-
-## 同源政策
-
-> [阮一峰：浏览器安全的基石同源政策](https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html)
-> [MDN：浏览器的同源策略](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)
-
-如果两个 URL 的 域名、端口、协议都相同的话，则这两个 URL 是同源。
-
-浏览器从网页去请求不同域名、端口或协议的资源时**（域名、端口、协议任一不同）**，导致非同源访问
-
-> "不同"注意:  域名和域名ip ,localhost和127.0.0.1虽然都指向本机，但也属于跨域
-
-### 非同源行为受到限制（不能共享）:
-
-```
-（1） Cookie、LocalStorage 和 IndexDB 无法读取。
-（2） DOM 无法获得。
-（3） AJAX 请求不能发送。
-```
+> 首先了解[同源策略.md](同源策略.md)
 
 
 
@@ -114,6 +87,6 @@ public WebMvcConfigurer corsConfigurer() {
 
 ## 防止跨源伪造访问
 
-* 防止**CSRF跨域请求伪造**（客户在B网站访问源网站时默认带上客户的cookie）攻击，可以通过在前端请求时拿取cookie中csrf标识字段（因为攻击者不知道你cookie，如果XSS漏洞拿取了客户cookie还有其他防御办法）
+* 防止**CSRF跨域请求伪造**（客户在B网站访问源网站时默认带上客户的cookie）攻击，可以通过在前端请求时拿取cookie中csrf token标识字段（因为攻击者不知道你cookie，如果XSS漏洞拿取了客户cookie还有其他防御办法）
 
 > [CSRF跨域请求伪造.md](CSRF跨域请求伪造.md)
