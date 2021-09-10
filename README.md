@@ -400,9 +400,9 @@ version
 
 ## 安全
 
-### 同源政策及跨源解决方案 TODO
+### 同源政策及跨域解决方案 TODO
 
-[同源策略.md](3.doc/同源策略.md)
+[同源策略与跨域解决方案.md](3.doc/同源策略与跨域解决方案.md)
 
 * 可以跨源访问情况
   * 资源嵌入跨源（标签）
@@ -410,18 +410,18 @@ version
   * JavaScript API 跨源（window/location）
 
 * 非同源行为受到限制（不能共享）
-* 解决方案
+* 跨域解决方案
 
 ```
 1、 JSONP跨域
-2、 todo：document.domain + iframe跨域
-3、 todo：location.hash + iframe
-4、 todo：window.name + iframe跨域
-5、 todo：postMessage跨域
+2、 document.domain + iframe跨域
+3、 location.hash + iframe
+4、 window.name + iframe跨域
+5、 postMessage跨域
 6、 CORS同源政策和跨域资源共享
-7、 todo：nginx代理跨域
-8、 todo：nodejs中间件代理跨域
-9、 todo：WebSocket协议跨域
+7、 nginx代理跨域
+8、 nodejs(Vue和非Vue)中间件代理跨域
+9、 WebSocket协议跨域
 ```
 
 ### CORS跨域资源共享 TODO
@@ -481,7 +481,7 @@ TODO：Knife4j
 
 [Yapi](https://hellosean1025.github.io/yapi/)
 
-
+TODO ApiFox
 
 
 ***
