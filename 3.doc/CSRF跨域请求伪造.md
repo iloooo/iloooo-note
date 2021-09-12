@@ -60,7 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-```javascript
+```html
 <script>
     $("#loginBtn").click(function () {
         let _csrf = $.cookie('XSRF-TOKEN');
@@ -71,13 +71,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 </script>
 ```
 
-#### TODO Apache Shiro CSRF
+#### &#x1f514; TODO：Apache Shiro CSRF
 
 
 
 ### 方式2：验证码（同时防范XSS漏洞，即攻击网站获得了cookie）
 
-> [跨站脚本漏洞XSS.md](跨站脚本漏洞XSS.md)
+> &#x1F4DC; [跨站脚本漏洞XSS.md](跨站脚本漏洞XSS.md)
 
 每次的用户提交都需要用户在表单中填写一个图片上的随机字符串
 
@@ -87,7 +87,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ## 参考
 
-> [SpringBoot 如何防御 CSRF 攻击](https://mp.weixin.qq.com/s/CFchihImcC3_J4uqmgzE3w)
+> &#x1f449; [SpringBoot 如何防御 CSRF 攻击](https://mp.weixin.qq.com/s/CFchihImcC3_J4uqmgzE3w)
 >
-> [Cross-site request forgery攻击方式](https://blog.csdn.net/qq_41499808/article/details/108710843)
+> &#x1f449; [Cross-site request forgery攻击方式](https://blog.csdn.net/qq_41499808/article/details/108710843)
 

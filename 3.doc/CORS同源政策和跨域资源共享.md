@@ -1,30 +1,6 @@
 # 跨域资源共享 CORS
 
-> 首先了解[同源策略与跨域解决方案.md](同源策略与跨域解决方案.md)
-
-
-
-## 跨域访问解决方案
-
-#### Cookie非同源共享：
-
-```javascript
-document.domain = 'example.com';
-或者：
-Set-Cookie: key=value; domain=.example.com; path=/
-```
-
-> `http://w1.example.com/a.html`和`http://w2.example.com/b.html`，只要设置相同的`document.domain`，两个网页就可以共享Cookie。
-
-#### AJAX非同源共享：
-
-```
-◾JSONP
-◾WebSocket
-◾CORS
-```
-
-
+> 首先了解 &#x1F4DC; [同源策略与跨域解决方案.md](同源策略与跨域解决方案.md)
 
 ### 跨域资源共享 CORS
 
@@ -58,15 +34,15 @@ CORS 是一种基于[HTTP](https://developer.mozilla.org/zh-CN/docs/Glossary/HTT
 
 处理：https://www.ruanyifeng.com/blog/2016/04/cors.html
 
-TODO：Apache Shiro 配置CROS
-
-TODO：Spring Security 配置CROS
-
-TODO：SpringMVC，Boot配置CROS
-
 
 
 ### CROS实现方式
+
+#### &#x1f514; TODO：Apache Shiro 配置CROS
+
+#### &#X1f514; TODO：Spring Security 配置CROS
+
+#### &#x1f514; TODO：SpringMVC，Boot配置CROS
 
 #### SpringBoot 配置CORS
 
@@ -106,7 +82,7 @@ class CorsConfig {
 }
 ```
 
-### 方式2：重写WebMvcConfigurer
+##### 方式2：重写WebMvcConfigurer
 
 ```java
 @Configuration
@@ -132,10 +108,39 @@ public WebMvcConfigurer corsConfigurer() {
 }
 ```
 
-> Reference: [springboot设置Cors跨域的四种方式](https://blog.csdn.net/Mint6/article/details/104726325)
+##### 方式3：使用注解（@CrossOrigin）
+
+```java
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+ 
+@Controller
+@RequestMapping("/admin/sysLog")
+@CrossOrigin
+public class SysLogController {
+ 
+}
+```
+
+##### 方式4：手工设置响应头（HttpServletResponse ）
+
+这种方式，可以自己手工加到，具体的controller，inteceptor，filter等逻辑里。
+
+```java
+@RequestMapping("/test")
+@ResponseBody
+public String test(){
+	response.addHeader("Access-Control-Allow-Origin", "http://localhost:8080");
+	return "success";
+}
+```
+
+> &#x1f449; [springboot设置Cors跨域的四种方式](https://blog.csdn.net/Mint6/article/details/104726325)
 
 ## 防止CSRF跨源伪造访问
 
 * 防止**CSRF跨域请求伪造**（客户在B网站访问源网站时默认带上客户的cookie）攻击，可以通过在前端请求时拿取cookie中csrf token标识字段（因为攻击者不知道你cookie，如果XSS漏洞拿取了客户cookie还有其他防御办法）
 
-> [CSRF跨域请求伪造.md](CSRF跨域请求伪造.md)
+> &#x1F4DC; [CSRF跨域请求伪造.md](CSRF跨域请求伪造.md)
+

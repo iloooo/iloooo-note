@@ -87,7 +87,7 @@ Bean Validation JSR303 外自定义的tag
 
 > JSR-303 是JAVA EE 6 中的一项子规范，叫做Java Bean Validation，**Hibernate Validator** 是 Bean Validation 的参考实现， Hibernate Validator 提供了 JSR 303 规范中所有内置 constraint 的实现，除此之外还有一些附加的 constraint，大致来说就是对Java Bean 对象做参数校验的，Validator 中定义了大量校验参数的注解，为我们日常开发提供了便利，摈弃了传统的方式中业务代码中的串行校验
 >
-> from：https://blog.csdn.net/weixin_43295079/article/details/100653977
+> &#x1f449; https://blog.csdn.net/weixin_43295079/article/details/100653977
 
 | 注释tag       | 描述                                                         |
 | ------------- | ------------------------------------------------------------ |
