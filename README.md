@@ -345,6 +345,7 @@ Constructor
 @Getter(lazy=true)
 @Builder
 @With
+@Accessors(chain = true)开启链式编程
 Lombok原理
 ```
 
