@@ -164,7 +164,7 @@ static 注意，修饰成员变量、方法、代码块、内部类
 
 &#x1F4DC;  [java-collection.md](0.markdown/java-collection.md)
 
-```
+```java
 List：有序、可重复
 	ArrayList底层、线程、方法
 		add(E e)：O(1)   大于原数组长度时扩容：1.5倍.扩容消耗性能，所以最好预设数组大小
@@ -195,25 +195,15 @@ Map：key（无序的、不可重复的）、value（无序的、可重复的）
 	TreeMap底层、自然和定制排序
 	Hashtable原理和功能同HashMap，但是不允许nul
 	Properties的key、value都是字符串类型
-相互转换
-	Array转List 
-		String[] s = new String[]{"A", "B", "C", "D","E"};
-		List<String> list = Arrays.asList(s);
-		对s的修改，直接影响list
-	List转Array
-		String[] dest = list.toArray(new String[0]);//new String[0]是指定返回数组的类型
-		System.out.println("dest: " + Arrays.toString(dest));
-		对list中关于元素的修改，不会影响dest。 
-    List转Set
-        Set<String> set = new HashSet<>(list);
-        或者：
-        Set<String> result = new HashSet<>();
-        result.addAll(list);
-	Set转List
-		List<String> list_1 = new ArrayList<>(set);
-		或者：
-		List<String> result= new ArrayList<>();
-		result.addAll(set);
+```
+
+### 集合Note
+
+[Java集合Note](java/collection/Java集合Note.md)
+
+```
+集合之间相互转换
+HashMap API
 ```
 
 ### HashMap各遍历方式分析
@@ -242,6 +232,16 @@ Streams API（JDK 1.8+）
 	多线程
 性能分析、遍历时删除数据的安全性分析
 ```
+
+### 集合contains方法时间复杂度
+
+https://blog.csdn.net/zhulj625/article/details/110955812
+
+| 集合各方法的时间复杂度 | contains | containskey | containsValue |
+| ---------------------- | -------- | ----------- | ------------- |
+| ArrayList              | O(N)     |             |               |
+| HashSet                | O(1)     |             |               |
+| HashMap                |          | O(1)        | O(N)          |
 
 ## 设计模式
 
@@ -345,6 +345,7 @@ Constructor
 @Getter(lazy=true)
 @Builder
 @With
+@Accessors(chain = true)开启链式编程
 Lombok原理
 ```
 

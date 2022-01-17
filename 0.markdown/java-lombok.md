@@ -1,4 +1,4 @@
-# Lombok
+# java-lombok
 
 ## 概括
 
@@ -175,6 +175,13 @@
 ### @With
 
 - v1.18.10中,@wither 被重新命名为@with，从实验中移出并进入核心包
+
+### @Accessors(chain = true)
+
+- 开启链式编程
+
+	- Apple apple = new Apple();
+	- apple.setColor("red").setFlag(true).setHeight(22.56);//链式
 
 ## 原理
 

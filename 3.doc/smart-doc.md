@@ -105,7 +105,17 @@ https://gitee.com/smart-doc-team/smart-doc/wikis/%E5%93%8D%E5%BA%94%E5%AD%97%E6%
 
 ### 导出数据字典
 
-https://gitee.com/smart-doc-team/smart-doc/wikis/%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8?sort_id=1713399
+自smart-doc 1.7.5开始，可以将代码中的枚举字典导出到文档中
+
+然后将上面的枚举导出到api文档中，操作如下：
+
+```java
+config.setDataDictionaries(
+    ApiDataDictionary.dict().setTitle("订单状态").setEnumClass(OrderEnum.class)
+                .setCodeField("code") //字典码值字段名
+                .setDescField("desc") //字段码
+);
+```
 
 ### swagger ui集成
 
