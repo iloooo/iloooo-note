@@ -1,65 +1,4 @@
 
-### 文章目录
-<!-- TOC -->
-
-- [文章目录](#%e6%96%87%e7%ab%a0%e7%9b%ae%e5%bd%95)
-- [0.前言](#0%e5%89%8d%e8%a8%80)
-- [1. `@SpringBootApplication`](#1-springbootapplication)
-- [2. Spring Bean 相关](#2-spring-bean-%e7%9b%b8%e5%85%b3)
-  - [2.1. `@Autowired`](#21-autowired)
-  - [2.2. `@Component`,`@Repository`,`@Service`, `@Controller`](#22-componentrepositoryservice-controller)
-  - [2.3. `@RestController`](#23-restcontroller)
-  - [2.4. `@Scope`](#24-scope)
-  - [2.5. `@Configuration`](#25-configuration)
-- [3. 处理常见的 HTTP 请求类型](#3-%e5%a4%84%e7%90%86%e5%b8%b8%e8%a7%81%e7%9a%84-http-%e8%af%b7%e6%b1%82%e7%b1%bb%e5%9e%8b)
-  - [3.1. GET 请求](#31-get-%e8%af%b7%e6%b1%82)
-  - [3.2. POST 请求](#32-post-%e8%af%b7%e6%b1%82)
-  - [3.3. PUT 请求](#33-put-%e8%af%b7%e6%b1%82)
-  - [3.4. **DELETE 请求**](#34-delete-%e8%af%b7%e6%b1%82)
-  - [3.5. **PATCH 请求**](#35-patch-%e8%af%b7%e6%b1%82)
-- [4. 前后端传值](#4-%e5%89%8d%e5%90%8e%e7%ab%af%e4%bc%a0%e5%80%bc)
-  - [4.1. `@PathVariable` 和 `@RequestParam`](#41-pathvariable-%e5%92%8c-requestparam)
-  - [4.2. `@RequestBody`](#42-requestbody)
-- [5. 读取配置信息](#5-%e8%af%bb%e5%8f%96%e9%85%8d%e7%bd%ae%e4%bf%a1%e6%81%af)
-  - [5.1. `@value`(常用)](#51-value%e5%b8%b8%e7%94%a8)
-  - [5.2. `@ConfigurationProperties`(常用)](#52-configurationproperties%e5%b8%b8%e7%94%a8)
-  - [5.3. `PropertySource`（不常用）](#53-propertysource%e4%b8%8d%e5%b8%b8%e7%94%a8)
-- [6. 参数校验](#6-%e5%8f%82%e6%95%b0%e6%a0%a1%e9%aa%8c)
-  - [6.1. 一些常用的字段验证的注解](#61-%e4%b8%80%e4%ba%9b%e5%b8%b8%e7%94%a8%e7%9a%84%e5%ad%97%e6%ae%b5%e9%aa%8c%e8%af%81%e7%9a%84%e6%b3%a8%e8%a7%a3)
-  - [6.2. 验证请求体(RequestBody)](#62-%e9%aa%8c%e8%af%81%e8%af%b7%e6%b1%82%e4%bd%93requestbody)
-  - [6.3. 验证请求参数(Path Variables 和 Request Parameters)](#63-%e9%aa%8c%e8%af%81%e8%af%b7%e6%b1%82%e5%8f%82%e6%95%b0path-variables-%e5%92%8c-request-parameters)
-- [7. 全局处理 Controller 层异常](#7-%e5%85%a8%e5%b1%80%e5%a4%84%e7%90%86-controller-%e5%b1%82%e5%bc%82%e5%b8%b8)
-- [8. JPA 相关](#8-jpa-%e7%9b%b8%e5%85%b3)
-  - [8.1. 创建表](#81-%e5%88%9b%e5%bb%ba%e8%a1%a8)
-  - [8.2. 创建主键](#82-%e5%88%9b%e5%bb%ba%e4%b8%bb%e9%94%ae)
-  - [8.3. 设置字段类型](#83-%e8%ae%be%e7%bd%ae%e5%ad%97%e6%ae%b5%e7%b1%bb%e5%9e%8b)
-  - [8.4. 指定不持久化特定字段](#84-%e6%8c%87%e5%ae%9a%e4%b8%8d%e6%8c%81%e4%b9%85%e5%8c%96%e7%89%b9%e5%ae%9a%e5%ad%97%e6%ae%b5)
-  - [8.5. 声明大字段](#85-%e5%a3%b0%e6%98%8e%e5%a4%a7%e5%ad%97%e6%ae%b5)
-  - [8.6. 创建枚举类型的字段](#86-%e5%88%9b%e5%bb%ba%e6%9e%9a%e4%b8%be%e7%b1%bb%e5%9e%8b%e7%9a%84%e5%ad%97%e6%ae%b5)
-  - [8.7. 增加审计功能](#87-%e5%a2%9e%e5%8a%a0%e5%ae%a1%e8%ae%a1%e5%8a%9f%e8%83%bd)
-  - [8.8. 删除/修改数据](#88-%e5%88%a0%e9%99%a4%e4%bf%ae%e6%94%b9%e6%95%b0%e6%8d%ae)
-  - [8.9. 关联关系](#89-%e5%85%b3%e8%81%94%e5%85%b3%e7%b3%bb)
-- [9. 事务 `@Transactional`](#9-%e4%ba%8b%e5%8a%a1-transactional)
-- [10. json 数据处理](#10-json-%e6%95%b0%e6%8d%ae%e5%a4%84%e7%90%86)
-  - [10.1. 过滤 json 数据](#101-%e8%bf%87%e6%bb%a4-json-%e6%95%b0%e6%8d%ae)
-  - [10.2. 格式化 json 数据](#102-%e6%a0%bc%e5%bc%8f%e5%8c%96-json-%e6%95%b0%e6%8d%ae)
-  - [10.3. 扁平化对象](#103-%e6%89%81%e5%b9%b3%e5%8c%96%e5%af%b9%e8%b1%a1)
-- [11. 测试相关](#11-%e6%b5%8b%e8%af%95%e7%9b%b8%e5%85%b3)
-
-<!-- /TOC -->
-### 0.前言
-
-_大家好，我是 Guide 哥！这是我的 221 篇优质原创文章。如需转载，请在文首注明地址，蟹蟹！_
-
-本文已经收录进我的 75K Star 的 Java 开源项目 JavaGuide：[https://github.com/Snailclimb/JavaGuide](https://github.com/Snailclimb/JavaGuide)。
-
-可以毫不夸张地说，这篇文章介绍的 Spring/SpringBoot 常用注解基本已经涵盖你工作中遇到的大部分常用的场景。对于每一个注解我都说了具体用法，掌握搞懂，使用 SpringBoot 来开发项目基本没啥大问题了！
-
-**为什么要写这篇文章？**
-
-最近看到网上有一篇关于 SpringBoot 常用注解的文章被转载的比较多，我看了文章内容之后属实觉得质量有点低，并且有点会误导没有太多实际使用经验的人（这些人又占据了大多数）。所以，自己索性花了大概 两天时间简单总结一下了。
-
-**因为我个人的能力和精力有限，如果有任何不对或者需要完善的地方，请帮忙指出！Guide 哥感激不尽！**
 
 ### 0.1 @RequestMapping
 
@@ -155,11 +94,11 @@ public class UserController {
 
 #### 2.3. `@RestController`
 
-`@RestController`注解是`@Controller和`@`ResponseBody`的合集,表示这是个控制器 bean,并且是将函数的返回值直 接填入 HTTP 响应体中,是 REST 风格的控制器。
+`@RestController`注解是`@Controller`和`@ResponseBody`的合集,表示这是个控制器 bean,并且是将函数的返回值直接填入 HTTP 响应体中,是 REST 风格的控制器。
 
 _Guide 哥：现在都是前后端分离，说实话我已经很久没有用过`@Controller`。如果你的项目太老了的话，就当我没说。_
 
-单独使用 `@Controller` 不加 `@ResponseBody`的话一般使用在要返回一个视图的情况，这种情况属于比较传统的 Spring MVC 的应用，对应于前后端不分离的情况。`@Controller` +`@ResponseBody` 返回 JSON 或 XML 形式数据
+单独使用 `@Controller` 不加 `@ResponseBody`的话一般是用在要返回一个视图的情况，这种情况属于比较传统的 Spring MVC 的应用，对应于前后端不分离的情况。`@Controller` +`@ResponseBody` 返回 JSON 或 XML 形式数据
 
 关于`@RestController` 和 `@Controller`的对比，请看这篇文章：[@RestController vs @Controller](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247485544&idx=1&sn=3cc95b88979e28fe3bfe539eb421c6d8&chksm=cea247a3f9d5ceb5e324ff4b8697adc3e828ecf71a3468445e70221cce768d1e722085359907&token=1725092312&lang=zh_CN#rd)。
 
@@ -227,7 +166,7 @@ public ResponseEntity<List<User>> getAllUsers() {
 ```java
 @PostMapping("/users")
 public ResponseEntity<User> createUser(@Valid @RequestBody UserCreateRequest userCreateRequest) {
- return userRespository.save(user);
+ return userRespository.save(userCreateRequest);
 }
 ```
 
@@ -285,7 +224,7 @@ public List<Teacher> getKlassRelatedTeachers(
 }
 ```
 
-如果我们请求的 url 是：`/klasses/{123456}/teachers?type=web`
+如果我们请求的 url 是：`/klasses/123456/teachers?type=web`
 
 那么我们服务获取到的数据就是：`klassId=123456,type=web`。
 
@@ -339,7 +278,7 @@ public class UserRegisterRequest {
 
 **下面我们来看一下 Spring 为我们提供了哪些方式帮助我们从配置文件中读取这些配置信息。**
 
-我们的数据源`application.yml`内容如下：：
+我们的数据源`application.yml`内容如下：
 
 ```yaml
 wuhan2020: 2020年初武汉爆发了新型冠状病毒，疫情严重，但是，我相信一切都会过去！武汉加油！中国加油！
@@ -359,7 +298,7 @@ library:
       description: 如何养成一个新习惯？如何让心智变得更成熟？如何拥有高质量的关系？ 如何走出人生的艰难时刻？
 ```
 
-#### 5.1. `@value`(常用)
+#### 5.1. `@Value`(常用)
 
 使用 `@Value("${property}")` 读取比较简单的配置信息：
 
@@ -394,7 +333,7 @@ class LibraryProperties {
 
 你可以像使用普通的 Spring bean 一样，将其注入到类中使用。
 
-#### 5.3. `PropertySource`（不常用）
+#### 5.3. `@PropertySource`（不常用）
 
 `@PropertySource`读取指定 properties 文件
 
@@ -423,6 +362,8 @@ class WebSite {
 
 SpringBoot 项目的 spring-boot-starter-web 依赖中已经有 hibernate-validator 包，不需要引用相关依赖。如下图所示（通过 idea 插件—Maven Helper 生成）：
 
+**注**：更新版本的 spring-boot-starter-web 依赖中不再有 hibernate-validator 包（如2.3.11.RELEASE），需要自己引入 `spring-boot-starter-validation` 依赖。
+
 ![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2021/03/c7bacd12-1c1a-4e41-aaaf-4cad840fc073.png)
 
 非 SpringBoot 项目需要自行引入相关依赖包，这里不多做讲解，具体可以查看我的这篇文章：《[如何在 Spring/Spring Boot 中做参数校验？你需要了解的都在这里！](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247485783&idx=1&sn=a407f3b75efa17c643407daa7fb2acd6&chksm=cea2469cf9d5cf8afbcd0a8a1c9cc4294d6805b8e01bee6f76bb2884c5bc15478e91459def49&token=292197051&lang=zh_CN#rd)》。
@@ -444,7 +385,7 @@ SpringBoot 项目的 spring-boot-starter-web 依赖中已经有 hibernate-valida
 - `@DecimalMin(value)`被注释的元素必须是一个数字，其值必须大于等于指定的最小值
 - `@DecimalMax(value)` 被注释的元素必须是一个数字，其值必须小于等于指定的最大值
 - `@Size(max=, min=)`被注释的元素的大小必须在指定的范围内
-- `@Digits (integer, fraction)`被注释的元素必须是一个数字，其值必须在可接受的范围内
+- `@Digits(integer, fraction)`被注释的元素必须是一个数字，其值必须在可接受的范围内
 - `@Past`被注释的元素必须是一个过去的日期
 - `@Future` 被注释的元素必须是一个将来的日期
 - ......
@@ -491,7 +432,7 @@ public class PersonController {
 
 #### 6.3. 验证请求参数(Path Variables 和 Request Parameters)
 
-**一定一定不要忘记在类上加上 `Validated` 注解了，这个参数可以告诉 Spring 去校验方法参数。**
+**一定一定不要忘记在类上加上 `@Validated` 注解了，这个参数可以告诉 Spring 去校验方法参数。**
 
 ```java
 @RestController
@@ -574,7 +515,7 @@ public class Role {
 private Long id;
 ```
 
-JPA 使用枚举定义了 4 中常见的主键生成策略，如下：
+JPA 使用枚举定义了 4 种常见的主键生成策略，如下：
 
 _Guide 哥：枚举替代常量的一种用法_
 
@@ -686,7 +627,7 @@ private String userName;
 设置字段类型并且加默认值，这个还是挺常用的。
 
 ```java
-Column(columnDefinition = "tinyint(1) default 1")
+@Column(columnDefinition = "tinyint(1) default 1")
 private Boolean enabled;
 ```
 
@@ -697,7 +638,7 @@ private Boolean enabled;
 如果我们想让`secrect` 这个字段不被持久化，可以使用 `@Transient`关键字声明。
 
 ```java
-Entity(name="USER")
+@Entity(name="USER")
 public class User {
 
     ......
@@ -711,7 +652,7 @@ public class User {
 
 ```java
 static String secrect; // not persistent because of static
-final String secrect = “Satish”; // not persistent because of final
+final String secrect = "Satish"; // not persistent because of final
 transient String secrect; // not persistent because of transient
 ```
 
@@ -730,7 +671,7 @@ private String content;
 
 ```java
 @Lob
-//指定 Lob 类型数据的获取策略， FetchType.EAGER 表示非延迟 加载，而 FetchType. LAZY 表示延迟加载 ；
+//指定 Lob 类型数据的获取策略， FetchType.EAGER 表示非延迟加载，而 FetchType.LAZY 表示延迟加载 ；
 @Basic(fetch = FetchType.EAGER)
 //columnDefinition 属性指定数据表对应的 Lob 字段类型
 @Column(name = "content", columnDefinition = "LONGTEXT NOT NULL")
@@ -768,7 +709,7 @@ public class Role {
 }
 ```
 
-数据库里面对应存储的是 MAIL/FEMAIL。
+数据库里面对应存储的是 MALE/FEMALE。
 
 #### 8.7. 增加审计功能
 
@@ -820,9 +761,9 @@ public class AuditSecurityConfiguration {
 }
 ```
 
-简单介绍一下上面设计到的一些注解：
+简单介绍一下上面涉及到的一些注解：
 
-1. `@CreatedDate`: 表示该字段为创建时间时间字段，在这个实体被 insert 的时候，会设置值
+1. `@CreatedDate`: 表示该字段为创建时间字段，在这个实体被 insert 的时候，会设置值
 2. `@CreatedBy` :表示该字段为创建人，在这个实体被 insert 的时候，会设置值
 
    `@LastModifiedDate`、`@LastModifiedBy`同理。
@@ -847,8 +788,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 - `@OneToOne` 声明一对一关系
 - `@OneToMany` 声明一对多关系
-- `@ManyToOne`声明多对一关系
-- `MangToMang`声明多对多关系
+- `@ManyToOne` 声明多对一关系
+- `@MangToMang` 声明多对多关系
 
 更多关于 Spring Boot JPA 的文章请看我的这篇文章：[一文搞懂如何在 Spring Boot 正确中使用 JPA](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247485689&idx=1&sn=061b32c2222869932be5631fb0bb5260&chksm=cea24732f9d5ce24a356fb3675170e7843addbfcc79ee267cfdb45c83fc7e90babf0f20d22e1&token=292197051&lang=zh_CN#rd) 。
 
@@ -864,14 +805,14 @@ public void save() {
 
 ```
 
-我们知道 Exception 分为运行时异常 RuntimeException 和非运行时异常。在`@Transactional`注解中如果不配置`rollbackFor`属性,那么事物只会在遇到`RuntimeException`的时候才会回滚,加上`rollbackFor=Exception.class`,可以让事物在遇到非运行时异常时也回滚。
+我们知道 Exception 分为运行时异常 RuntimeException 和非运行时异常。在`@Transactional`注解中如果不配置`rollbackFor`属性,那么事务只会在遇到`RuntimeException`的时候才会回滚,加上`rollbackFor=Exception.class`,可以让事务在遇到非运行时异常时也回滚。
 
-`@Transactional` 注解一般用在可以作用在`类`或者`方法`上。
+`@Transactional` 注解一般可以作用在`类`或者`方法`上。
 
-- **作用于类**：当把`@Transactional 注解放在类上时，表示所有该类的`public 方法都配置相同的事务属性信息。
+- **作用于类**：当把`@Transactional` 注解放在类上时，表示所有该类的 public 方法都配置相同的事务属性信息。
 - **作用于方法**：当类配置了`@Transactional`，方法也配置了`@Transactional`，方法的事务会覆盖类的事务配置信息。
 
-更多关于关于 Spring 事务的内容请查看：
+更多关于 Spring 事务的内容请查看：
 
 1. [可能是最漂亮的 Spring 事务管理详解](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484943&idx=1&sn=46b9082af4ec223137df7d1c8303ca24&chksm=cea249c4f9d5c0d2b8212a17252cbfb74e5fbe5488b76d829827421c53332326d1ec360f5d63&token=1082669959&lang=zh_CN#rd)
 2. [一口气说出 6 种 @Transactional 注解失效场景](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247486483&idx=2&sn=77be488e206186803531ea5d7164ec53&chksm=cea243d8f9d5cacecaa5c5daae4cde4c697b9b5b21f96dfc6cce428cfcb62b88b3970c26b9c2&token=816772476&lang=zh_CN#rd)
@@ -890,7 +831,6 @@ public class User {
     private String userName;
     private String fullName;
     private String password;
-    @JsonIgnore
     private List<UserRole> userRoles = new ArrayList<>();
 }
 ```
@@ -912,7 +852,7 @@ public class User {
 
 #### 10.2. 格式化 json 数据
 
-`@JsonFormat`一般用来格式化 json 数据。：
+`@JsonFormat`一般用来格式化 json 数据。
 
 比如：
 
@@ -928,9 +868,7 @@ private Date date;
 @Setter
 @ToString
 public class Account {
-    @JsonUnwrapped
     private Location location;
-    @JsonUnwrapped
     private PersonInfo personInfo;
 
   @Getter

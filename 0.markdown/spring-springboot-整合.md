@@ -103,7 +103,83 @@ public class AppConfig {
   // ...
 }
 
-## Spring整合-Hibernate
+## SpringBoot整合-Mybatis
 
-## Spring整合-Junit
+### 引入mybatis起步依赖，添加mysql驱动
+
+- <dependencies>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+ </dependencies>
+
+### 编写DataSource和MyBatis相关配置
+
+- spring:
+  datasource:
+    url: jdbc:mysql:///springboot?serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml # mapper映射文件路径
+  type-aliases-package: com.itheima.springbootmybatis.domain
+  # config-location:  # 指定mybatis的核心配置文件
+
+## SpringBoot整合-Redis
+
+### 引入redis起步依赖
+
+-   <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+    </dependencies>
+
+### 配置redis相关属性
+
+- spring:
+  redis:
+    host: 127.0.0.1 # redis的主机ip
+    port: 6379
+
+### 注入RedisTemplate模板
+
+- @Autowired
+private RedisTemplate redisTemplate;
+
+## SpringBoot整合-Junit
+
+### 引入starter-test起步依赖
+
+- <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+   </dependencies>
+
+### 编写测试类
+
+- @RunWith(SpringRunner.class)
+@SpringBootTest(classes = SpringbootJunitApplication.class )
+public class UserServiceTest {
+    @Test
+    public void test(){
+        System.out.println(111);
+    }
+}
 

@@ -849,7 +849,7 @@ Java 类型, Hibernate 映射类型及 SQL 类型之间的对应关系
 
 # Spring 全家桶
 
-## Spring注解总结
+## Spring等注解总结
 
 &#x1F4CA;  [spring-springboot-annotation.xmind](spring/spring-springboot-annotation.xmind)
 
@@ -1044,7 +1044,7 @@ Exception 异常处理机制
 TODO	文件上传
 ```
 
-## Spring Boot TODO
+## SpringBoot
 
 &#x1F4CA;  [spring-boot.xmind](spring/spring-boot.xmind)
 
@@ -1053,16 +1053,41 @@ TODO	文件上传
 &#x1F4DC;  [spring-boot.md](0.markdown/xx.md)
 
 ```
-SpringBoot是整合Spring技术栈的一站式框架
-SpringBoot是简化Spring技术栈的快速开发脚手架
-快速入门
+Spring Boot概述
 Spring Boot配置
+	配置文件
+		在同一级目录下优先级为：properties>yml > yaml
+	yaml基本语法
+		- 大小写敏感
+		- 数据值前边必须有空格，作为分隔符
+		- 缩进时不允许使用Tab键，只允许使用空格
+		- 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可
+	yaml数据格式
+		'-' 表示数组
+		${name}引用
+	获取配置的3种方式
+		1.@Value("${person.address[0]}")
+		2.Evironment
+		3.@ConfigurationProperties(prefix = "person")
+	profile激活方式
+		- 配置文件： 再配置文件中配置：spring.profiles.active=dev
+		- 虚拟机参数：在VM options 指定：-Dspring.profiles.active=dev
+		- 命令行参数：java –jar xxx.jar  --spring.profiles.active=dev
+	内部配置文件加载顺序
+		当前目录/config>当前目录>classpath(resource)的/config目录>classpath(resource)的根目录
+	外部配置加载顺序
+		java -jar app.jar --name="Spring“命令行参数>命令行指定配置文件>jar包同路径或config中配置文件
+自动配置原理
+
+项目打包部署
+	jar包(官方推荐)--内置tomcat
+	war包--外置tomcat
 
 ```
 
-### Spring/SpringBoot 整合
+### SpringBoot 整合
 
-&#x1F4CA;  [Spring 整合总结](spring/spring-springboot-整合.xmind)
+&#x1F4CA;  [Spring 整合总结](spring/spring-boot/spring-springboot-整合.xmind)
 
 &#x1F3A8;  [Spring 整合脑图](1.pic/spring-springboot-整合.png)
 
@@ -1073,6 +1098,9 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-applicat
 ```
 Spring整合-数据源DataSource
 Spring整合-Mybatis
+SpringBoot整合-Mybatis
+SpringBoot整合-Redis
+SpringBoot整合-Junit
 ```
 
 
